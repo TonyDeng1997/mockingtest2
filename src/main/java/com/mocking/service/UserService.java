@@ -1,4 +1,4 @@
-/*
+
 package com.mocking.service;
 
 import com.mocking.model.User;
@@ -8,4 +8,3 @@ public interface UserService {
 
     User findByUsername(String username);
 }
-*/

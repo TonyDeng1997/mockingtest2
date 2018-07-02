@@ -1,9 +1,9 @@
-/*
+
 package com.mocking.service;
 
 import com.mocking.model.User;
-import com.mocking.repository.RoleRepository;
-import com.mocking.repository.UserRepository;
+import com.mocking.data.RoleRepository;
+import com.mocking.data.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -31,4 +31,4 @@ public class UserServiceImpl implements UserService {
         return userRepository.findByUsername(username);
     }
 }
-*/
+

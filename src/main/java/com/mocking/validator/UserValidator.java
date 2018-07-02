@@ -1,4 +1,4 @@
-/*
+
 package com.mocking.validator;
 
 import com.mocking.model.User;
@@ -41,4 +41,4 @@ public class UserValidator implements Validator {
         }
     }
 }
-*/
+
