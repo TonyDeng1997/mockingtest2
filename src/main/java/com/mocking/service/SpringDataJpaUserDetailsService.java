@@ -17,22 +17,34 @@ package com.mocking.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.User;
+
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mocking.data.ManagerRepository;
 import com.mocking.model.Manager;
-
+import java.util.HashSet;
+import java.util.Set;
+import com.mocking.model.Role;
+import com.mocking.model.User;
+import com.mocking.data.UserRepository;
 /**
  * @author Greg Turnquist
  */
 // tag::code[]
 @Component
 public class SpringDataJpaUserDetailsService implements UserDetailsService {
-
+	/*
 	private final ManagerRepository repository;
 
 	@Autowired
@@ -43,9 +55,26 @@ public class SpringDataJpaUserDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
 		Manager manager = this.repository.findByName(name);
-		return new User(manager.getName(), manager.getPassword(),
+		return new org.springframework.security.core.userdetails.User(manager.getName(), manager.getPassword(),
 				AuthorityUtils.createAuthorityList(manager.getRoles()));
 	}
+	*/
+	
+	@Autowired
+    private UserRepository userRepository;
+
+    @Override
+    @Transactional(readOnly = true)
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userRepository.findByUsername(username);
+
+        Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
+        for (Role role : user.getRoles()){
+            grantedAuthorities.add(new SimpleGrantedAuthority(role.getName()));
+        }
+
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), grantedAuthorities);
+    }
 
 }
 // end::code[]
