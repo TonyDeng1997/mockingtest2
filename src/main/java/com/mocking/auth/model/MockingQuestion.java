@@ -8,30 +8,13 @@ import java.util.Set;
 @Table(name = "mocking_config")
 public class MockingQuestion {
     private Long id;
-    private Long mocking_config_id;
+
     private String candidate_id; //Email of company candidate or UID 
     private Long num_questions;
     private Date expiration_date;
     
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "post_id")
+
 	private MockingConfig config;
-	
-    public Long getMocking_config_id() {
-		return mocking_config_id;
-	}
-
-	public void setMocking_config_id(Long mocking_config_id) {
-		this.mocking_config_id = mocking_config_id;
-	}
-
-	public MockingConfig getConfig() {
-		return config;
-	}
-
-	public void setConfig(MockingConfig config) {
-		this.config = config;
-	}
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -42,6 +25,18 @@ public class MockingQuestion {
 	public void setId(Long id) {
 		this.id = id;
 	}
+	
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "mocking_config_id")
+	public MockingConfig getConfig() {
+		return config;
+	}
+
+	public void setConfig(MockingConfig config) {
+		this.config = config;
+	}
+
+	
 	
 	public String getCandidate_id() {
 		return candidate_id;

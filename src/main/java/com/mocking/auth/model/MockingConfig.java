@@ -48,7 +48,7 @@ public class MockingConfig {
 	}
 
     @OneToMany(cascade = CascadeType.ALL, 
-    		mappedBy = "post", 
+    		mappedBy = "config", 
     		orphanRemoval = true
     )
 	public Set<MockingQuestion> getMockings_questions() {

@@ -1,5 +1,42 @@
 package com.mocking.auth.service;
 
-public class MockingConfigServiceImpl {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import com.mocking.auth.model.MockingConfig;
+import com.mocking.auth.repository.MockingConfigRepository;
 
+@Service
+public class MockingConfigServiceImpl implements MockingConfigService {
+		
+		@Autowired
+	    private MockingConfigRepository mockingConfigRepository;
+
+
+		@Override
+		public void addMockingConfig(MockingConfig mc) {
+			// TODO Auto-generated method stub
+			mockingConfigRepository.saveAndFlush(mc);
+		}
+
+		@Override
+		@Transactional(readOnly = true)
+		public MockingConfig findMockingConfig(Long client_id) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		@Transactional(readOnly = true)
+		public MockingConfig findMockingConfig(String candidate_id) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		@Transactional(readOnly = true)
+		public MockingConfig findMockingConfig(Long client_id__id, String candidate_id) {
+			// TODO Auto-generated method stub
+			return null;
+		}
 }
