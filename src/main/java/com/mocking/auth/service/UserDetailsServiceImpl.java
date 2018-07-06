@@ -2,7 +2,7 @@ package com.mocking.auth.service;
 
 import com.mocking.auth.model.Role;
 import com.mocking.auth.model.User;
-import com.mocking.auth.repository.UserRepository;
+import com.mocking.auth.repository.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -18,7 +18,7 @@ import java.util.Set;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
-    private UserRepository userRepository;
+    private UserDao userRepository;
 
     @Override
     @Transactional(readOnly = true)
