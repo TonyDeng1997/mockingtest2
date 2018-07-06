@@ -1,8 +1,8 @@
 package com.mocking.auth.service;
 
 import com.mocking.auth.model.User;
-import com.mocking.auth.repository.RoleRepository;
-import com.mocking.auth.repository.UserRepository;
+import com.mocking.auth.repository.RoleDao;
+import com.mocking.auth.repository.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -12,9 +12,9 @@ import java.util.HashSet;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    private UserRepository userRepository;
+    private UserDao userRepository;
     @Autowired
-    private RoleRepository roleRepository;
+    private RoleDao roleRepository;
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 

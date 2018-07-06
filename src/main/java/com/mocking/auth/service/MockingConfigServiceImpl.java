@@ -4,13 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.mocking.auth.model.MockingConfig;
-import com.mocking.auth.repository.MockingConfigRepository;
+import com.mocking.auth.repository.MockingConfigDao;
 
 @Service
 public class MockingConfigServiceImpl implements MockingConfigService {
 		
 		@Autowired
-	    private MockingConfigRepository mockingConfigRepository;
+	    private MockingConfigDao mockingConfigRepository;
 
 
 		@Override

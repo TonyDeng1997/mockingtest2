@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.Set;
 
 @Entity
-@Table(name = "mocking_config")
+@Table(name = "mocking_question")
 public class MockingQuestion {
     private Long id;
 

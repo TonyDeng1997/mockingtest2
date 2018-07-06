@@ -1,8 +1,6 @@
 package com.mocking.auth.service;
 
-import java.util.Collections;
 import java.util.List;
-
 import com.mocking.auth.model.MockingQuestion;
 
 /*
@@ -12,6 +10,6 @@ import com.mocking.auth.model.MockingQuestion;
 
 public interface MockingQuestionService {
 	 void addMockingQuestion(MockingQuestion mq);
-	 void addMockingQuestions(Collections questions);
+	 void addMockingQuestions(List<MockingQuestion> questions);
 	 List<MockingQuestion> findMockingQuestions(Long mockingConfigId);
 }
