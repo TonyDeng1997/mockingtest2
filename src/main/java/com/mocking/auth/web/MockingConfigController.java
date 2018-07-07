@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+//https://dzone.com/articles/add-custom-functionality-to-a-spring-data-reposito
+//https://dzone.com/articles/using-spring-mvc%E2%80%99s
+//
 @Controller
 public class MockingConfigController {
 
@@ -38,7 +41,6 @@ public class MockingConfigController {
     @RequestMapping(value = "/mocking/config", method = RequestMethod.POST)
     public String saveMockdingConfig(@ModelAttribute("mockingConfigForm") MockingConfig mockingConfigForm, BindingResult bindingResult, Model model) {
         // TODO need to implement a mockingConfigValidator
-    	
     	mockingConfigValidator.validate(mockingConfigForm, bindingResult);
 
         if (bindingResult.hasErrors()) {
@@ -52,7 +54,6 @@ public class MockingConfigController {
   
 	
     /*
-
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(Model model, String error, String logout) {
         if (error != null)
