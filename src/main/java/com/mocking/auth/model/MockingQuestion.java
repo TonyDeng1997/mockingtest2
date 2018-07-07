@@ -8,13 +8,10 @@ import java.util.Set;
 @Table(name = "mocking_question")
 public class MockingQuestion {
     private Long id;
-
-    private String candidate_id; //Email of company candidate or UID 
-    private Long num_questions;
-    private Date expiration_date;
-    
-
-	private MockingConfig config;
+    private Long mocking_config_id; //Email of company candidate or UID 
+    private Long question_id;
+    private Long score;
+	private MockingConfig config; // Used for mappedby in the other class where it is 1:m
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,7 +24,9 @@ public class MockingQuestion {
 	}
 	
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "mocking_config_id")
+    @JoinColumn(name = "mocking_config_id", referencedColumnName = "id", 
+    				insertable=false, updatable=false
+    		   )
 	public MockingConfig getConfig() {
 		return config;
 	}
@@ -36,32 +35,30 @@ public class MockingQuestion {
 		this.config = config;
 	}
 
-	
-	
-	public String getCandidate_id() {
-		return candidate_id;
+	@Column(name="mocking_config_id")
+	public Long getMocking_config_id() {
+		return mocking_config_id;
 	}
-	
-	public void setCandidate_id(String candidate_id) {
-		this.candidate_id = candidate_id;
-	}
-	
-	public Long getNum_questions() {
-		return num_questions;
-	}
-	
-	public void setNum_questions(Long num_questions) {
-		this.num_questions = num_questions;
-	}
-	
-	public Date getExpiration_date() {
-		return expiration_date;
-	}
-	
-	public void setExpiration_date(Date expiration_date) {
-		this.expiration_date = expiration_date;
-	}
-	
-	
 
+	public void setMocking_config_id(Long mocking_config_id) {
+		this.mocking_config_id = mocking_config_id;
+	}
+
+	@Column(name="question_id")
+	public Long getQuestion_id() {
+		return question_id;
+	}
+
+	public void setQuestion_id(Long question_id) {
+		this.question_id = question_id;
+	}
+
+	@Column(name="score")
+	public Long getScore() {
+		return score;
+	}
+
+	public void setScore(Long score) {
+		this.score = score;
+	}
 }

@@ -7,14 +7,14 @@ import java.util.Set;
 @Entity
 @Table(name = "mocking_config")
 public class MockingConfig {
-    private Long id;
+	private Long id;
     private String candidate_id; //Email of company candidate or UID 
     private Long num_questions;
-    private Date expiration_date;
+	private Date expiration_date;
     private Set<MockingQuestion> mockings_questions;
   
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;
     }
@@ -23,6 +23,7 @@ public class MockingConfig {
         this.id = id;
     }
     
+    @Column(name="candidate_id", nullable = false)
     public String getCandidate_id() {
 		return candidate_id;
 	}
@@ -31,6 +32,7 @@ public class MockingConfig {
 		this.candidate_id = candidate_id;
 	}
 
+	@Column(name="num_questions")
 	public Long getNum_questions() {
 		return num_questions;
 	}
@@ -38,7 +40,8 @@ public class MockingConfig {
 	public void setNum_questions(Long num_questions) {
 		this.num_questions = num_questions;
 	}
-
+	
+	@Column(name="expiration_date")
 	public Date getExpiration_date() {
 		return expiration_date;
 	}
