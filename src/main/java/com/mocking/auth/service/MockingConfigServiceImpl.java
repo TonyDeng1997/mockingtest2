@@ -10,18 +10,18 @@ import com.mocking.auth.repository.MockingConfigDao;
 public class MockingConfigServiceImpl implements MockingConfigService {
 		
 		@Autowired
-	    private MockingConfigDao mockingConfigRepository;
+	    private MockingConfigDao mockingConfigDao;
 
 
 		@Override
 		public void save(MockingConfig mc) {
 			// TODO Auto-generated method stub
-			mockingConfigRepository.save(mc);
+			mockingConfigDao.save(mc);
 		}
 
 		@Override
 		@Transactional(readOnly = true)
-		public MockingConfig findMockingConfig(Long client_id) {
+		public MockingConfig findMockingConfig(Long id) {
 			// TODO Auto-generated method stub
 			return null;
 		}
@@ -35,7 +35,7 @@ public class MockingConfigServiceImpl implements MockingConfigService {
 
 		@Override
 		@Transactional(readOnly = true)
-		public MockingConfig findMockingConfig(Long client_id__id, String candidate_id) {
+		public MockingConfig findMockingConfig(Long id, String candidate_id) {
 			// TODO Auto-generated method stub
 			return null;
 		}

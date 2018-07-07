@@ -15,7 +15,7 @@ public class MockingQuestionServiceImpl implements MockingQuestionService {
     private MockingQuestionDao mockingQuestionDao;
 	
 	@Override
-	public void addMockingQuestion(MockingQuestion mq) {
+	public void save(MockingQuestion mq) {
 		// TODO Auto-generated method stub
 		mockingQuestionDao.saveAndFlush(mq);
 	}

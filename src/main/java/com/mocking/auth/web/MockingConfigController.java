@@ -22,9 +22,11 @@ public class MockingConfigController {
     @Autowired
     private MockingConfigService mockingConfigService;
 
+    //TODO finish validator
     @Autowired
     private MockingConfigValidator mockingConfigValidator;
 
+    //TODO Get 
     @RequestMapping(value = "/mocking/config/{id}", method = RequestMethod.GET)
     public String getMockingConfig(Model model) {
         model.addAttribute("userForm", new User());

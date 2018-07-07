@@ -9,7 +9,7 @@ import com.mocking.auth.model.MockingQuestion;
  * */
 
 public interface MockingQuestionService {
-	 void addMockingQuestion(MockingQuestion mq);
+	 void save(MockingQuestion mq);
 	 void addMockingQuestions(List<MockingQuestion> questions);
 	 List<MockingQuestion> findMockingQuestions(Long mockingConfigId);
 }
