@@ -10,6 +10,6 @@ import com.mocking.auth.model.MockingQuestion;
 
 public interface MockingQuestionDao extends JpaRepository<MockingQuestion, Long> {
 
-	 List<MockingQuestion> findMockingQuestions(Long mockingConfigId);
+	 //List<MockingQuestion> findMockingQuestions(Long mockingConfigId);
 	
 }

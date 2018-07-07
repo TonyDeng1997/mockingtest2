@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.mocking.auth.model.MockingQuestion;
-import com.mocking.auth.repository.MockingQuestionDaoImpl;
+import com.mocking.auth.repository.MockingQuestionDao;
 
 @Service
 public class MockingQuestionServiceImpl implements MockingQuestionService {
 
 	@Autowired
-    private MockingQuestionDaoImpl mockingQuestionDao;
+    private MockingQuestionDao mockingQuestionDao;
 	
 	@Override
 	public void addMockingQuestion(MockingQuestion mq) {
@@ -31,8 +31,7 @@ public class MockingQuestionServiceImpl implements MockingQuestionService {
 	@Override
 	public List<MockingQuestion> findMockingQuestions(Long mockingConfigId) {
 		// TODO Auto-generated method stub
-		return mockingQuestionDao.findMockingQuestions(mockingConfigId);
+		return null;
 	}
-
 	
 }

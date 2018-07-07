@@ -14,9 +14,9 @@ public class MockingConfigServiceImpl implements MockingConfigService {
 
 
 		@Override
-		public void addMockingConfig(MockingConfig mc) {
+		public void save(MockingConfig mc) {
 			// TODO Auto-generated method stub
-			mockingConfigRepository.saveAndFlush(mc);
+			mockingConfigRepository.save(mc);
 		}
 
 		@Override
