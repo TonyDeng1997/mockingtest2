@@ -8,7 +8,7 @@ import java.util.Set;
 @Table(name = "mocking_config")
 public class MockingConfig {
 	private Long id;
-    private String candidate_id; //Email of company candidate or UID 
+    private String candidate; //Email of company candidate or UID 
     private Long num_questions;
 	private Date expiration_date;
     private Set<MockingQuestion> mockings_questions;
@@ -25,11 +25,11 @@ public class MockingConfig {
     
     @Column(name="candidate_id", nullable = false)
     public String getCandidate_id() {
-		return candidate_id;
+		return candidate;
 	}
 
 	public void setCandidate_id(String candidate_id) {
-		this.candidate_id = candidate_id;
+		this.candidate = candidate_id;
 	}
 
 	@Column(name="num_questions")

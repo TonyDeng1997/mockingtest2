@@ -31,7 +31,7 @@ public class MockingQuestionServiceImpl implements MockingQuestionService {
 	@Override
 	public List<MockingQuestion> findMockingQuestions(Long mockingConfigId) {
 		// TODO Auto-generated method stub
-		return null;
+		return mockingQuestionDao.findByMocking_Config_Id(mockingConfigId);
 	}
 	
 }
