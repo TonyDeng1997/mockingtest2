@@ -5,29 +5,29 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-import com.mocking.auth.model.MockingConfig;
-import com.mocking.auth.service.MockingConfigService;
+import com.mocking.auth.model.Client;
+import com.mocking.auth.service.ClientService;
 
 @Component
-public class MockingConfigValidator implements Validator  {
+public class ClientValidator implements Validator  {
 
 	@Autowired
-    private MockingConfigService mockingConfigService;
+    private ClientService ClientService;
 	
 	@Override
     public boolean supports(Class<?> aClass) {
-        return MockingConfig.class.equals(aClass);
+        return ClientService.class.equals(aClass);
     }
 
 	@Override
 	public void validate(Object target, Errors errors) {
 		// TODO Auto-generated method stub
-		MockingConfig config=(MockingConfig) target;
+		Client config=(Client) target;
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "NotEmpty");
-        if (config.getCandidate_id().length() < 6 || config.getCandidate_id().length() > 32) {
+        if (config.getName().length()< 6 || config.getName().length() > 32) {
             errors.rejectValue("username", "Size.userForm.username");
         }
-        if (mockingConfigService.findMockingConfig(config.getCandidate_id()) != null) {
+        if (ClientService.findByClientname(config.getName()) != null) {
             errors.rejectValue("username", "Duplicate.userForm.username");
         }
 

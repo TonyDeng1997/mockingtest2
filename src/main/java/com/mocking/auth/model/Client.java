@@ -3,13 +3,16 @@ package com.mocking.auth.model;
 import javax.persistence.*;
 
 
+
 @Entity
 @Table(name = "client")
 public class Client {
 
 
 	 private long id;
-	 private String name;
+
+
+	private String name;
 	 private String email;
 	 private String type;
 	 private String address1;
@@ -17,10 +20,22 @@ public class Client {
 	 private String zip_code;
 	 
 	
-	             
+	 public Client(String name, String email, String type, String address1, String address2, String zip_code) {
+			this.name = name;
+			this.email = email;
+			this.type = type;
+			this.address1 = address1;
+			this.address2 = address2;
+			this.zip_code = zip_code;
+		}
 	 
 	 
-	 @Id
+	 public Client() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	@Id
 	 @Column(name = "client_id")
      @GeneratedValue
 	 public long getId() {
