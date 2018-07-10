@@ -5,29 +5,29 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-import com.mocking.auth.model.MockingConfig;
-import com.mocking.auth.service.MockingConfigService;
+import com.mocking.auth.model.MockingQuestion;
+import com.mocking.auth.service.MockingQuestionService;
 
 @Component
-public class MockingConfigValidator implements Validator  {
+public class MockingQuestionValidator implements Validator  {
 
 	@Autowired
-    private MockingConfigService mockingConfigService;
+    private MockingQuestionService mockingQuestionService;
 	
 	@Override
     public boolean supports(Class<?> aClass) {
-        return MockingConfig.class.equals(aClass);
+        return MockingQuestionService.class.equals(aClass);
     }
 
 	@Override
 	public void validate(Object target, Errors errors) {
 		// TODO Auto-generated method stub
-		MockingConfig config=(MockingConfig) target;
+		MockingQuestion config=(MockingQuestion) target;
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "NotEmpty");
-        if (config.getCandidate_id().length() < 6 || config.getCandidate_id().length() > 32) {
+        if (config.getMocking_config_id()< 0 || config.getMocking_config_id() > 32) {
             errors.rejectValue("username", "Size.userForm.username");
         }
-        if (mockingConfigService.findMockingConfig(config.getCandidate_id()) != null) {
+        if (mockingQuestionService.findMockingQuestions(config.getMocking_config_id()) != null) {
             errors.rejectValue("username", "Duplicate.userForm.username");
         }
 

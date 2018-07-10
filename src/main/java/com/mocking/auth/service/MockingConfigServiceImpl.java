@@ -22,21 +22,23 @@ public class MockingConfigServiceImpl implements MockingConfigService {
 		@Override
 		@Transactional(readOnly = true)
 		public MockingConfig findMockingConfig(Long id) {
-			// TODO Auto-generated method stub
-			return null;
+			return mockingConfigDao.findById(id);
+			
 		}
 
 		@Override
 		@Transactional(readOnly = true)
 		public MockingConfig findMockingConfig(String candidate_id) {
 			// TODO Auto-generated method stub
-			return null;
+			return mockingConfigDao.findByCandidateId(candidate_id);
+			
 		}
 
 		@Override
 		@Transactional(readOnly = true)
 		public MockingConfig findMockingConfig(Long id, String candidate_id) {
 			// TODO Auto-generated method stub
-			return null;
+			return mockingConfigDao.find(id,candidate_id);
+		
 		}
 }
