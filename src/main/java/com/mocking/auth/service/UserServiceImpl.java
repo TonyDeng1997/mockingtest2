@@ -12,21 +12,21 @@ import java.util.HashSet;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    private UserDao userRepository;
+    private UserDao userDao;
     @Autowired
-    private RoleDao roleRepository;
+    private RoleDao roleDao;
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
     public void save(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        user.setRoles(new HashSet<>(roleRepository.findAll()));
-        userRepository.save(user);
+        user.setRoles(new HashSet<>(roleDao.findAll()));
+        userDao.save(user);
     }
 
     @Override
     public User findByUsername(String username) {
-        return userRepository.findByUsername(username);
+        return userDao.findByUsername(username);
     }
 }
