@@ -23,12 +23,12 @@ public class MockingConfigValidator implements Validator  {
 	public void validate(Object target, Errors errors) {
 		// TODO Auto-generated method stub
 		MockingConfig config=(MockingConfig) target;
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "NotEmpty");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "candidate_id", "NotEmpty");
         if (config.getCandidate_id().length() < 6 || config.getCandidate_id().length() > 32) {
-            errors.rejectValue("username", "Size.userForm.username");
+            errors.rejectValue("candidate_id", "Size.userForm.username");
         }
         if (mockingConfigService.findMockingConfig(config.getCandidate_id()) != null) {
-            errors.rejectValue("username", "Duplicate.userForm.username");
+            errors.rejectValue("candidate_id", "Duplicate.userForm.username");
         }
 
 

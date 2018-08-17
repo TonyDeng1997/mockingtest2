@@ -1,11 +1,13 @@
 package com.mocking.auth.service;
 
-import com.mocking.auth.model.Client;
-import com.mocking.auth.repository.ClientDao;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import com.mocking.auth.model.Client;
+import com.mocking.auth.repository.ClientDao;
 
 @Service
 public class ClientServiceImpl implements ClientService {

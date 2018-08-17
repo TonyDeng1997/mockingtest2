@@ -35,6 +35,7 @@
         <h4 class="text-center"><a href="${contextPath}/mocking/configtest">Click here for mocking config test</a></h4>
         <h4 class="text-center"><a href="${contextPath}/mocking/questiontest">Click here for mocking question test</a></h4>
         <h4 class="text-center"><a href="${contextPath}/mocking/clienttest">Click here for client test</a></h4>
+        <h4 class="text-center"><a href="${contextPath}/timer">Click here to go to main page</a></h4>
 
     </c:if>
 
