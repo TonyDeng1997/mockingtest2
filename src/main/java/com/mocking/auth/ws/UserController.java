@@ -1,4 +1,4 @@
-package com.mocking.auth.web;
+package com.mocking.auth.ws;
 
 import com.mocking.auth.model.User;
 import com.mocking.auth.service.SecurityService;

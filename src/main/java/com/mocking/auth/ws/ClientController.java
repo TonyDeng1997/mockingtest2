@@ -1,4 +1,4 @@
-package com.mocking.auth.web;
+package com.mocking.auth.ws;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
