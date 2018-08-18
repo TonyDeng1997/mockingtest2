@@ -1,5 +1,6 @@
 package com.mocking.auth.ws;
 
+import com.mocking.auth.model.TestForm;
 import com.mocking.auth.model.User;
 import com.mocking.auth.service.SecurityService;
 import com.mocking.auth.service.UserService;
@@ -11,6 +12,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
 
 @Controller
 public class UserController {
@@ -59,5 +61,12 @@ public class UserController {
     @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
     public String welcome(Model model) {
         return "welcome";
+    }
+    
+
+    @RequestMapping(value = {"/test"}, method = RequestMethod.POST)
+    public String test(TestForm form, Model model) {
+    	model.addAttribute("form", form);
+        return "testCodeSubmission";
     }
 }

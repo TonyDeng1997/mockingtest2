@@ -66,23 +66,20 @@ width: 50%;
   }, 1000);
   </script>
 
+   <sec:csrfMetaTags/>
+   
 <script>
 
   function runCode() {
-	  //alert(document.getElementById("code_editor").innerHTML);
 	  $.ajax({
 		  //change this url
-		    url: url,
-		    data: {
-		        "[[${_csrf.parameterName}]]": "[[${_csrf.token}]]"
-		        },
+		    url: "/test",
+		    data: $('code_editor').val(),
 		    type: "POST",
-		    dataType: "json",
 		    success: function(result) {
 		    	alert(document.getElementById("code_editor").innerHTML);
 		    }
 		});
-
   }
 </script>
 </head>
@@ -98,33 +95,31 @@ width: 50%;
 <div id="lang" class="center">
  <select name="p_language" id="lang_selector">
   	<option name="java" value="" default>Java</option>
-	<option name="js" value="" >Javascript</option>
+	<option name="js" value="">Javascript</option>
  </select>
 </div>
 
+<form action="/test" method ="post" id="usrform" enctype="multipart/form-data">
 <div class="columns  is-desktop center">
-<form action="/timer" method ="post" id="usrform" class="level">
-<div class="column level-left">
-<textarea id="code_editor" cols='100' rows='20' form="usrform"> public static void main(String[] args) {} </textarea>
-</div>
+	<div class="column level-left">
+		<textarea id="code_editor" cols='100' rows='20' form="usrform"> public static void main(String[] args) {} </textarea>
+	</div>
 
-<div class="column level-right">
-	<textarea id="display_result" cols='100' rows='20' disabled> </textarea>
-</div>
-</form>
+	<div class="column level-right">
+		<textarea id="display_result" cols='100' rows='20' disabled> </textarea>
+	</div>
 </div>
 
 <div class="level center">
-<div class="level-item">
-<input type="button" id="run_code" onclick="runCode()" value="run"> 
+	<div class="level-item">
+		<input type="button" id="run_code" onclick="runCode()" value="run" /> 
+	</div>
+	<div class="level-item">
+		<input type="submit" id="submit_code" value="submit" /> 
+	</div>
 </div>
+</form>
 
-<div class="level-item">
-<input type="submit" id="submit_code" onclick="submitCode()" value="submit"> 
-</div>
-</div>
-<!-- Need to get JQuery js lib, and use $.ajax(type: post) -->
-<!--  <button name="run" id="runCode" onclick="runCode();">Run</button>-->
 </div>
 
 </body>
