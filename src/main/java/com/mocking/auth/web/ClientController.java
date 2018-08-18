@@ -35,10 +35,11 @@ public class ClientController {
     }
     @RequestMapping(value = "timer", method = RequestMethod.GET)
     public String getTimer(Model model) {
-        model.addAttribute("mockingClientForm", new Client());
 
         return "timer";
     }
+
+    
 
     //TODO, need to create a web form just like userForm
     @RequestMapping(value = "/mocking/clienttest", method = RequestMethod.POST)

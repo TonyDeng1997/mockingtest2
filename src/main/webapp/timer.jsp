@@ -53,9 +53,24 @@ $('code_editor').val()
 -->
 <script>
 
+
+
   
   function runCode() {
-	  alert(document.getElementById("code_editor").innerHTML);
+	  //alert(document.getElementById("code_editor").innerHTML);
+	  $.ajax({
+		  //change this url
+		    url: url,
+		    data: {
+		        "[[${_csrf.parameterName}]]": "[[${_csrf.token}]]"
+		        },
+		    type: "POST",
+		    dataType: "json",
+		    success: function(result) {
+		    	alert(document.getElementById("code_editor").innerHTML);
+		    }
+		});
+
   }
 </script>
 
@@ -73,11 +88,14 @@ $('code_editor').val()
  </select>
 </div>
 <div style="float: left">
-<textarea id="code_editor" cols='80' rows='60'> public static void main(String[] args) {} </textarea>
+<form action="/timer" method ="post" id="usrform">
+<textarea id="code_editor" cols='80' rows='60' form="usrform"> public static void main(String[] args) {} </textarea>
 <textarea disabled id="display_result" cols='80' rows='60'> </textarea>
+<input type="button" id="myButton" onclick="runCode()" value="run"> 
+</form>
 
 <!-- Need to get JQuery js lib, and use $.ajax(type: post) -->
-<button name="run" id="runCode" onclick="runCode();">Run</button>
+<!--  <button name="run" id="runCode" onclick="runCode();">Run</button>-->
 </div>
 </div>
 </body>
