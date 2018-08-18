@@ -3,12 +3,25 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
 <style>
 p {
   text-align: right;
   font-size: 60px;
   margin-top:0px;
 }
+
+textarea {
+  resize: none;
+}
+
+.center {
+margin: auto;
+width: 50%;
+/*padding: 10px;*/.
+}
+    
 </style>
 
 <script>
@@ -48,14 +61,8 @@ p {
   }, 1000);
   </script>
 
-<!-- Use jquery to send post request the content is the code 
-$('code_editor').val()
--->
 <script>
 
-
-
-  
   function runCode() {
 	  //alert(document.getElementById("code_editor").innerHTML);
 	  $.ajax({
@@ -73,30 +80,47 @@ $('code_editor').val()
 
   }
 </script>
-
 </head>
 <body>
 
 <!-- Use bulma.io css and use flexbox -->
-
 <p id="demo"></p>
-<div id="container" style=" display: inline;">
- <div id="lang">
+
+
+<div id="container">
+
+
+<div id="lang" class="center">
  <select name="p_language" id="lang_selector">
-  <option name="java" value="" default> Java</option>
-	<option name="js" value="" > Javascript</option>
+  	<option name="java" value="" default>Java</option>
+	<option name="js" value="" >Javascript</option>
  </select>
 </div>
-<div style="float: left">
-<form action="/timer" method ="post" id="usrform">
-<textarea id="code_editor" cols='80' rows='60' form="usrform"> public static void main(String[] args) {} </textarea>
-<textarea disabled id="display_result" cols='80' rows='60'> </textarea>
-<input type="button" id="myButton" onclick="runCode()" value="run"> 
-</form>
 
+<div class="columns  is-desktop center">
+<form action="/timer" method ="post" id="usrform" class="level">
+<div class="column level-left">
+<textarea id="code_editor" cols='100' rows='20' form="usrform"> public static void main(String[] args) {} </textarea>
+</div>
+
+<div class="column level-right">
+	<textarea id="display_result" cols='100' rows='20' disabled> </textarea>
+</div>
+</form>
+</div>
+
+<div class="level center">
+<div class="level-item">
+<input type="button" id="run_code" onclick="runCode()" value="run"> 
+</div>
+
+<div class="level-item">
+<input type="submit" id="submit_code" onclick="submitCode()" value="submit"> 
+</div>
+</div>
 <!-- Need to get JQuery js lib, and use $.ajax(type: post) -->
 <!--  <button name="run" id="runCode" onclick="runCode();">Run</button>-->
 </div>
-</div>
+
 </body>
 </html>

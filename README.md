@@ -95,3 +95,6 @@ Master branch is always the most trustable branch.
 ** mvn clean
 ** mvn test
 ** mvn spring-boot:run
+
+## Flyway Integration
+`https://flywaydb.org/getstarted/firststeps/maven`
