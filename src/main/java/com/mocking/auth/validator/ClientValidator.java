@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
+
 import com.mocking.auth.model.Client;
 import com.mocking.auth.service.ClientService;
 
@@ -23,12 +24,12 @@ public class ClientValidator implements Validator  {
 	public void validate(Object target, Errors errors) {
 		// TODO Auto-generated method stub
 		Client config=(Client) target;
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "NotEmpty");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "NotEmpty");
         if (config.getName().length()< 6 || config.getName().length() > 32) {
-            errors.rejectValue("username", "Size.userForm.username");
+            errors.rejectValue("name", "Size.userForm.username");
         }
         if (ClientService.findByClientname(config.getName()) != null) {
-            errors.rejectValue("username", "Duplicate.userForm.username");
+            errors.rejectValue("name", "Duplicate.userForm.username");
         }
 
 

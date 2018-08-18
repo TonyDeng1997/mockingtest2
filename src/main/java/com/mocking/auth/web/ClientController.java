@@ -1,18 +1,6 @@
 package com.mocking.auth.web;
 
 
-import com.mocking.auth.model.Client;
-import com.mocking.auth.model.MockingConfig;
-import com.mocking.auth.model.MockingQuestion;
-import com.mocking.auth.model.User;
-import com.mocking.auth.service.ClientService;
-import com.mocking.auth.service.MockingConfigService;
-import com.mocking.auth.service.MockingQuestionService;
-import com.mocking.auth.service.SecurityService;
-import com.mocking.auth.service.UserService;
-import com.mocking.auth.validator.ClientValidator;
-import com.mocking.auth.validator.MockingQuestionValidator;
-import com.mocking.auth.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +8,10 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import com.mocking.auth.service.ClientService;
+import com.mocking.auth.validator.ClientValidator;
+import com.mocking.auth.model.Client;
+
 
 //https://dzone.com/articles/add-custom-functionality-to-a-spring-data-reposito
 //https://dzone.com/articles/using-spring-mvc%E2%80%99s
@@ -28,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class ClientController {
 
     @Autowired
-    private ClientService ClientnService;
+    private ClientService ClientService;
 
     //TODO finish validator
     @Autowired
@@ -41,6 +33,13 @@ public class ClientController {
 
         return "clienttest";
     }
+    @RequestMapping(value = "timer", method = RequestMethod.GET)
+    public String getTimer(Model model) {
+
+        return "timer";
+    }
+
+    
 
     //TODO, need to create a web form just like userForm
     @RequestMapping(value = "/mocking/clienttest", method = RequestMethod.POST)
