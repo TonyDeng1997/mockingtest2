@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -99,10 +101,12 @@ width: 50%;
  </select>
 </div>
 
-<form action="/test" method ="post" id="usrform" enctype="multipart/form-data">
+<form:form action="/test?${_csrf.parameterName}=${_csrf.token}" modelAttribute="form" method ="post"  enctype="multipart/form-data">
 <div class="columns  is-desktop center">
 	<div class="column level-left">
-		<textarea id="code_editor" cols='100' rows='20' form="usrform"> public static void main(String[] args) {} </textarea>
+	<spring:bind path="source_code">
+		<form:textarea cols='100' rows='20' path="source_code"/> 
+	</spring:bind>
 	</div>
 
 	<div class="column level-right">
@@ -118,7 +122,7 @@ width: 50%;
 		<input type="submit" id="submit_code" value="submit" /> 
 	</div>
 </div>
-</form>
+</form:form>
 
 </div>
 

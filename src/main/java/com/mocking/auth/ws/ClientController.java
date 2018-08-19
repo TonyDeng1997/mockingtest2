@@ -33,11 +33,8 @@ public class ClientController {
 
         return "clienttest";
     }
-    @RequestMapping(value = "timer", method = RequestMethod.GET)
-    public String getTimer(Model model) {
-
-        return "timer";
-    }
+    
+    
 
     
 

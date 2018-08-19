@@ -63,10 +63,14 @@ public class UserController {
         return "welcome";
     }
     
-
+    @RequestMapping(value = "timer", method = RequestMethod.GET)
+    public String getTimer(Model model) {
+    	model.addAttribute("form", new TestForm());
+        return "timer";
+    }
     @RequestMapping(value = {"/test"}, method = RequestMethod.POST)
-    public String test(TestForm form, Model model) {
-    	model.addAttribute("form", form);
-        return "testCodeSubmission";
+    public String test(@ModelAttribute("form") TestForm form,Model model)  {
+    	System.out.println(form.getSource_code());
+        return "redirect:/welcome";
     }
 }
