@@ -6,6 +6,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.UUID;
 
+import javax.swing.JFrame;
+
 public class RunCode {
 	private Path userFolderPath; 
 	private String sourceFilePath;
@@ -111,17 +113,18 @@ public class RunCode {
             System.out.println(codeResult.getException());
 
             printWriter.close();
-            System.exit(0);
+           
+            //System.exit(0);
         }
         catch (IOException e) {
             System.out.println("IOException happened - here's what I know: ");
             e.printStackTrace();
-            System.exit(-1);
+           // System.exit(-1);
         }
         catch (Exception e) {
             System.out.println("Exception happened - here's what I know: ");
             e.printStackTrace();
-            System.exit(-1);
+           // System.exit(-1);
         }
         return null;
 	}

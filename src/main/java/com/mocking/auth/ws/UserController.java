@@ -5,6 +5,8 @@ import com.mocking.auth.model.User;
 import com.mocking.auth.service.SecurityService;
 import com.mocking.auth.service.UserService;
 import com.mocking.auth.validator.UserValidator;
+import util.RunCode;
+import util.SourceCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -71,6 +73,13 @@ public class UserController {
     @RequestMapping(value = {"/test"}, method = RequestMethod.POST)
     public String test(@ModelAttribute("form") TestForm form,Model model)  {
     	System.out.println(form.getSource_code());
+    	
+    	SourceCode UserCode=new SourceCode("hello",form.getSource_code(),"java");
+    	RunCode TheProcess=new RunCode(UserCode);
+    	TheProcess.executeCode();
+    	System.out.println("done");
+    	
+    	
         return "redirect:/welcome";
     }
 }
