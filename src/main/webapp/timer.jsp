@@ -72,17 +72,7 @@ width: 50%;
    
 <script>
 
-  function runCode() {
-	  $.ajax({
-		  //change this url
-		    url: "/test",
-		    data: $('code_editor').val(),
-		    type: "POST",
-		    success: function(result) {
-		    	alert(document.getElementById("code_editor").innerHTML);
-		    }
-		});
-  }
+
 </script>
 </head>
 <body>
@@ -105,12 +95,12 @@ width: 50%;
 <div class="columns  is-desktop center">
 	<div class="column level-left">
 	<spring:bind path="source_code">
-		<form:textarea cols='100' rows='20' path="source_code"/> 
+		<form:textarea cols='100' rows='20' path="source_code" value="hello" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"></form:textarea>> 
 	</spring:bind>
 	</div>
 
 	<div class="column level-right">
-		<textarea id="display_result" cols='100' rows='20' disabled> </textarea>
+		<textarea id="display_result" cols='100' rows='20' disabled >${feedback}</textarea>
 	</div>
 </div>
 
