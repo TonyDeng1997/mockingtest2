@@ -120,7 +120,7 @@ body {
 <div class="columns  is-desktop center">
 	<div class="column level-left">
 	<spring:bind path="source_code">
-	<div id="editor"></div>
+	
 		<!--<form:textarea cols='100' rows='20' path="source_code" value="hello" id ="editor" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"></form:textarea>>-->
 		<form:textarea cols='100' rows='20' path="source_code" value="hello" id="code" style="display: none;" ></form:textarea>
 	
@@ -128,7 +128,7 @@ body {
 	</div>
 
 	<div class="column level-right">
-		<textarea id="display_result" cols='100' rows='20' disabled id="feedback" >${feedback}</textarea>
+		<textarea id="display_result" cols='100' rows='20' disabled id="feedback" style="display: none;">${feedback}</textarea>
 	</div>
 </div>
 
