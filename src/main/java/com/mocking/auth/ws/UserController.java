@@ -12,6 +12,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
@@ -86,12 +87,12 @@ public class UserController {
     	
     	SourceCode UserCode=new SourceCode("hello",form.getSource_code(),"java");
     	RunCode TheProcess=new RunCode(UserCode);
-    	TheProcess.executeCode();
+    	Path hello = TheProcess.executeCode();
     	Map<String, Object> params = new HashMap<>();
     	FileReader fr;
 		try {
 			String data = "";
-		    data = new String(Files.readAllBytes(Paths.get("log.txt")));
+		    data = new String(Files.readAllBytes(Paths.get(hello+"/"+"log.txt")));
 		    System.out.println(data);
 		    
 		    params.put("feedback", data);

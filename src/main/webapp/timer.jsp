@@ -52,43 +52,7 @@ body {
     }
 </style>
 
-<script>
-  // Set the date we're counting down to
 
-  var testTime= 1;
-  var testends=0;
-  if(testends == 0){
-    testends=new Date().getTime()+testTime*60000;
-  }
-  
-  // Update the count down every 1 second
-  var x = setInterval(function() {
-  
-      // Get todays date and time
-      var now = new Date().getTime();
-      
-      // Find the distance between now and the count down date
-      var distance = testends - now;
-      
-      // Time calculations for days, hours, minutes and seconds
-     
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      
-      // Output the result in an element with id="demo"
-      document.getElementById("demo").innerHTML =hours + "h "
-      + minutes + "m " + seconds + "s ";
-      
-      // If the count down is over, write some text 
-      if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("demo").innerHTML = "EXPIRED";
-          document.getElementById("code_editor").disabled=true;
-          editor.setReadOnly(true);
-      }
-  }, 1000);
-  </script>
 
    <sec:csrfMetaTags/>
    
@@ -110,6 +74,7 @@ body {
  <select name="p_language" id="lang_selector">
   	<option name="java" value="" default>Java</option>
 	<option name="js" value="">Javascript</option>
+	<option name="python" value="">Javascript</option>
  </select>
 </div>
 
@@ -160,10 +125,45 @@ body {
     editor2.setValue(document.getElementById("feedback").innerHTML);
     function myFunction() {
     	document.getElementById("code").innerHTML = editor.getValue();
-    	editor2.setValue(document.getElementById("feedback").innerHTML);
     }
     
     
 </script>
+<script>
+  // Set the date we're counting down to
+
+  var testTime= 1;
+  var testends=0;
+  if(testends == 0){
+    testends=new Date().getTime()+testTime*60000;
+  }
+  
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+  
+      // Get todays date and time
+      var now = new Date().getTime();
+      
+      // Find the distance between now and the count down date
+      var distance = testends - now;
+      
+      // Time calculations for days, hours, minutes and seconds
+     
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML =hours + "h "
+      + minutes + "m " + seconds + "s ";
+      
+      // If the count down is over, write some text 
+      if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+          editor.setReadOnly(true);
+      }
+  }, 1000);
+  </script>
 </body>
 </html>

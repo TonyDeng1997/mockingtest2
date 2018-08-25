@@ -50,9 +50,50 @@ public class RunCode {
           fileWriter.write(sourceCode.getCode());
           fileWriter.close();
 	}
+	private void generatelog() throws IOException  {
+		String s=null;
+		Process p = builder.start();
+		
+	       
+        CodeResult codeResult = new CodeResult();
+        System.out.println(userFolderPath);
+        PrintWriter printWriter = new PrintWriter(userFolderPath+"/"+"log.txt");
+
+        BufferedReader stdInput = new BufferedReader(new
+                InputStreamReader(p.getInputStream()));
+
+        BufferedReader stdError = new BufferedReader(new 
+             InputStreamReader(p.getErrorStream()));
+
+        // read the output from the command
+        System.out.println("Here is the standard output of the command:\n");
+        printWriter.println("printWrite: Here is the standard output of the command:\n");
+        StringBuilder output = new StringBuilder();
+        while ((s = stdInput.readLine()) != null) {
+            printWriter.println(s);
+            output.append(s);
+            output.append(System.getProperty("line.separator"));
+        }
+        codeResult.setStdout(output.toString());
+        System.out.println(codeResult.getStdout());
+
+        // read any errors from the attempted command
+        System.out.println("Here is the standard error of the command (if any):\n");
+        printWriter.println("printWrite: Here is the standard error of the command (if any):\n");
+        StringBuilder error = new StringBuilder();
+        while ((s = stdError.readLine()) != null) {
+            printWriter.println(s);
+            error.append(s);
+            error.append(System.getProperty("line.separator"));
+        }
+        codeResult.setException(error.toString());
+        System.out.println(codeResult.getException());
+
+        printWriter.close();
+		
+	}
 	
-	public CodeResult executeCode()  {
-		String s = null;
+	public Path executeCode()  {
 		
         try {
             System.out.println("Java Home: " + System.getProperty("java.home") + "bin/java");
@@ -75,7 +116,8 @@ public class RunCode {
             } else {
                 builder.command("/bin/sh", "-c", "python " + sourceFilePath.toString());
             }
-
+            generatelog();
+            /*
             Process p = builder.start();
        
             CodeResult codeResult = new CodeResult();
@@ -115,6 +157,8 @@ public class RunCode {
             printWriter.close();
            
             //System.exit(0);
+             
+             */
         }
         catch (IOException e) {
             System.out.println("IOException happened - here's what I know: ");
@@ -126,7 +170,7 @@ public class RunCode {
             e.printStackTrace();
            // System.exit(-1);
         }
-        return null;
+        return userFolderPath;
 	}
 
     public static String readFileAsString(String fileName) throws Exception {
