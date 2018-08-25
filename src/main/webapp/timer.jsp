@@ -70,11 +70,11 @@ body {
 <div id="container">
 
 
-<div id="lang" class="center">
- <select name="p_language" id="lang_selector">
-  	<option name="java" value="" default>Java</option>
-	<option name="js" value="">Javascript</option>
-	<option name="python" value="">Javascript</option>
+<div id="lang" class="center" >
+ <select name="p_language" id="lang_selector"  onchange="changefunction()">
+  	<option name="java" value="java" default>Java</option>
+	<option name="js" value="javascript">Javascript</option>
+	<option name="python" value="python">python</option>
  </select>
 </div>
 
@@ -126,7 +126,11 @@ body {
     function myFunction() {
     	document.getElementById("code").innerHTML = editor.getValue();
     }
-    
+    function changefunction() {
+        var x = document.getElementById("lang_selector").value;
+        editor.setValue(x);
+        editor.session.setMode("ace/mode/"+x);
+    }
     
 </script>
 <script>
