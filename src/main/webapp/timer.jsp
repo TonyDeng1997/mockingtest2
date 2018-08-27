@@ -29,8 +29,110 @@ margin: auto;
 width: 50%;
 /*padding: 10px;*/.
 }
+
+body {
+        overflow: hidden;
+    }
+
+    #editor {
+       position: relative !important;
+       border: 1px solid lightgray;
+       margin: auto;
+       height: 300px;
+       width: 80%;
+       
+    }
+    #editor2 {
+       position: relative !important;
+       border: 1px solid lightgray;
+       margin: auto;
+       height: 300px;
+       width: 80%;
+       
+    }
 </style>
 
+
+
+   <sec:csrfMetaTags/>
+   
+<script>
+
+
+</script>
+</head>
+<body>
+
+<!-- Use bulma.io css and use flexbox -->
+<p id="demo"></p>
+
+
+<div id="container">
+
+
+<div id="lang" class="center" >
+ <select name="p_language" id="lang_selector"  onchange="changefunction()">
+  	<option name="java" value="java" default>Java</option>
+	<option name="js" value="javascript">Javascript</option>
+	<option name="python" value="python">python</option>
+ </select>
+</div>
+
+<div id="editor"></div>
+<div id="editor2">${feedback}</div>
+
+<form:form action="/test?${_csrf.parameterName}=${_csrf.token}" modelAttribute="form" method ="post"  enctype="multipart/form-data">
+<div class="columns  is-desktop center">
+	<div class="column level-left">
+	<spring:bind path="source_code">
+	
+		<!--<form:textarea cols='100' rows='20' path="source_code" value="hello" id ="editor" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"></form:textarea>>-->
+		<form:textarea cols='100' rows='20' path="source_code" value="hello" id="code" style="display: none;" ></form:textarea>
+	
+	</spring:bind>
+	</div>
+
+	<div class="column level-right">
+		<textarea id="display_result" cols='100' rows='20' disabled id="feedback" style="display: none;">${feedback}</textarea>
+	</div>
+</div>
+
+<div class="level center">
+	<div class="level-item">
+		<input type="button" id="run_code" onclick="runCode()" value="run" /> 
+	</div>
+	<div class="level-item">
+		<input type="submit" id="submit_code" value="submit" onclick="myFunction()"/> 
+	</div>
+</div>
+</form:form>
+
+</div>
+<script src="/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/twilight");
+    editor.session.setMode("ace/mode/javascript");
+    editor.resize();
+    editor.setValue("the new text here");
+    var myElement = document.getElementById("intro");
+   
+    var editor2=ace.edit("editor2");
+    editor2.setTheme("ace/theme/twilight");
+    editor2.session.setMode("ace/mode/javascript");
+    editor2.resize();
+    editor2.setReadOnly(true);  // false to make it editable
+    editor2.setValue(document.getElementById("feedback").innerHTML);
+    function myFunction() {
+    	document.getElementById("code").innerHTML = editor.getValue();
+    }
+    function changefunction() {
+        var x = document.getElementById("lang_selector").value;
+        editor.setValue(x);
+        editor.session.setMode("ace/mode/"+x);
+    }
+    
+</script>
 <script>
   // Set the date we're counting down to
 
@@ -63,58 +165,9 @@ width: 50%;
       if (distance < 0) {
           clearInterval(x);
           document.getElementById("demo").innerHTML = "EXPIRED";
-          document.getElementById("code_editor").disabled=true;
+          editor.setReadOnly(true);
       }
   }, 1000);
   </script>
-
-   <sec:csrfMetaTags/>
-   
-<script>
-
-
-</script>
-</head>
-<body>
-
-<!-- Use bulma.io css and use flexbox -->
-<p id="demo"></p>
-
-
-<div id="container">
-
-
-<div id="lang" class="center">
- <select name="p_language" id="lang_selector">
-  	<option name="java" value="" default>Java</option>
-	<option name="js" value="">Javascript</option>
- </select>
-</div>
-
-<form:form action="/test?${_csrf.parameterName}=${_csrf.token}" modelAttribute="form" method ="post"  enctype="multipart/form-data">
-<div class="columns  is-desktop center">
-	<div class="column level-left">
-	<spring:bind path="source_code">
-		<form:textarea cols='100' rows='20' path="source_code" value="hello" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"></form:textarea>> 
-	</spring:bind>
-	</div>
-
-	<div class="column level-right">
-		<textarea id="display_result" cols='100' rows='20' disabled >${feedback}</textarea>
-	</div>
-</div>
-
-<div class="level center">
-	<div class="level-item">
-		<input type="button" id="run_code" onclick="runCode()" value="run" /> 
-	</div>
-	<div class="level-item">
-		<input type="submit" id="submit_code" value="submit" /> 
-	</div>
-</div>
-</form:form>
-
-</div>
-
 </body>
 </html>
