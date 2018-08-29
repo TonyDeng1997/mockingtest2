@@ -112,14 +112,14 @@ body {
 <script>
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/twilight");
-    editor.session.setMode("ace/mode/javascript");
+    editor.session.setMode("ace/mode/java");
     editor.resize();
     editor.setValue("the new text here");
     var myElement = document.getElementById("intro");
    
     var editor2=ace.edit("editor2");
     editor2.setTheme("ace/theme/twilight");
-    editor2.session.setMode("ace/mode/javascript");
+ //   editor2.session.setMode("ace/mode/javascript");
     editor2.resize();
     editor2.setReadOnly(true);  // false to make it editable
     editor2.setValue(document.getElementById("feedback").innerHTML);
