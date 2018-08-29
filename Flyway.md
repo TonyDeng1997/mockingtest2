@@ -34,3 +34,7 @@ Then do the following in bash,
 
 
 After the above second command, it will create the words database with all the tables and data.
+
+* From maven we should run the following,
+
+$ mvn flyway:migrate
