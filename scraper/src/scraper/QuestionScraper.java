@@ -6,14 +6,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.jsoup.Connection.Method;
+import org.jsoup.Connection.Response;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+/*Let us see if you we can use this file in the future for scrapping other sites.
+ * 
+ * For now, we do not need this.
+ * */
 public class QuestionScraper {
 
-	final static private String baseUrl = "https://leetcode.com/problemset/all/";
 	private List<Question> list;
 	private Map<Long, String> map;
 	
@@ -21,7 +26,7 @@ public class QuestionScraper {
 	}
 	
 	
-	//TODO
+	
 	HashMap<Long, String> constructTable() {
 		HashMap<Long, String> map = new HashMap<>();
 		 // Read https://leetcode.com/problemset/all/
@@ -77,8 +82,18 @@ public class QuestionScraper {
 		return q;
 	}
 	
+	final static private String baseUrl = "https://leetcode.com//problemset//all//";
 	static void scrapQuestionTable(String url) throws IOException {
+		/*
+		Response res  = Jsoup.connect(java.net.URLEncoder.encode(url)).data("loginField", "xlics05@yahoo.com")
+			    .data("passwordField", "welcome05")
+			    .method(Method.GET)
+			    .execute();
+		
+		Document doc = res.parse();
+			    */
 		Document doc = Jsoup.connect(url).get();
+		
 		System.out.println(doc.html());
 	}
 	

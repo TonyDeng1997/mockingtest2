@@ -1,7 +1,7 @@
 package scraper;
 
 public class Question {
-	private Long questionId;
+
 	private String questionName;
 	private String descriptionUrl;
 	private double acceptance;
