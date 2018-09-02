@@ -13,6 +13,7 @@ import org.jsoup.select.Elements;
 
 public class QuestionScraper {
 
+	final static private String baseUrl = "https://leetcode.com/problemset/all/";
 	private List<Question> list;
 	private Map<Long, String> map;
 	
@@ -76,14 +77,17 @@ public class QuestionScraper {
 		return q;
 	}
 	
+	static void scrapQuestionTable(String url) throws IOException {
+		Document doc = Jsoup.connect(url).get();
+		System.out.println(doc.html());
+	}
+	
+	
 	public static void main(String[] args) throws IOException {
 		//"https://leetcode.com/problems/two-sum/description/"
 		QuestionScraper obj = new QuestionScraper();
 		
-		String title = "Add Two numbers";
-		String baseUrl = "https://leetcode.com/problems/";
-		//regular expression
-		System.out.println(baseUrl+ title.toLowerCase().replaceAll("\\s+", "-")+"/description/");
-		
+		scrapQuestionTable(baseUrl);
+				
 	}
 }
