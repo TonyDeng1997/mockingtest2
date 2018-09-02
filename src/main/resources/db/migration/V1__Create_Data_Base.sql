@@ -1,4 +1,4 @@
-create database mockingtest;
+
 
 CREATE TABLE question_data (
 id int auto_increment,

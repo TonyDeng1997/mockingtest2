@@ -81,10 +81,10 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>5.1.4</version>
  				<configuration> 
- 				<url>jdbc:mysql://localhost:3306/flyway_schema</url> 
- 				<user>root</user> 
- 				<password>123456</password> 
- 				<basedir>db/migrations</basedir> 
+		  	<url>jdbc:mysql://localhost:3306/mockingtest?useSSL=false</url> 
+				<user>root</user> 
+ 			<password>denghanfei</password> 
+ 				<basedir>db/migration</basedir> 
 				</configuration> 
  			</plugin> 
 

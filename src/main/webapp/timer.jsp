@@ -6,10 +6,18 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+<link rel=stylesheet href="/doc/docs.css">
+
+<link rel="stylesheet" href="/lib/codemirror.css">
+<link rel="stylesheet" href="/addon/hint/show-hint.css">
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+<script src="/lib/codemirror.js"></script>
+<script src="/addon/hint/show-hint.js"></script>
+<script src="/addon/hint/anyword-hint.js"></script>
+<script src="/mode/javascript/javascript.js"></script>
 
 
 
@@ -78,24 +86,26 @@ body {
  </select>
 </div>
 
-<div id="editor"></div>
-<div id="editor2">${feedback}</div>
+<!--<div id="editor"></div>-->
+<!--   <div id="editor2">${feedback}</div>-->
+
+
 
 <form:form action="/test?${_csrf.parameterName}=${_csrf.token}" modelAttribute="form" method ="post"  enctype="multipart/form-data">
-<div class="columns  is-desktop center">
+<!--  <div class="columns  is-desktop center">-->
 	<div class="column level-left">
 	<spring:bind path="source_code">
 	
 		<!--<form:textarea cols='100' rows='20' path="source_code" value="hello" id ="editor" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"></form:textarea>>-->
-		<form:textarea cols='100' rows='20' path="source_code" value="hello" id="code" style="display: none;" ></form:textarea>
+		<form:textarea cols='100' rows='20' path="source_code" value="hello" id="code" name="code"  ></form:textarea>
 	
 	</spring:bind>
 	</div>
 
 	<div class="column level-right">
-		<textarea id="display_result" cols='100' rows='20' disabled id="feedback" style="display: none;">${feedback}</textarea>
+		<textarea id="display_result" cols='100' rows='20' disabled id="feedback" >${feedback}</textarea>
 	</div>
-</div>
+<!--   </div>-->
 
 <div class="level center">
 	<div class="level-item">
@@ -111,14 +121,14 @@ body {
 <script src="/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/twilight");
+    editor.setTheme("ace/theme/chrome");
     editor.session.setMode("ace/mode/java");
     editor.resize();
     editor.setValue("the new text here");
     var myElement = document.getElementById("intro");
    
     var editor2=ace.edit("editor2");
-    editor2.setTheme("ace/theme/twilight");
+    editor2.setTheme("ace/theme/chrome");
  //   editor2.session.setMode("ace/mode/javascript");
     editor2.resize();
     editor2.setReadOnly(true);  // false to make it editable
@@ -169,5 +179,14 @@ body {
       }
   }, 1000);
   </script>
+  <script>
+      CodeMirror.commands.autocomplete = function(cm) {
+        cm.showHint({hint: CodeMirror.hint.anyword});
+      }
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        extraKeys: {"Ctrl-Space": "autocomplete"}
+      });
+    </script>
 </body>
 </html>
