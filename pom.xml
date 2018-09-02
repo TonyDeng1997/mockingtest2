@@ -37,8 +37,8 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<!-- <scope>runtime</scope> -->
-			<!-- <version>8.0.11</version> -->
-			 <version>5.1.46</version>
+			<!--  <version>8.0.11</version>-->
+			<version>5.1.46</version>
 		</dependency>
 		
 		<dependency>
@@ -82,8 +82,8 @@
                 <version>5.1.4</version>
  				<configuration> 
 		  	<url>jdbc:mysql://localhost:3306/mockingtest?useSSL=false</url> 
-				<user>root</user> 
- 			<password>denghanfei</password> 
+				<user>mockingtest</user> 
+ 				<password>mockingtest</password> 
  				<basedir>db/migration</basedir> 
 				</configuration> 
  			</plugin> 

@@ -1,9 +1,12 @@
 package scraper;
 
 public class Question {
-	private Long questionId;
+
 	private String questionName;
-	private String url;
+	private String descriptionUrl;
+	private double acceptance;
+	private Difficulty difficulty;
+	private String articleUrl;
 	private String questionContent;
 	
 	/**

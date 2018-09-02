@@ -98,3 +98,18 @@ Master branch is always the most trustable branch.
 
 ## Flyway Integration
 `https://flywaydb.org/getstarted/firststeps/maven`
+
+## Create a db user for development
+Throughtout the whole project, developer is going to connect to their own local db but in the configuration file
+we have to change the user password and user name all the time, so for the convinience, we decided to set a dummy user account
+called `mockingtest`, password: `mockingtest`. The following script will help you create such db user in your 
+local db, and grant permissiosn.
+
+`
+CREATE USER 'mockingtest'@'localhost' IDENTIFIED BY 'mockingtest';
+`
+
+`
+GRANT ALL PRIVILEGES ON * . * TO 'mockingtest'@'localhost';
+`
+ref: https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
