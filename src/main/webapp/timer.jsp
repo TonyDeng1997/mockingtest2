@@ -6,7 +6,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-<link rel=stylesheet href="resources/doc/docs.css">
+<link rel=stylesheet href="resources/resources/code-mirror-5.40.0/doc/docs.css">
 
 <link rel="stylesheet" href="resources/code-mirror-5.40.0/lib/codemirror.css">
 <link rel="stylesheet" href="resources/code-mirror-5.40.0/addon/hint/show-hint.css">
