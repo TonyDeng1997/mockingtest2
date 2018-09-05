@@ -5,7 +5,7 @@ public class Question {
 	private String questionName;
 	private String descriptionUrl;
 	private double acceptance;
-	private Difficulty difficulty;
+	private String difficulty;
 	private String articleUrl;
 	private String questionContent;
 	
@@ -36,6 +36,26 @@ public class Question {
 	 */
 	public void setQuestionContent(String questionContent) {
 		this.questionContent = questionContent;
+	}
+
+
+	public double getAcceptance() {
+		return acceptance;
+	}
+
+
+	public void setAcceptance(double acceptance) {
+		this.acceptance = acceptance;
+	}
+
+
+	public String getDifficulty() {
+		return difficulty;
+	}
+
+
+	public void setDifficulty(String difficulty) {
+		this.difficulty = difficulty;
 	}
 
 }
