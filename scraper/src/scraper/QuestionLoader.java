@@ -12,7 +12,7 @@ import java.util.List;
  * 
  * For now, we do not need this.
  * */
-public class Questionloader {
+public class QuestionLoader {
 
 	public static List<Question> load(String filePath) throws IOException {
 		File file = new File(filePath);
