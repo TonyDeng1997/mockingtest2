@@ -1777,8 +1777,7 @@ All Possible Full Binary Trees    		64.5%	Medium
 895	
 Maximum Frequency Stack    		49.2%	Hard	
 896	
-Monotonic Array    New
-64.5%	Easy	
+Monotonic Array   64.5%	Easy	
 897	
 Increasing Order Search Tree 51.3%	Easy	
 898	

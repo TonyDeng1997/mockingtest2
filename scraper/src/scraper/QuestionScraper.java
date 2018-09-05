@@ -60,7 +60,6 @@ public class QuestionScraper {
 		return list;
 	}
 	
-	
 	static Question scrap(String url) throws IOException {
 		Document doc = Jsoup.connect(url).get();
 		Question q = new Question();
