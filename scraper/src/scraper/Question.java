@@ -1,11 +1,14 @@
 package scraper;
 
-
-
 public class Question {
-
-	
 	private Long questionId;
+	private String questionName;
+	private String descriptionUrl;
+	private double acceptance;
+	private String difficulty;
+	private String articleUrl;
+	private String questionContent;
+	
 	/**
 	 * @return the questionId
 	 */
@@ -13,6 +16,9 @@ public class Question {
 		return questionId;
 	}
 
+	enum Difficulty {
+		EASY, MEDIUM, HARD
+	}
 
 	/**
 	 * @param questionId the questionId to set
@@ -21,16 +27,12 @@ public class Question {
 		this.questionId = questionId;
 	}
 
-
-	private String questionName;
-	private String descriptionUrl;
 	/**
 	 * @return the descriptionUrl
 	 */
 	public String getDescriptionUrl() {
 		return descriptionUrl;
 	}
-
 
 	/**
 	 * @param descriptionUrl the descriptionUrl to set
@@ -39,14 +41,12 @@ public class Question {
 		this.descriptionUrl = descriptionUrl;
 	}
 
-
 	/**
 	 * @return the articleUrl
 	 */
 	public String getArticleUrl() {
 		return articleUrl;
 	}
-
 
 	/**
 	 * @param articleUrl the articleUrl to set
@@ -55,19 +55,12 @@ public class Question {
 		this.articleUrl = articleUrl;
 	}
 
-
-	private double acceptance;
-	private String difficulty;
-	private String articleUrl;
-	private String questionContent;
-	
 	/**
 	 * @return the questionName
 	 */
 	public String getQuestionName() {
 		return questionName;
 	}
-
 
 	/**
 	 * @param questionName the questionName to set
@@ -90,24 +83,19 @@ public class Question {
 		this.questionContent = questionContent;
 	}
 
-
 	public double getAcceptance() {
 		return acceptance;
 	}
-
 
 	public void setAcceptance(double acceptance) {
 		this.acceptance = acceptance;
 	}
 
-
 	public String getDifficulty() {
 		return difficulty;
 	}
 
-
 	public void setDifficulty(String difficulty) {
 		this.difficulty = difficulty;
 	}
-
 }
