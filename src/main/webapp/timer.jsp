@@ -6,18 +6,18 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-<link rel=stylesheet href="/doc/docs.css">
+<link rel=stylesheet href="resources/resources/code-mirror-5.40.0/doc/docs.css">
 
-<link rel="stylesheet" href="/lib/codemirror.css">
-<link rel="stylesheet" href="/addon/hint/show-hint.css">
+<link rel="stylesheet" href="resources/code-mirror-5.40.0/lib/codemirror.css">
+<link rel="stylesheet" href="resources/code-mirror-5.40.0/addon/hint/show-hint.css">
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-<script src="/lib/codemirror.js"></script>
-<script src="/addon/hint/show-hint.js"></script>
-<script src="/addon/hint/anyword-hint.js"></script>
-<script src="/mode/javascript/javascript.js"></script>
+<script src="resources/code-mirror-5.40.0/lib/codemirror.js"></script>
+<script src="resources/code-mirror-5.40.0/addon/hint/show-hint.js"></script>
+<script src="resources/code-mirror-5.40.0/addon/hint/anyword-hint.js"></script>
+<script src="resources/code-mirror-5.40.0/mode/javascript/javascript.js"></script>
 
 
 
