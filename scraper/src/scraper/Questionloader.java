@@ -27,7 +27,7 @@ public class Questionloader {
 	
 	
 	
-	public static List<Question> main(String[] args) throws IOException {
+	public static List<Question> load() throws IOException {
 		File file = new File("test.txt");
 		FileReader fileReader = new FileReader(file);
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -58,9 +58,16 @@ public class Questionloader {
 			}
 			
 		}
+		//System.out.println(questionlist.get(1).getDifficulty());
+		//System.out.println(questionlist.get(1).getQuestionName());
+		//System.out.println(questionlist.get(1).getAcceptance());
 		fileReader.close();
 		return questionlist;
 				
+	}
+	public static void main(String[] args) throws IOException {
+		load();
+		
 	}
 }
 
