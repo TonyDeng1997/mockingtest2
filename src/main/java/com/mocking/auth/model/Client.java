@@ -2,7 +2,7 @@ package com.mocking.auth.model;
 
 import javax.persistence.*;
 
-
+/*@author feifei*/
 
 @Entity
 @Table(name = "client")
@@ -19,7 +19,6 @@ public class Client {
 	 private String address2;
 	 private String zip_code;
 	 
-	
 	 public Client(String name, String email, String type, String address1, String address2, String zip_code) {
 			this.name = name;
 			this.email = email;
@@ -28,7 +27,6 @@ public class Client {
 			this.address2 = address2;
 			this.zip_code = zip_code;
 		}
-	 
 	 
 	 public Client() {
 		// TODO Auto-generated constructor stub
@@ -94,7 +92,3 @@ public class Client {
 		this.zip_code = zip_code;
 	}  
 }
-    
-
-    
-

@@ -1,6 +1,6 @@
 package com.mocking.auth.ws;
 
-
+/*@author xiaofeng*/
 import com.mocking.auth.model.MockingConfig;
 import com.mocking.auth.model.User;
 import com.mocking.auth.service.MockingConfigService;
