@@ -8,11 +8,8 @@ import javax.persistence.*;
 @Table(name = "client")
 public class Client {
 
-
 	 private long id;
-
-
-	private String name;
+	 private String name;
 	 private String email;
 	 private String type;
 	 private String address1;
