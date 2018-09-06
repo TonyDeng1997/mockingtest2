@@ -41,7 +41,7 @@ public class QuestionScanner {
 		return;
 	}
 	
-	private static String scrap(String url) throws IOException {
+	protected static String scrap(String url) throws IOException {
 		Document doc = Jsoup.connect(url).get();
 		Question q = new Question();
 		String title = doc.title();
