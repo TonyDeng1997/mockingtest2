@@ -1,15 +1,12 @@
 package com.mocking.auth.repository;
-
 import java.util.List;
-
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-
 import com.mocking.auth.model.MockingConfig;
 import com.mocking.auth.model.MockingQuestion;
 
+/*@author feifei*/
 
 public interface MockingQuestionDao extends JpaRepository<MockingQuestion, Long> {
 

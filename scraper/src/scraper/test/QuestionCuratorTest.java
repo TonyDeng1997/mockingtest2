@@ -11,7 +11,7 @@ public class QuestionCuratorTest {
 
 	@Test
 	public void test() throws IOException {
-		List<Question>  list = QuestionCurator.load("D:\\fe_project\\mockingtest2\\scraper\\src\\scraper\\lt_code_data.txt",  "", false);
+		List<Question>  list = QuestionCurator.preprocess("D:\\fe_project\\mockingtest2\\scraper\\src\\scraper\\lt_code_data.txt",  "", false);
 		Assert.assertTrue(list.size()>0);
 	}
 }
