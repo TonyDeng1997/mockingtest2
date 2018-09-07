@@ -64,6 +64,6 @@ public class QuestionCurator {
 	}
 
 	public static void main(String[] args) throws IOException {
-		QuestionCurator.load("D:\\fe_project\\mockingtest2\\scraper\\src\\scraper\\lt_code_data.txt", "D:\\fe_project\\mockingtest2\\scraper\\src\\scraper\\formattedInitialData.txt", true);
+		QuestionCurator.load("/Users/TonyDeng/Desktop/mockingtestold/scraper/src/scraper/lt_code_data.txt", "/Users/TonyDeng/Desktop/mockingtestold/scraper/src/scraper/formattedInitialData.txt", true);
 	}
 }
