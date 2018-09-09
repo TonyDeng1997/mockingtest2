@@ -3,7 +3,7 @@
 CREATE TABLE question_data (
 id int auto_increment,
 title varchar(255) not null,
-acceptance_rate decimal null,
+acceptance_rate decimal(30,29) null,
 difficulty varchar(255) not null,
 description text not null,
 article text null,

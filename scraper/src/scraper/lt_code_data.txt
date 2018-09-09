@@ -233,9 +233,9 @@ Populating Next Right Pointers in Each Node    		36.7%	Medium
 117	
 Populating Next Right Pointers in Each Node II    		33.6%	Medium	
 118	
-Pascal's Triangle    		41.8%	Easy	
+Pascal\'s Triangle    		41.8%	Easy	
 119	
-Pascal's Triangle II    		39.7%	Easy	
+Pascal\'s Triangle II    		39.7%	Easy	
 120	
 Triangle    		36.2%	Medium	
 121	
@@ -1779,7 +1779,7 @@ Maximum Frequency Stack    		49.2%	Hard
 896	
 Monotonic Array   64.5%	Easy	
 897	
-Increasing Order Search Tree 51.3%	Easy	
+Increasing Order Search Tree  51.3%	Easy	
 898	
 Bitwise ORs of Subarrays    9.6%	Medium	
 899	

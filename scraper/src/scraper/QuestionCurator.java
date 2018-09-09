@@ -3,6 +3,7 @@ package scraper;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.apache.commons.io.FileUtils;
 
@@ -34,6 +35,7 @@ public class QuestionCurator {
 		
 		// Only get the even number lines
 		int x=0;
+		String[] finals;
 		Long questionId = 0L;
 		List<Question> questionlist = new ArrayList<Question>();
 		for (String line : contents) {
@@ -42,7 +44,7 @@ public class QuestionCurator {
 				
 				// TODO remove this when it is done
 				//System.out.println(line);
-				
+				finals=line.split("\\s{2,}");
 				String[] entry = line.split("\\d+\\.\\d+%");
 				Question newquestion=new Question();
 				// Get id to check if we curated the data correctly
@@ -55,9 +57,17 @@ public class QuestionCurator {
 				newquestion.setDescriptionUrl(descriptionUrl);
 				String articleUrl = "";
 				newquestion.setArticleUrl(articleUrl);
-				double acceptance_rate = Float.parseFloat(line.replaceAll("[^\\d+\\.\\d+]",""))/100;
+				//double acceptance_rate = Float.parseFloat(line.replaceAll("[^\\d+\\.\\d+]",""))/100;
+				//System.out.println(line);
+				//System.out.println(line.replaceAll("[^\\d+\\.\\d+]",""));
+				//newquestion.setAcceptance(acceptance_rate);
+				System.out.println(Arrays.toString(finals));
+				double acceptance_rate=Float.parseFloat(finals[1].trim().split("\\s")[0].split("%")[0])/100;
 				newquestion.setAcceptance(acceptance_rate);
 				
+				//String hello="hello3ooo 34.5% sd3d";
+				System.out.println(acceptance_rate);
+				//System.out.println(hello.replaceAll("[^\\d+\\.\\d+]",""));
 				// Be careful of the following call
 				/*
 				String content = QuestionScanner.scrap(descriptionUrl);
@@ -89,7 +99,7 @@ public class QuestionCurator {
 			FileUtils.writeStringToFile(outputFile, sb.toString(),"UTF8");
 
 			// write to sql
-			File sql_output_file = new File("E:\\mockingtest2\\src\\main\\resources\\db\\migration\\ V1__Question__Data.sql");
+			File sql_output_file = new File("/Users/TonyDeng/Desktop/mockingtestold/src/main/resources/db/migration/V2__QuestionData.sql");
 			
 			FileUtils.writeStringToFile(sql_output_file, sql_builder.toString(),"UTF8");
 			System.out.println("Done!");
@@ -101,7 +111,9 @@ public class QuestionCurator {
 	
 	
 	public static void main(String[] args) throws IOException {
-		QuestionCurator.preprocess("e:\\mockingtest2\\scraper\\src\\scraper\\lt_code_data.txt", 
-				"e:\\mockingtest2\\scraper\\src\\scraper\\formattedInitialData.txt", true);
+
+		QuestionCurator.preprocess("/Users/TonyDeng/Desktop/mockingtestold/scraper/src/scraper/lt_code_data.txt", 
+				"/Users/TonyDeng/Desktop/mockingtestold/scraper/src/scraper/formattedInitialData.txt", true);
+
 	}
 }

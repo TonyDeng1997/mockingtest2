@@ -110,3 +110,4 @@ mysql> show tables;
 
 mysql>
 </pre>
+[How to name a flyway file](https://flywaydb.org/documentation/migrations#naming)
