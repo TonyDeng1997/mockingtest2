@@ -106,7 +106,7 @@ called `mockingtest`, password: `mockingtest`. The following script will help yo
 local db, and grant permissiosn.
 
 `
-CREATE USER 'mockingtest'@'localhost' IDENTIFIED BY 'mockingtest';
+CREATE USER 'mockingtest'@'localhost' IDENTIFIED BY '!LetUsUseThis2018';
 `
 
 `
