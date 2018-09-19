@@ -118,6 +118,9 @@ body {
 </form:form>
 
 </div>
+
+
+<!-- This is ACE editor configuration 
 <script src="/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
@@ -143,6 +146,8 @@ body {
     }
     
 </script>
+-->
+
 <script>
   // Set the date we're counting down to
 
