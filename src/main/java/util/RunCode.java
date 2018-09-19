@@ -47,6 +47,7 @@ public class RunCode {
 	
 	private void generateSourceFile(String sourceFilePath) throws IOException {
 	      FileWriter fileWriter = new FileWriter(sourceFilePath);
+	      System.out.println(sourceFilePath);
           fileWriter.write(sourceCode.getCode());
           fileWriter.close();
 	}
@@ -54,10 +55,8 @@ public class RunCode {
 	private void generatelog() throws IOException  {
 		String s=null;
 		Process p = builder.start();
-		
-	       
-        CodeResult codeResult = new CodeResult();
-        System.out.println(userFolderPath);
+		CodeResult codeResult = new CodeResult();
+        System.out.println("User Folder Path:" + userFolderPath);
         PrintWriter printWriter = new PrintWriter(userFolderPath+"/"+"log.txt");
 
         BufferedReader stdInput = new BufferedReader(new
@@ -97,7 +96,7 @@ public class RunCode {
 	public Path executeCode()  {
 		
         try {
-            System.out.println("Java Home: " + System.getProperty("java.home") + "bin/java");
+            System.out.println("Java Home: " + System.getProperty("java.home") + "\\bin/java");
             System.out.println("User Home: " + System.getProperty("user.home"));
             System.out.println("User Directory: " + System.getProperty("user.dir"));
 
@@ -113,53 +112,15 @@ public class RunCode {
             if(sourceCode.getFileExt().equals("java")) {
                 String compileCommand = "javac " + sourceCode.getTitle() + "." + sourceCode.getFileExt();
                 String runCommand = "java " + sourceCode.getTitle();
-                builder.command("/bin/sh", "-c", compileCommand + ";" + runCommand);
+                
+                System.out.println(compileCommand);
+                System.out.println(runCommand);
+                
+                builder.command("/usr/bin/sh", "-c", compileCommand + ";" + runCommand);
             } else {
-                builder.command("/bin/sh", "-c", "python " + sourceFilePath.toString());
+                builder.command("/usr/bin/sh", "-c", "python " + sourceFilePath.toString());
             }
             generatelog();
-            /*
-            Process p = builder.start();
-       
-            CodeResult codeResult = new CodeResult();
-
-            PrintWriter printWriter = new PrintWriter("log.txt");
-
-            BufferedReader stdInput = new BufferedReader(new
-                    InputStreamReader(p.getInputStream()));
-
-            BufferedReader stdError = new BufferedReader(new 
-                 InputStreamReader(p.getErrorStream()));
-
-            // read the output from the command
-            System.out.println("Here is the standard output of the command:\n");
-            printWriter.println("printWrite: Here is the standard output of the command:\n");
-            StringBuilder output = new StringBuilder();
-            while ((s = stdInput.readLine()) != null) {
-                printWriter.println(s);
-                output.append(s);
-                output.append(System.getProperty("line.separator"));
-            }
-            codeResult.setStdout(output.toString());
-            System.out.println(codeResult.getStdout());
-
-            // read any errors from the attempted command
-            System.out.println("Here is the standard error of the command (if any):\n");
-            printWriter.println("printWrite: Here is the standard error of the command (if any):\n");
-            StringBuilder error = new StringBuilder();
-            while ((s = stdError.readLine()) != null) {
-                printWriter.println(s);
-                error.append(s);
-                error.append(System.getProperty("line.separator"));
-            }
-            codeResult.setException(error.toString());
-            System.out.println(codeResult.getException());
-
-            printWriter.close();
-           
-            //System.exit(0);
-             
-             */
         }
         catch (IOException e) {
             System.out.println("IOException happened - here's what I know: ");
