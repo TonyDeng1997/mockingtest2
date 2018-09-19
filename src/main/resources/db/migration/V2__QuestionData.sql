@@ -12,10 +12,10 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Integer to Roman', '0.4740000069141388', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Roman to Integer', '0.49300000071525574', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Longest Common Prefix', '0.3190000057220459', 'Easy', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('3Sum', '3.2200000286102295', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('3Sum Closest', '3.325000047683716', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('3Sum', '0.2199999988079071', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('3Sum Closest', '0.32499998807907104', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Letter Combinations of a Phone Number', '0.3779999911785126', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('4Sum', '4.2820000648498535', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('4Sum', '0.28200000524520874', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Remove Nth Node From End of List', '0.3370000123977661', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Valid Parentheses', '0.3449999988079071', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Merge Two Sorted Lists', '0.42900002002716064', 'Easy', '', 'null');
@@ -71,7 +71,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Simplify Path', '0.26899999380111694', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Edit Distance', '0.33900001645088196', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Set Matrix Zeroes', '0.375', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Search a 2D Matrix', '2.3450000286102295', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Search a 2D Matrix', '0.3449999988079071', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Sort Colors', '0.39800000190734863', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Minimum Window Substring', '0.2789999842643738', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Combinations', '0.4309999942779541', 'Medium', '', 'null');
@@ -115,8 +115,8 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Distinct Subsequences', '0.33000001311302185', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Populating Next Right Pointers in Each Node', '0.367000013589859', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Populating Next Right Pointers in Each Node II', '0.335999995470047', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Pascal's Triangle', '0.4179999828338623', 'Easy', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Pascal's Triangle II', '0.3970000147819519', 'Easy', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Pascal\'s Triangle', '0.4179999828338623', 'Easy', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Pascal\'s Triangle II', '0.3970000147819519', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Triangle', '0.3620000183582306', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Best Time to Buy and Sell Stock', '0.44099998474121094', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Best Time to Buy and Sell Stock II', '0.48900002241134644', 'Easy', '', 'null');
@@ -154,8 +154,8 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Find Minimum in Rotated Sorted Array II', '0.382999986410141', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Min Stack', '0.3290000259876251', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Binary Tree Upside Down', '0.4740000069141388', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Read N Characters Given Read4', '4.2829999923706055', 'Easy', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Read N Characters Given Read4 II - Call multiple times', '4.243000030517578', 'Hard', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Read N Characters Given Read4', '0.28299999237060547', 'Easy', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Read N Characters Given Read4 II - Call multiple times', '0.24299998581409454', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Longest Substring with At Most Two Distinct Characters', '0.43700000643730164', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Intersection of Two Linked Lists', '0.30799999833106995', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('One Edit Distance', '0.3140000104904175', 'Medium', '', 'null');
@@ -188,7 +188,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Best Time to Buy and Sell Stock IV', '0.25200000405311584', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Rotate Array', '0.2670000195503235', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Reverse Bits', '0.2929999828338623', 'Easy', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Number of 1 Bits', '1.4079999923706055', 'Easy', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Number of 1 Bits', '0.40799999237060547', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Word Frequency', '0.2619999945163727', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Valid Phone Numbers', '0.24899999797344208', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Transpose File', '0.21899999678134918', 'Medium', '', 'null');
@@ -237,7 +237,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Delete Node in a Linked List', '0.48900002241134644', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Product of Array Except Self', '0.5139999985694885', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Sliding Window Maximum', '0.35099998116493225', 'Hard', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Search a 2D Matrix II', '2.3930001258850098', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Search a 2D Matrix II', '0.3930000066757202', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Different Ways to Add Parentheses', '0.47200000286102295', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Valid Anagram', '0.4870000183582306', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Shortest Word Distance', '0.5450000166893005', 'Easy', '', 'null');
@@ -248,7 +248,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Strobogrammatic Number III', '0.33400002121925354', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Group Shifted Strings', '0.4580000042915344', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Count Univalue Subtrees', '0.4529999792575836', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Flatten 2D Vector', '2.4200000762939453', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Flatten 2D Vector', '0.41999998688697815', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Meeting Rooms', '0.4959999918937683', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Meeting Rooms II', '0.4000000059604645', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Factor Combinations', '0.43700000643730164', 'Medium', '', 'null');
@@ -256,7 +256,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Paint House', '0.46799999475479126', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Binary Tree Paths', '0.42800000309944153', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Add Digits', '0.5249999761581421', 'Easy', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('3Sum Smaller', '3.428999900817871', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('3Sum Smaller', '0.42900002002716064', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Single Number III', '0.5429999828338623', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Graph Valid Tree', '0.3869999945163727', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Trips and Users', '0.20899999141693115', 'Hard', '', 'null');
@@ -301,11 +301,11 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Remove Invalid Parentheses', '0.36400002241134644', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Smallest Rectangle Enclosing Black Pixels', '0.4740000069141388', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Range Sum Query - Immutable', '0.33799999952316284', 'Easy', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Range Sum Query 2D - Immutable', '2.2850000858306885', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Range Sum Query 2D - Immutable', '0.2849999964237213', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Number of Islands II', '0.39900001883506775', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Additive Number', '0.2789999842643738', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Range Sum Query - Mutable', '0.242000013589859', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Range Sum Query 2D - Mutable', '2.2769999504089355', 'Hard', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Range Sum Query 2D - Mutable', '0.2770000100135803', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Best Time to Buy and Sell Stock with Cooldown', '0.4259999990463257', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Minimum Height Trees', '0.29100000858306885', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Sparse Matrix Multiplication', '0.5350000262260437', 'Medium', '', 'null');
@@ -377,8 +377,8 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Combination Sum IV', '0.4309999942779541', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Kth Smallest Element in a Sorted Matrix', '0.460999995470047', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Design Phone Directory', '0.37599998712539673', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Insert Delete GetRandom O(1)', '1.403999924659729', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Insert Delete GetRandom O(1) - Duplicates allowed', '1.2999999523162842', 'Hard', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Insert Delete GetRandom O(1)', '0.40400001406669617', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Insert Delete GetRandom O(1) - Duplicates allowed', '0.30000001192092896', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Linked List Random Node', '0.4790000021457672', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Ransom Note', '0.4829999804496765', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Shuffle an Array', '0.4790000021457672', 'Medium', '', 'null');
@@ -390,7 +390,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Elimination Game', '0.42800000309944153', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Perfect Rectangle', '0.2770000100135803', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Is Subsequence', '0.4479999840259552', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('UTF-8 Validation', '8.348999977111816', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('UTF-8 Validation', '0.3490000069141388', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Decode String', '0.4220000207424164', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Longest Substring with At Least K Repeating Characters', '0.3609999716281891', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Rotate Function', '0.34200000762939453', 'Medium', '', 'null');
@@ -451,9 +451,9 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Sort Characters By Frequency', '0.5270000100135803', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Minimum Number of Arrows to Burst Balloons', '0.44699999690055847', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Minimum Moves to Equal Array Elements', '0.4829999804496765', 'Easy', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('4Sum II', '4.480999946594238', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('4Sum II', '0.48099997639656067', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Assign Cookies', '0.4749999940395355', 'Easy', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('132 Pattern', '132.27499389648438', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('132 Pattern', '0.2750000059604645', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Circular Array Loop', '0.23799999058246613', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Poor Pigs', '0.43400001525878906', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Repeated Substring Pattern', '0.38499999046325684', 'Easy', '', 'null');
@@ -467,7 +467,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Unique Substrings in Wraparound String', '0.3330000042915344', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Validate IP Address', '0.20499999821186066', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Convex Polygon', '0.3479999899864197', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Implement Rand10() Using Rand7()', '107.43099975585938', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Implement Rand10() Using Rand7()', '0.4309999942779541', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Encode String with Shortest Length', '0.43700000643730164', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Concatenated Words', '0.3190000057220459', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Matchsticks to Square', '0.3529999852180481', 'Medium', '', 'null');
@@ -501,7 +501,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Find Mode in Binary Search Tree', '0.3790000081062317', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('IPO', '0.3659999966621399', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Next Greater Element II', '0.484000027179718', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Base 7', '7.439000129699707', 'Easy', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Base 7', '0.4390000104904175', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('The Maze II', '0.3920000195503235', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Relative Ranks', '0.47099998593330383', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Perfect Number', '0.3270000219345093', 'Easy', '', 'null');
@@ -511,7 +511,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Find Largest Value in Each Tree Row', '0.5609999895095825', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Longest Palindromic Subsequence', '0.4350000023841858', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Super Washing Machines', '0.36400002241134644', 'Hard', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Coin Change 2', '2.373000144958496', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Coin Change 2', '0.37299999594688416', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Random Flip Matrix', '0.3160000145435333', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Detect Capital', '0.5189999938011169', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Longest Uncommon Subsequence I', '0.5579999685287476', 'Easy', '', 'null');
@@ -534,7 +534,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Minimum Time Difference', '0.4650000035762787', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Single Element in a Sorted Array', '0.562000036239624', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Reverse String II', '0.44200000166893005', 'Easy', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('01 Matrix', '1.3360000848770142', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('01 Matrix', '0.335999995470047', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Diameter of Binary Tree', '0.4509999752044678', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Output Contest Matches', '0.7149999737739563', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Boundary of Binary Tree', '0.3279999792575836', 'Medium', '', 'null');
@@ -561,7 +561,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Permutation in String', '0.36500000953674316', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Maximum Vacation Days', '0.36400002241134644', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Median Employee Salary', '0.3930000066757202', 'Hard', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Managers with at Least 5 Direct Reports', '5.579999923706055', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Managers with at Least 5 Direct Reports', '0.5799999833106995', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Find Median Given Frequency of Numbers', '0.42800000309944153', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Subtree of Another Tree', '0.40400001406669617', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Squirrel Simulation', '0.5259999632835388', 'Medium', '', 'null');
@@ -576,7 +576,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Kill Process', '0.5239999890327454', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Delete Operation for Two Strings', '0.4479999840259552', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Find Customer Referee', '0.625', 'Easy', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Investments in 2016', '2016.4429931640625', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Investments in 2016', '0.4429999887943268', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Customer Placing the Largest Number of Orders', '0.6140000224113464', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Erect the Fence', '0.33799999952316284', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Design In-Memory File System', '0.3630000054836273', 'Hard', '', 'null');
@@ -587,7 +587,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Valid Square', '0.39800000190734863', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Longest Harmonious Subsequence', '0.41499999165534973', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Big Countries', '0.7169999480247498', 'Easy', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Classes More Than 5 Students', '5.325999736785889', 'Easy', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Classes More Than 5 Students', '0.3259999752044678', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Friend Requests I: Overall Acceptance Rate', '0.3790000081062317', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Range Addition II', '0.4790000021457672', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Minimum Index Sum of Two Lists', '0.46400001645088196', 'Easy', '', 'null');
@@ -640,9 +640,9 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Maximum Length of Pair Chain', '0.4749999940395355', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Palindromic Substrings', '0.5440000295639038', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Replace Words', '0.48900002241134644', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Dota2 Senate', '2.36899995803833', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('2 Keys Keyboard', '2.4600000381469727', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('4 Keys Keyboard', '4.497999668121338', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Dota2 Senate', '0.36900001764297485', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('2 Keys Keyboard', '0.46000000834465027', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('4 Keys Keyboard', '0.49799999594688416', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Find Duplicate Subtrees', '0.3930000066757202', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Two Sum IV - Input is a BST', '0.5049999952316284', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Maximum Binary Tree', '0.7089999914169312', 'Medium', '', 'null');
@@ -651,7 +651,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Judge Route Circle', '0.6890000104904175', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Find K Closest Elements', '0.34700000286102295', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Split Array into Consecutive Subsequences', '0.375', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Remove 9', '9.503000259399414', 'Hard', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Remove 9', '0.503000020980835', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Image Smoother', '0.47099998593330383', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Maximum Width of Binary Tree', '0.3840000033378601', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Equal Tree Partition', '0.36500000953674316', 'Medium', '', 'null');
@@ -670,7 +670,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Implement Magic Dictionary', '0.49400001764297485', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Map Sum Pairs', '0.5070000290870667', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Valid Parenthesis String', '0.2979999780654907', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('24 Game', '24.391000747680664', 'Hard', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('24 Game', '0.390999972820282', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Valid Palindrome II', '0.32499998807907104', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Next Closest Time', '0.41599997878074646', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Baseball Game', '0.5870000123977661', 'Easy', '', 'null');
@@ -680,7 +680,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Repeated String Match', '0.3140000104904175', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Longest Univalue Path', '0.3270000219345093', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Knight Probability in Chessboard', '0.4059999883174896', 'Medium', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Maximum Sum of 3 Non-Overlapping Subarrays', '3.4179999828338623', 'Hard', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Maximum Sum of 3 Non-Overlapping Subarrays', '0.4179999828338623', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Employee Importance', '0.5180000066757202', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Stickers to Spell Word', '0.3579999804496765', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Top K Frequent Words', '0.4209999740123749', 'Medium', '', 'null');
@@ -708,7 +708,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Best Time to Buy and Sell Stock with Transaction Fee', '0.4749999940395355', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Range Module', '0.3100000023841858', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Max Stack', '0.3700000047683716', 'Hard', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('1-bit and 2-bit Characters', '12.48900032043457', 'Easy', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('1-bit and 2-bit Characters', '0.48900002241134644', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Maximum Length of Repeated Subarray', '0.4220000207424164', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Find K-th Smallest Pair Distance', '0.2800000011920929', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Longest Word in Dictionary', '0.4190000295639038', 'Easy', '', 'null');
@@ -828,7 +828,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Sum of Distances in Tree', '0.33900001645088196', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Image Overlap', '0.4209999740123749', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Rectangle Overlap', '0.4309999942779541', 'Easy', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('New 21 Game', '21.260000228881836', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('New 21 Game', '0.25999999046325684', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Push Dominoes', '0.41200000047683716', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Similar String Groups', '0.33799999952316284', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Magic Squares In Grid', '0.34299999475479126', 'Easy', '', 'null');
@@ -860,7 +860,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Prime Palindrome', '0.18400000035762787', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Transpose Matrix', '0.6509999632835388', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Binary Gap', '0.5990000367164612', 'Easy', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Reordered Power of 2', '2.4769999980926514', 'Medium', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Reordered Power of 2', '0.47699999809265137', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Advantage Shuffle', '0.39400002360343933', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Minimum Number of Refueling Stops', '0.2590000033378601', 'Hard', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Leaf-Similar Trees', '0.6150000095367432', 'Easy', '', 'null');
@@ -874,7 +874,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Decoded String at Index', '0.22200000286102295', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Boats to Save People', '0.3890000283718109', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Reachable Nodes In Subdivided Graph', '0.33400002121925354', 'Hard', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Projection Area of 3D Shapes', '3.6660001277923584', 'Easy', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Projection Area of 3D Shapes', '0.6660000085830688', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Uncommon Words from Two Sentences', '0.6060000061988831', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Spiral Matrix III', '0.6359999775886536', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Possible Bipartition', '0.3720000088214874', 'Medium', '', 'null');
@@ -883,7 +883,7 @@ INSERT INTO question_data (title, acceptance_rate, difficulty, description, arti
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Construct Binary Tree from Preorder and Postorder Traversal', '0.5460000038146973', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Find and Replace Pattern', '0.7019999623298645', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Sum of Subsequence Widths', '0.23999999463558197', 'Hard', '', 'null');
-INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Surface Area of 3D Shapes', '3.547999858856201', 'Easy', '', 'null');
+INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Surface Area of 3D Shapes', '0.5479999780654907', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Groups of Special-Equivalent Strings', '0.609000027179718', 'Easy', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('All Possible Full Binary Trees', '0.6449999809265137', 'Medium', '', 'null');
 INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES ('Maximum Frequency Stack', '0.492000013589859', 'Hard', '', 'null');
