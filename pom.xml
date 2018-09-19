@@ -64,7 +64,12 @@
   			<version>4.12</version>
   			
 		</dependency>
-		
+
+        <dependency>
+        	<groupId>org.jsoup</groupId>
+        	<artifactId>jsoup</artifactId>
+        	<version>1.11.3</version>
+        </dependency>
     </dependencies>
     
     
@@ -90,7 +95,13 @@
 
         </plugins>
         <resources>
-      <resource>
+      <resource>      	
+        <directory>scrapper</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+      <resource>      	
         <directory>src/main/resources</directory>
         <excludes>
           <exclude>**/*.java</exclude>

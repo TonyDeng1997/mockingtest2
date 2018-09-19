@@ -109,7 +109,7 @@ body {
 
 <div class="level center">
 	<div class="level-item">
-		<input type="button" id="run_code" onclick="runCode()" value="run" /> 
+		<input type="submit" id="run_code" onclick="runCode()" value="run" /> 
 	</div>
 	<div class="level-item">
 		<input type="submit" id="submit_code" value="submit" onclick="myFunction()"/> 
@@ -133,7 +133,7 @@ body {
     editor2.resize();
     editor2.setReadOnly(true);  // false to make it editable
     editor2.setValue(document.getElementById("feedback").innerHTML);
-    function myFunction() {
+    function runCode() {
     	document.getElementById("code").innerHTML = editor.getValue();
     }
     function changefunction() {
