@@ -50,6 +50,7 @@ public class RunCode {
           fileWriter.write(sourceCode.getCode());
           fileWriter.close();
 	}
+	
 	private void generatelog() throws IOException  {
 		String s=null;
 		Process p = builder.start();
