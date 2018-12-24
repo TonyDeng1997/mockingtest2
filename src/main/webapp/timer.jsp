@@ -145,7 +145,7 @@ body {
 </script>
 <script>
   // Set the date we're counting down to
-
+/*
   var testTime= 1;
   var testends=0;
   if(testends == 0){
@@ -178,6 +178,50 @@ body {
           editor.setReadOnly(true);
       }
   }, 1000);
+  */
+  function startTimer(duration, display) {
+var timer = duration, minutes, seconds;
+var clearint=setInterval(function () {
+    minutes = parseInt(timer / 60, 10)
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.textContent = minutes + " " + " " + seconds;
+
+    if (--timer < 0) {
+        timer = -1;
+        display.textContent = "Expired";
+      clearInterval(clearint);
+      
+    }
+  console.log(parseInt(seconds))
+  
+  window.localStorage.setItem("seconds",seconds)
+  window.localStorage.setItem("minutes",minutes)
+}, 1000);
+
+
+
+}
+
+
+window.onload = function () {
+  sec  = parseInt(window.localStorage.getItem("seconds"))
+  min = parseInt(window.localStorage.getItem("minutes"))
+
+  if(parseInt(min*sec)){
+    var fiveMinutes = (parseInt(min*60)+sec);
+  }else{
+    var fiveMinutes = 10;
+  }
+    // var fiveMinutes = 60 * 5;
+  display = document.querySelector('#demo');
+  startTimer(fiveMinutes, display);
+};
+
+
   </script>
   <script>
       CodeMirror.commands.autocomplete = function(cm) {
@@ -187,6 +231,8 @@ body {
         lineNumbers: true,
         extraKeys: {"Ctrl-Space": "autocomplete"}
       });
+      
+      
     </script>
 </body>
 </html>
