@@ -191,8 +191,9 @@ var clearint=setInterval(function () {
     display.textContent = minutes + " " + " " + seconds;
 
     if (--timer < 0) {
-        timer = -1;
-        display.textContent = "Expired";
+      timer = -1;
+      display.textContent = "Expired";
+      localStorage.clear();
       clearInterval(clearint);
       
     }
@@ -211,10 +212,10 @@ window.onload = function () {
   sec  = parseInt(window.localStorage.getItem("seconds"))
   min = parseInt(window.localStorage.getItem("minutes"))
 
-  if(parseInt(min*sec)){
+  if(parseInt(min)==0 && parseInt(sec)==0){
     var fiveMinutes = (parseInt(min*60)+sec);
   }else{
-    var fiveMinutes = 10;
+    var fiveMinutes = 120;
   }
     // var fiveMinutes = 60 * 5;
   display = document.querySelector('#demo');
@@ -231,6 +232,14 @@ window.onload = function () {
         lineNumbers: true,
         extraKeys: {"Ctrl-Space": "autocomplete"}
       });
+      if (window.performance) {
+  console.info("window.performance works fine on this browser");
+}
+  if (performance.navigation.type == 1) {
+    alert( "U just RELOADAED!" );
+  } else {
+    console.info( "This page is not reloaded");
+  }
       
       
     </script>
