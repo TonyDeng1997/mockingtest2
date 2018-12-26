@@ -1,0 +1,893 @@
+1	Two Sum	0.3879999816417694	Easy	https://leetcode.com/problems/two-sum/description/
+2	Add Two Numbers	0.29100000858306885	Medium	https://leetcode.com/problems/add-two-numbers/description/
+3	Longest Substring Without Repeating Characters	0.25	Medium	https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+4	Median of Two Sorted Arrays	0.2370000034570694	Hard	https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+5	Longest Palindromic Substring	0.25600001215934753	Medium	https://leetcode.com/problems/longest-palindromic-substring/description/
+6	ZigZag Conversion	0.2840000092983246	Medium	https://leetcode.com/problems/zigzag-conversion/description/
+7	Reverse Integer	0.24400000274181366	Easy	https://leetcode.com/problems/reverse-integer/description/
+8	String to Integer (atoi)	0.14100000262260437	Medium	https://leetcode.com/problems/string-to-integer-(atoi)/description/
+9	Palindrome Number	0.3799999952316284	Easy	https://leetcode.com/problems/palindrome-number/description/
+10	Regular Expression Matching	0.24400000274181366	Hard	https://leetcode.com/problems/regular-expression-matching/description/
+11	Container With Most Water	0.382999986410141	Medium	https://leetcode.com/problems/container-with-most-water/description/
+12	Integer to Roman	0.4740000069141388	Medium	https://leetcode.com/problems/integer-to-roman/description/
+13	Roman to Integer	0.49300000071525574	Easy	https://leetcode.com/problems/roman-to-integer/description/
+14	Longest Common Prefix	0.3190000057220459	Easy	https://leetcode.com/problems/longest-common-prefix/description/
+15	3Sum	3.2200000286102295	Medium	https://leetcode.com/problems/3sum/description/
+16	3Sum Closest	3.325000047683716	Medium	https://leetcode.com/problems/3sum-closest/description/
+17	Letter Combinations of a Phone Number	0.3779999911785126	Medium	https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
+18	4Sum	4.2820000648498535	Medium	https://leetcode.com/problems/4sum/description/
+19	Remove Nth Node From End of List	0.3370000123977661	Medium	https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
+20	Valid Parentheses	0.3449999988079071	Easy	https://leetcode.com/problems/valid-parentheses/description/
+21	Merge Two Sorted Lists	0.42900002002716064	Easy	https://leetcode.com/problems/merge-two-sorted-lists/description/
+22	Generate Parentheses	0.49900001287460327	Medium	https://leetcode.com/problems/generate-parentheses/description/
+23	Merge k Sorted Lists	0.29899999499320984	Hard	https://leetcode.com/problems/merge-k-sorted-lists/description/
+24	Swap Nodes in Pairs	0.4059999883174896	Medium	https://leetcode.com/problems/swap-nodes-in-pairs/description/
+25	Reverse Nodes in k-Group	0.33000001311302185	Hard	https://leetcode.com/problems/reverse-nodes-in-k-group/description/
+26	Remove Duplicates from Sorted Array	0.37599998712539673	Easy	https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+27	Remove Element	0.4179999828338623	Easy	https://leetcode.com/problems/remove-element/description/
+28	Implement strStr()	0.2979999780654907	Easy	https://leetcode.com/problems/implement-strstr()/description/
+29	Divide Two Integers	0.15700000524520874	Medium	https://leetcode.com/problems/divide-two-integers/description/
+30	Substring with Concatenation of All Words	0.2239999920129776	Hard	https://leetcode.com/problems/substring-with-concatenation-of-all-words/description/
+31	Next Permutation	0.2919999957084656	Medium	https://leetcode.com/problems/next-permutation/description/
+32	Longest Valid Parentheses	0.2370000034570694	Hard	https://leetcode.com/problems/longest-valid-parentheses/description/
+33	Search in Rotated Sorted Array	0.3199999928474426	Medium	https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+34	Find First and Last Position of Element in Sorted Array	0.3199999928474426	Medium	https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
+35	Search Insert Position	0.4000000059604645	Easy	https://leetcode.com/problems/search-insert-position/description/
+36	Valid Sudoku	0.390999972820282	Medium	https://leetcode.com/problems/valid-sudoku/description/
+37	Sudoku Solver	0.3330000042915344	Hard	https://leetcode.com/problems/sudoku-solver/description/
+38	Count and Say	0.37700000405311584	Easy	https://leetcode.com/problems/count-and-say/description/
+39	Combination Sum	0.43299999833106995	Medium	https://leetcode.com/problems/combination-sum/description/
+40	Combination Sum II	0.375	Medium	https://leetcode.com/problems/combination-sum-ii/description/
+41	First Missing Positive	0.26600000262260437	Hard	https://leetcode.com/problems/first-missing-positive/description/
+42	Trapping Rain Water	0.3890000283718109	Hard	https://leetcode.com/problems/trapping-rain-water/description/
+43	Multiply Strings	0.28600001335144043	Medium	https://leetcode.com/problems/multiply-strings/description/
+44	Wildcard Matching	0.2150000035762787	Hard	https://leetcode.com/problems/wildcard-matching/description/
+45	Jump Game II	0.2629999816417694	Hard	https://leetcode.com/problems/jump-game-ii/description/
+46	Permutations	0.4959999918937683	Medium	https://leetcode.com/problems/permutations/description/
+47	Permutations II	0.36500000953674316	Medium	https://leetcode.com/problems/permutations-ii/description/
+48	Rotate Image	0.43700000643730164	Medium	https://leetcode.com/problems/rotate-image/description/
+49	Group Anagrams	0.4090000092983246	Medium	https://leetcode.com/problems/group-anagrams/description/
+50	Pow(x, n)	0.26499998569488525	Medium	https://leetcode.com/problems/pow(x,-n)/description/
+51	N-Queens	0.3490000069141388	Hard	https://leetcode.com/problems/n-queens/description/
+52	N-Queens II	0.4829999804496765	Hard	https://leetcode.com/problems/n-queens-ii/description/
+53	Maximum Subarray	0.41099998354911804	Easy	https://leetcode.com/problems/maximum-subarray/description/
+54	Spiral Matrix	0.281000018119812	Medium	https://leetcode.com/problems/spiral-matrix/description/
+55	Jump Game	0.3009999990463257	Medium	https://leetcode.com/problems/jump-game/description/
+56	Merge Intervals	0.3290000259876251	Medium	https://leetcode.com/problems/merge-intervals/description/
+57	Insert Interval	0.29600000381469727	Hard	https://leetcode.com/problems/insert-interval/description/
+58	Length of Last Word	0.32099997997283936	Easy	https://leetcode.com/problems/length-of-last-word/description/
+59	Spiral Matrix II	0.4270000159740448	Medium	https://leetcode.com/problems/spiral-matrix-ii/description/
+60	Permutation Sequence	0.3050000071525574	Medium	https://leetcode.com/problems/permutation-sequence/description/
+61	Rotate List	0.25200000405311584	Medium	https://leetcode.com/problems/rotate-list/description/
+62	Unique Paths	0.44099998474121094	Medium	https://leetcode.com/problems/unique-paths/description/
+63	Unique Paths II	0.32499998807907104	Medium	https://leetcode.com/problems/unique-paths-ii/description/
+64	Minimum Path Sum	0.4259999990463257	Medium	https://leetcode.com/problems/minimum-path-sum/description/
+65	Valid Number	0.12999999523162842	Hard	https://leetcode.com/problems/valid-number/description/
+66	Plus One	0.4000000059604645	Easy	https://leetcode.com/problems/plus-one/description/
+67	Add Binary	0.35499998927116394	Easy	https://leetcode.com/problems/add-binary/description/
+68	Text Justification	0.20799998939037323	Hard	https://leetcode.com/problems/text-justification/description/
+69	Sqrt(x)	0.2939999997615814	Easy	https://leetcode.com/problems/sqrt(x)/description/
+70	Climbing Stairs	0.41999998688697815	Easy	https://leetcode.com/problems/climbing-stairs/description/
+71	Simplify Path	0.26899999380111694	Medium	https://leetcode.com/problems/simplify-path/description/
+72	Edit Distance	0.33900001645088196	Hard	https://leetcode.com/problems/edit-distance/description/
+73	Set Matrix Zeroes	0.375	Medium	https://leetcode.com/problems/set-matrix-zeroes/description/
+74	Search a 2D Matrix	2.3450000286102295	Medium	https://leetcode.com/problems/search-a-2d-matrix/description/
+75	Sort Colors	0.39800000190734863	Medium	https://leetcode.com/problems/sort-colors/description/
+76	Minimum Window Substring	0.2789999842643738	Hard	https://leetcode.com/problems/minimum-window-substring/description/
+77	Combinations	0.4309999942779541	Medium	https://leetcode.com/problems/combinations/description/
+78	Subsets	0.47200000286102295	Medium	https://leetcode.com/problems/subsets/description/
+79	Word Search	0.2879999876022339	Medium	https://leetcode.com/problems/word-search/description/
+80	Remove Duplicates from Sorted Array II	0.3799999952316284	Medium	https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/
+81	Search in Rotated Sorted Array II	0.32499998807907104	Medium	https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/
+82	Remove Duplicates from Sorted List II	0.30799999833106995	Medium	https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/description/
+83	Remove Duplicates from Sorted List	0.40799999237060547	Easy	https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
+84	Largest Rectangle in Histogram	0.2849999964237213	Hard	https://leetcode.com/problems/largest-rectangle-in-histogram/description/
+85	Maximal Rectangle	0.3059999942779541	Hard	https://leetcode.com/problems/maximal-rectangle/description/
+86	Partition List	0.34599998593330383	Medium	https://leetcode.com/problems/partition-list/description/
+87	Scramble String	0.3020000159740448	Hard	https://leetcode.com/problems/scramble-string/description/
+88	Merge Sorted Array	0.3309999704360962	Easy	https://leetcode.com/problems/merge-sorted-array/description/
+89	Gray Code	0.4350000023841858	Medium	https://leetcode.com/problems/gray-code/description/
+90	Subsets II	0.39500001072883606	Medium	https://leetcode.com/problems/subsets-ii/description/
+91	Decode Ways	0.20799998939037323	Medium	https://leetcode.com/problems/decode-ways/description/
+92	Reverse Linked List II	0.3229999840259552	Medium	https://leetcode.com/problems/reverse-linked-list-ii/description/
+93	Restore IP Addresses	0.2919999957084656	Medium	https://leetcode.com/problems/restore-ip-addresses/description/
+94	Binary Tree Inorder Traversal	0.5180000066757202	Medium	https://leetcode.com/problems/binary-tree-inorder-traversal/description/
+95	Unique Binary Search Trees II	0.3309999704360962	Medium	https://leetcode.com/problems/unique-binary-search-trees-ii/description/
+96	Unique Binary Search Trees	0.4309999942779541	Medium	https://leetcode.com/problems/unique-binary-search-trees/description/
+97	Interleaving String	0.2590000033378601	Hard	https://leetcode.com/problems/interleaving-string/description/
+98	Validate Binary Search Tree	0.24400000274181366	Medium	https://leetcode.com/problems/validate-binary-search-tree/description/
+99	Recover Binary Search Tree	0.32099997997283936	Hard	https://leetcode.com/problems/recover-binary-search-tree/description/
+100	Same Tree	0.484000027179718	Easy	https://leetcode.com/problems/same-tree/description/
+101	Symmetric Tree	0.4129999876022339	Easy	https://leetcode.com/problems/symmetric-tree/description/
+102	Binary Tree Level Order Traversal	0.4429999887943268	Medium	https://leetcode.com/problems/binary-tree-level-order-traversal/description/
+103	Binary Tree Zigzag Level Order Traversal	0.38099998235702515	Medium	https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/description/
+104	Maximum Depth of Binary Tree	0.5659999847412109	Easy	https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
+105	Construct Binary Tree from Preorder and Inorder Traversal	0.3620000183582306	Medium	https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/
+106	Construct Binary Tree from Inorder and Postorder Traversal	0.3540000021457672	Medium	https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/
+107	Binary Tree Level Order Traversal II	0.4350000023841858	Easy	https://leetcode.com/problems/binary-tree-level-order-traversal-ii/description/
+108	Convert Sorted Array to Binary Search Tree	0.4620000123977661	Easy	https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/
+109	Convert Sorted List to Binary Search Tree	0.3709999918937683	Medium	https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/description/
+110	Balanced Binary Tree	0.390999972820282	Easy	https://leetcode.com/problems/balanced-binary-tree/description/
+111	Minimum Depth of Binary Tree	0.3400000035762787	Easy	https://leetcode.com/problems/minimum-depth-of-binary-tree/description/
+112	Path Sum	0.3569999933242798	Easy	https://leetcode.com/problems/path-sum/description/
+113	Path Sum II	0.3720000088214874	Medium	https://leetcode.com/problems/path-sum-ii/description/
+114	Flatten Binary Tree to Linked List	0.38199999928474426	Medium	https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/
+115	Distinct Subsequences	0.33000001311302185	Hard	https://leetcode.com/problems/distinct-subsequences/description/
+116	Populating Next Right Pointers in Each Node	0.367000013589859	Medium	https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/
+117	Populating Next Right Pointers in Each Node II	0.335999995470047	Medium	https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/description/
+118	Pascal's Triangle	0.4179999828338623	Easy	https://leetcode.com/problems/pascal's-triangle/description/
+119	Pascal's Triangle II	0.3970000147819519	Easy	https://leetcode.com/problems/pascal's-triangle-ii/description/
+120	Triangle	0.3620000183582306	Medium	https://leetcode.com/problems/triangle/description/
+121	Best Time to Buy and Sell Stock	0.44099998474121094	Easy	https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
+122	Best Time to Buy and Sell Stock II	0.48900002241134644	Easy	https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/
+123	Best Time to Buy and Sell Stock III	0.31200000643730164	Hard	https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/
+124	Binary Tree Maximum Path Sum	0.27799999713897705	Hard	https://leetcode.com/problems/binary-tree-maximum-path-sum/description/
+125	Valid Palindrome	0.28299999237060547	Easy	https://leetcode.com/problems/valid-palindrome/description/
+126	Word Ladder II	0.1550000011920929	Hard	https://leetcode.com/problems/word-ladder-ii/description/
+127	Word Ladder	0.20899999141693115	Medium	https://leetcode.com/problems/word-ladder/description/
+128	Longest Consecutive Sequence	0.3920000195503235	Hard	https://leetcode.com/problems/longest-consecutive-sequence/description/
+129	Sum Root to Leaf Numbers	0.3920000195503235	Medium	https://leetcode.com/problems/sum-root-to-leaf-numbers/description/
+130	Surrounded Regions	0.20600000023841858	Medium	https://leetcode.com/problems/surrounded-regions/description/
+131	Palindrome Partitioning	0.3709999918937683	Medium	https://leetcode.com/problems/palindrome-partitioning/description/
+132	Palindrome Partitioning II	0.25600001215934753	Hard	https://leetcode.com/problems/palindrome-partitioning-ii/description/
+133	Clone Graph	0.25200000405311584	Medium	https://leetcode.com/problems/clone-graph/description/
+134	Gas Station	0.3109999895095825	Medium	https://leetcode.com/problems/gas-station/description/
+135	Candy	0.25999999046325684	Hard	https://leetcode.com/problems/candy/description/
+136	Single Number	0.5680000185966492	Easy	https://leetcode.com/problems/single-number/description/
+137	Single Number II	0.4359999895095825	Medium	https://leetcode.com/problems/single-number-ii/description/
+138	Copy List with Random Pointer	0.25699999928474426	Medium	https://leetcode.com/problems/copy-list-with-random-pointer/description/
+139	Word Break	0.3240000009536743	Medium	https://leetcode.com/problems/word-break/description/
+140	Word Break II	0.25200000405311584	Hard	https://leetcode.com/problems/word-break-ii/description/
+141	Linked List Cycle	0.34700000286102295	Easy	https://leetcode.com/problems/linked-list-cycle/description/
+142	Linked List Cycle II	0.30000001192092896	Medium	https://leetcode.com/problems/linked-list-cycle-ii/description/
+143	Reorder List	0.27799999713897705	Medium	https://leetcode.com/problems/reorder-list/description/
+144	Binary Tree Preorder Traversal	0.4819999933242798	Medium	https://leetcode.com/problems/binary-tree-preorder-traversal/description/
+145	Binary Tree Postorder Traversal	0.4399999976158142	Hard	https://leetcode.com/problems/binary-tree-postorder-traversal/description/
+146	LRU Cache	0.2110000103712082	Hard	https://leetcode.com/problems/lru-cache/description/
+147	Insertion Sort List	0.3479999899864197	Medium	https://leetcode.com/problems/insertion-sort-list/description/
+148	Sort List	0.3149999976158142	Medium	https://leetcode.com/problems/sort-list/description/
+149	Max Points on a Line	0.15199999511241913	Hard	https://leetcode.com/problems/max-points-on-a-line/description/
+150	Evaluate Reverse Polish Notation	0.29600000381469727	Medium	https://leetcode.com/problems/evaluate-reverse-polish-notation/description/
+151	Reverse Words in a String	0.15700000524520874	Medium	https://leetcode.com/problems/reverse-words-in-a-string/description/
+152	Maximum Product Subarray	0.27300000190734863	Medium	https://leetcode.com/problems/maximum-product-subarray/description/
+153	Find Minimum in Rotated Sorted Array	0.41499999165534973	Medium	https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
+154	Find Minimum in Rotated Sorted Array II	0.382999986410141	Hard	https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/
+155	Min Stack	0.3290000259876251	Easy	https://leetcode.com/problems/min-stack/description/
+156	Binary Tree Upside Down	0.4740000069141388	Medium	https://leetcode.com/problems/binary-tree-upside-down/description/
+157	Read N Characters Given Read4	4.2829999923706055	Easy	https://leetcode.com/problems/read-n-characters-given-read4/description/
+158	Read N Characters Given Read4 II - Call multiple times	4.243000030517578	Hard	https://leetcode.com/problems/read-n-characters-given-read4-ii---call-multiple-times/description/
+159	Longest Substring with At Most Two Distinct Characters	0.43700000643730164	Hard	https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/description/
+160	Intersection of Two Linked Lists	0.30799999833106995	Easy	https://leetcode.com/problems/intersection-of-two-linked-lists/description/
+161	One Edit Distance	0.3140000104904175	Medium	https://leetcode.com/problems/one-edit-distance/description/
+162	Find Peak Element	0.3959999978542328	Medium	https://leetcode.com/problems/find-peak-element/description/
+163	Missing Ranges	0.2290000021457672	Medium	https://leetcode.com/problems/missing-ranges/description/
+164	Maximum Gap	0.3070000112056732	Hard	https://leetcode.com/problems/maximum-gap/description/
+165	Compare Version Numbers	0.21400000154972076	Medium	https://leetcode.com/problems/compare-version-numbers/description/
+166	Fraction to Recurring Decimal	0.1850000023841858	Medium	https://leetcode.com/problems/fraction-to-recurring-decimal/description/
+167	Two Sum II - Input array is sorted	0.4749999940395355	Easy	https://leetcode.com/problems/two-sum-ii---input-array-is-sorted/description/
+168	Excel Sheet Column Title	0.2789999842643738	Easy	https://leetcode.com/problems/excel-sheet-column-title/description/
+169	Majority Element	0.49300000071525574	Easy	https://leetcode.com/problems/majority-element/description/
+170	Two Sum III - Data structure design	0.2750000059604645	Easy	https://leetcode.com/problems/two-sum-iii---data-structure-design/description/
+171	Excel Sheet Column Number	0.4959999918937683	Easy	https://leetcode.com/problems/excel-sheet-column-number/description/
+172	Factorial Trailing Zeroes	0.3700000047683716	Easy	https://leetcode.com/problems/factorial-trailing-zeroes/description/
+173	Binary Search Tree Iterator	0.4449999928474426	Medium	https://leetcode.com/problems/binary-search-tree-iterator/description/
+174	Dungeon Game	0.2510000169277191	Hard	https://leetcode.com/problems/dungeon-game/description/
+175	Combine Two Tables	0.44599997997283936	Easy	https://leetcode.com/problems/combine-two-tables/description/
+176	Second Highest Salary	0.2409999966621399	Easy	https://leetcode.com/problems/second-highest-salary/description/
+177	Nth Highest Salary	0.22200000286102295	Medium	https://leetcode.com/problems/nth-highest-salary/description/
+178	Rank Scores	0.31299999356269836	Medium	https://leetcode.com/problems/rank-scores/description/
+179	Largest Number	0.2409999966621399	Medium	https://leetcode.com/problems/largest-number/description/
+180	Consecutive Numbers	0.2919999957084656	Medium	https://leetcode.com/problems/consecutive-numbers/description/
+181	Employees Earning More Than Their Managers	0.41200000047683716	Easy	https://leetcode.com/problems/employees-earning-more-than-their-managers/description/
+182	Duplicate Emails	0.4829999804496765	Easy	https://leetcode.com/problems/duplicate-emails/description/
+183	Customers Who Never Order	0.38999998569488525	Easy	https://leetcode.com/problems/customers-who-never-order/description/
+184	Department Highest Salary	0.2409999966621399	Medium	https://leetcode.com/problems/department-highest-salary/description/
+185	Department Top Three Salaries	0.20999999344348907	Hard	https://leetcode.com/problems/department-top-three-salaries/description/
+186	Reverse Words in a String II	0.3290000259876251	Medium	https://leetcode.com/problems/reverse-words-in-a-string-ii/description/
+187	Repeated DNA Sequences	0.33900001645088196	Medium	https://leetcode.com/problems/repeated-dna-sequences/description/
+188	Best Time to Buy and Sell Stock IV	0.25200000405311584	Hard	https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/description/
+189	Rotate Array	0.2670000195503235	Easy	https://leetcode.com/problems/rotate-array/description/
+190	Reverse Bits	0.2929999828338623	Easy	https://leetcode.com/problems/reverse-bits/description/
+191	Number of 1 Bits	1.4079999923706055	Easy	https://leetcode.com/problems/number-of-1-bits/description/
+192	Word Frequency	0.2619999945163727	Medium	https://leetcode.com/problems/word-frequency/description/
+193	Valid Phone Numbers	0.24899999797344208	Easy	https://leetcode.com/problems/valid-phone-numbers/description/
+194	Transpose File	0.21899999678134918	Medium	https://leetcode.com/problems/transpose-file/description/
+195	Tenth Line	0.3400000035762787	Easy	https://leetcode.com/problems/tenth-line/description/
+196	Delete Duplicate Emails	0.2709999978542328	Easy	https://leetcode.com/problems/delete-duplicate-emails/description/
+197	Rising Temperature	0.3190000057220459	Easy	https://leetcode.com/problems/rising-temperature/description/
+198	House Robber	0.40400001406669617	Easy	https://leetcode.com/problems/house-robber/description/
+199	Binary Tree Right Side View	0.4399999976158142	Medium	https://leetcode.com/problems/binary-tree-right-side-view/description/
+200	Number of Islands	0.3779999911785126	Medium	https://leetcode.com/problems/number-of-islands/description/
+201	Bitwise AND of Numbers Range	0.3490000069141388	Medium	https://leetcode.com/problems/bitwise-and-of-numbers-range/description/
+202	Happy Number	0.4259999990463257	Easy	https://leetcode.com/problems/happy-number/description/
+203	Remove Linked List Elements	0.3409999907016754	Easy	https://leetcode.com/problems/remove-linked-list-elements/description/
+204	Count Primes	0.27000001072883606	Easy	https://leetcode.com/problems/count-primes/description/
+205	Isomorphic Strings	0.3540000021457672	Easy	https://leetcode.com/problems/isomorphic-strings/description/
+206	Reverse Linked List	0.48900002241134644	Easy	https://leetcode.com/problems/reverse-linked-list/description/
+207	Course Schedule	0.34700000286102295	Medium	https://leetcode.com/problems/course-schedule/description/
+208	Implement Trie (Prefix Tree)	0.3309999704360962	Medium	https://leetcode.com/problems/implement-trie-(prefix-tree)/description/
+209	Minimum Size Subarray Sum	0.33000001311302185	Medium	https://leetcode.com/problems/minimum-size-subarray-sum/description/
+210	Course Schedule II	0.3140000104904175	Medium	https://leetcode.com/problems/course-schedule-ii/description/
+211	Add and Search Word - Data structure design	0.2670000195503235	Medium	https://leetcode.com/problems/add-and-search-word---data-structure-design/description/
+212	Word Search II	0.25699999928474426	Hard	https://leetcode.com/problems/word-search-ii/description/
+213	House Robber II	0.34700000286102295	Medium	https://leetcode.com/problems/house-robber-ii/description/
+214	Shortest Palindrome	0.257999986410141	Hard	https://leetcode.com/problems/shortest-palindrome/description/
+215	Kth Largest Element in an Array	0.42500001192092896	Medium	https://leetcode.com/problems/kth-largest-element-in-an-array/description/
+216	Combination Sum III	0.48500001430511475	Medium	https://leetcode.com/problems/combination-sum-iii/description/
+217	Contains Duplicate	0.4859999716281891	Easy	https://leetcode.com/problems/contains-duplicate/description/
+218	The Skyline Problem	0.2979999780654907	Hard	https://leetcode.com/problems/the-skyline-problem/description/
+219	Contains Duplicate II	0.33500000834465027	Easy	https://leetcode.com/problems/contains-duplicate-ii/description/
+220	Contains Duplicate III	0.1889999955892563	Medium	https://leetcode.com/problems/contains-duplicate-iii/description/
+221	Maximal Square	0.3100000023841858	Medium	https://leetcode.com/problems/maximal-square/description/
+222	Count Complete Tree Nodes	0.2849999964237213	Medium	https://leetcode.com/problems/count-complete-tree-nodes/description/
+223	Rectangle Area	0.3449999988079071	Medium	https://leetcode.com/problems/rectangle-area/description/
+224	Basic Calculator	0.29600000381469727	Hard	https://leetcode.com/problems/basic-calculator/description/
+225	Implement Stack using Queues	0.35599997639656067	Easy	https://leetcode.com/problems/implement-stack-using-queues/description/
+226	Invert Binary Tree	0.5479999780654907	Easy	https://leetcode.com/problems/invert-binary-tree/description/
+227	Basic Calculator II	0.3089999854564667	Medium	https://leetcode.com/problems/basic-calculator-ii/description/
+228	Summary Ranges	0.33400002121925354	Medium	https://leetcode.com/problems/summary-ranges/description/
+229	Majority Element II	0.30000001192092896	Medium	https://leetcode.com/problems/majority-element-ii/description/
+230	Kth Smallest Element in a BST	0.4699999988079071	Medium	https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/
+231	Power of Two	0.41099998354911804	Easy	https://leetcode.com/problems/power-of-two/description/
+232	Implement Queue using Stacks	0.39400002360343933	Easy	https://leetcode.com/problems/implement-queue-using-stacks/description/
+233	Number of Digit One	0.2929999828338623	Hard	https://leetcode.com/problems/number-of-digit-one/description/
+234	Palindrome Linked List	0.3409999907016754	Easy	https://leetcode.com/problems/palindrome-linked-list/description/
+235	Lowest Common Ancestor of a Binary Search Tree	0.4099999964237213	Easy	https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
+236	Lowest Common Ancestor of a Binary Tree	0.3140000104904175	Medium	https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/
+237	Delete Node in a Linked List	0.48900002241134644	Easy	https://leetcode.com/problems/delete-node-in-a-linked-list/description/
+238	Product of Array Except Self	0.5139999985694885	Medium	https://leetcode.com/problems/product-of-array-except-self/description/
+239	Sliding Window Maximum	0.35099998116493225	Hard	https://leetcode.com/problems/sliding-window-maximum/description/
+240	Search a 2D Matrix II	2.3930001258850098	Medium	https://leetcode.com/problems/search-a-2d-matrix-ii/description/
+241	Different Ways to Add Parentheses	0.47200000286102295	Medium	https://leetcode.com/problems/different-ways-to-add-parentheses/description/
+242	Valid Anagram	0.4870000183582306	Easy	https://leetcode.com/problems/valid-anagram/description/
+243	Shortest Word Distance	0.5450000166893005	Easy	https://leetcode.com/problems/shortest-word-distance/description/
+244	Shortest Word Distance II	0.4270000159740448	Medium	https://leetcode.com/problems/shortest-word-distance-ii/description/
+245	Shortest Word Distance III	0.5170000195503235	Medium	https://leetcode.com/problems/shortest-word-distance-iii/description/
+246	Strobogrammatic Number	0.40700000524520874	Easy	https://leetcode.com/problems/strobogrammatic-number/description/
+247	Strobogrammatic Number II	0.41599997878074646	Medium	https://leetcode.com/problems/strobogrammatic-number-ii/description/
+248	Strobogrammatic Number III	0.33400002121925354	Hard	https://leetcode.com/problems/strobogrammatic-number-iii/description/
+249	Group Shifted Strings	0.4580000042915344	Medium	https://leetcode.com/problems/group-shifted-strings/description/
+250	Count Univalue Subtrees	0.4529999792575836	Medium	https://leetcode.com/problems/count-univalue-subtrees/description/
+251	Flatten 2D Vector	2.4200000762939453	Medium	https://leetcode.com/problems/flatten-2d-vector/description/
+252	Meeting Rooms	0.4959999918937683	Easy	https://leetcode.com/problems/meeting-rooms/description/
+253	Meeting Rooms II	0.4000000059604645	Medium	https://leetcode.com/problems/meeting-rooms-ii/description/
+254	Factor Combinations	0.43700000643730164	Medium	https://leetcode.com/problems/factor-combinations/description/
+255	Verify Preorder Sequence in Binary Search Tree	0.41499999165534973	Medium	https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree/description/
+256	Paint House	0.46799999475479126	Easy	https://leetcode.com/problems/paint-house/description/
+257	Binary Tree Paths	0.42800000309944153	Easy	https://leetcode.com/problems/binary-tree-paths/description/
+258	Add Digits	0.5249999761581421	Easy	https://leetcode.com/problems/add-digits/description/
+259	3Sum Smaller	3.428999900817871	Medium	https://leetcode.com/problems/3sum-smaller/description/
+260	Single Number III	0.5429999828338623	Medium	https://leetcode.com/problems/single-number-iii/description/
+261	Graph Valid Tree	0.3869999945163727	Medium	https://leetcode.com/problems/graph-valid-tree/description/
+262	Trips and Users	0.20899999141693115	Hard	https://leetcode.com/problems/trips-and-users/description/
+263	Ugly Number	0.4000000059604645	Easy	https://leetcode.com/problems/ugly-number/description/
+264	Ugly Number II	0.3409999907016754	Medium	https://leetcode.com/problems/ugly-number-ii/description/
+265	Paint House II	0.3920000195503235	Hard	https://leetcode.com/problems/paint-house-ii/description/
+266	Palindrome Permutation	0.5849999785423279	Easy	https://leetcode.com/problems/palindrome-permutation/description/
+267	Palindrome Permutation II	0.3229999840259552	Medium	https://leetcode.com/problems/palindrome-permutation-ii/description/
+268	Missing Number	0.46000000834465027	Easy	https://leetcode.com/problems/missing-number/description/
+269	Alien Dictionary	0.27300000190734863	Hard	https://leetcode.com/problems/alien-dictionary/description/
+270	Closest Binary Search Tree Value	0.41499999165534973	Easy	https://leetcode.com/problems/closest-binary-search-tree-value/description/
+271	Encode and Decode Strings	0.257999986410141	Medium	https://leetcode.com/problems/encode-and-decode-strings/description/
+272	Closest Binary Search Tree Value II	0.4129999876022339	Hard	https://leetcode.com/problems/closest-binary-search-tree-value-ii/description/
+273	Integer to English Words	0.23100000619888306	Hard	https://leetcode.com/problems/integer-to-english-words/description/
+274	H-Index	0.3409999907016754	Medium	https://leetcode.com/problems/h-index/description/
+275	H-Index II	0.35099998116493225	Medium	https://leetcode.com/problems/h-index-ii/description/
+276	Paint Fence	0.3540000021457672	Easy	https://leetcode.com/problems/paint-fence/description/
+277	Find the Celebrity	0.3529999852180481	Medium	https://leetcode.com/problems/find-the-celebrity/description/
+278	First Bad Version	0.2680000066757202	Easy	https://leetcode.com/problems/first-bad-version/description/
+279	Perfect Squares	0.38599997758865356	Medium	https://leetcode.com/problems/perfect-squares/description/
+280	Wiggle Sort	0.5920000076293945	Medium	https://leetcode.com/problems/wiggle-sort/description/
+281	Zigzag Iterator	0.5370000004768372	Medium	https://leetcode.com/problems/zigzag-iterator/description/
+282	Expression Add Operators	0.3100000023841858	Hard	https://leetcode.com/problems/expression-add-operators/description/
+283	Move Zeroes	0.5220000147819519	Easy	https://leetcode.com/problems/move-zeroes/description/
+284	Peeking Iterator	0.3659999966621399	Medium	https://leetcode.com/problems/peeking-iterator/description/
+285	Inorder Successor in BST	0.34200000762939453	Medium	https://leetcode.com/problems/inorder-successor-in-bst/description/
+286	Walls and Gates	0.46299999952316284	Medium	https://leetcode.com/problems/walls-and-gates/description/
+287	Find the Duplicate Number	0.4570000171661377	Medium	https://leetcode.com/problems/find-the-duplicate-number/description/
+288	Unique Word Abbreviation	0.1860000044107437	Medium	https://leetcode.com/problems/unique-word-abbreviation/description/
+289	Game of Life	0.38999998569488525	Medium	https://leetcode.com/problems/game-of-life/description/
+290	Word Pattern	0.33900001645088196	Easy	https://leetcode.com/problems/word-pattern/description/
+291	Word Pattern II	0.3879999816417694	Hard	https://leetcode.com/problems/word-pattern-ii/description/
+292	Nim Game	0.5540000200271606	Easy	https://leetcode.com/problems/nim-game/description/
+293	Flip Game	0.578000009059906	Easy	https://leetcode.com/problems/flip-game/description/
+294	Flip Game II	0.47200000286102295	Medium	https://leetcode.com/problems/flip-game-ii/description/
+295	Find Median from Data Stream	0.31299999356269836	Hard	https://leetcode.com/problems/find-median-from-data-stream/description/
+296	Best Meeting Point	0.5270000100135803	Hard	https://leetcode.com/problems/best-meeting-point/description/
+297	Serialize and Deserialize Binary Tree	0.3630000054836273	Hard	https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/
+298	Binary Tree Longest Consecutive Sequence	0.4229999780654907	Medium	https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/description/
+299	Bulls and Cows	0.367000013589859	Medium	https://leetcode.com/problems/bulls-and-cows/description/
+300	Longest Increasing Subsequence	0.3920000195503235	Medium	https://leetcode.com/problems/longest-increasing-subsequence/description/
+301	Remove Invalid Parentheses	0.36400002241134644	Hard	https://leetcode.com/problems/remove-invalid-parentheses/description/
+302	Smallest Rectangle Enclosing Black Pixels	0.4740000069141388	Hard	https://leetcode.com/problems/smallest-rectangle-enclosing-black-pixels/description/
+303	Range Sum Query - Immutable	0.33799999952316284	Easy	https://leetcode.com/problems/range-sum-query---immutable/description/
+304	Range Sum Query 2D - Immutable	2.2850000858306885	Medium	https://leetcode.com/problems/range-sum-query-2d---immutable/description/
+305	Number of Islands II	0.39900001883506775	Hard	https://leetcode.com/problems/number-of-islands-ii/description/
+306	Additive Number	0.2789999842643738	Medium	https://leetcode.com/problems/additive-number/description/
+307	Range Sum Query - Mutable	0.242000013589859	Medium	https://leetcode.com/problems/range-sum-query---mutable/description/
+308	Range Sum Query 2D - Mutable	2.2769999504089355	Hard	https://leetcode.com/problems/range-sum-query-2d---mutable/description/
+309	Best Time to Buy and Sell Stock with Cooldown	0.4259999990463257	Medium	https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/description/
+310	Minimum Height Trees	0.29100000858306885	Medium	https://leetcode.com/problems/minimum-height-trees/description/
+311	Sparse Matrix Multiplication	0.5350000262260437	Medium	https://leetcode.com/problems/sparse-matrix-multiplication/description/
+312	Burst Balloons	0.4429999887943268	Hard	https://leetcode.com/problems/burst-balloons/description/
+313	Super Ugly Number	0.390999972820282	Medium	https://leetcode.com/problems/super-ugly-number/description/
+314	Binary Tree Vertical Order Traversal	0.38599997758865356	Medium	https://leetcode.com/problems/binary-tree-vertical-order-traversal/description/
+315	Count of Smaller Numbers After Self	0.35499998927116394	Hard	https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/
+316	Remove Duplicate Letters	0.3089999854564667	Hard	https://leetcode.com/problems/remove-duplicate-letters/description/
+317	Shortest Distance from All Buildings	0.35099998116493225	Hard	https://leetcode.com/problems/shortest-distance-from-all-buildings/description/
+318	Maximum Product of Word Lengths	0.4659999907016754	Medium	https://leetcode.com/problems/maximum-product-of-word-lengths/description/
+319	Bulb Switcher	0.4320000112056732	Medium	https://leetcode.com/problems/bulb-switcher/description/
+320	Generalized Abbreviation	0.4690000116825104	Medium	https://leetcode.com/problems/generalized-abbreviation/description/
+321	Create Maximum Number	0.24899999797344208	Hard	https://leetcode.com/problems/create-maximum-number/description/
+322	Coin Change	0.2720000147819519	Medium	https://leetcode.com/problems/coin-change/description/
+323	Number of Connected Components in an Undirected Graph	0.4950000047683716	Medium	https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/description/
+324	Wiggle Sort II	0.26600000262260437	Medium	https://leetcode.com/problems/wiggle-sort-ii/description/
+325	Maximum Size Subarray Sum Equals k	0.43400001525878906	Medium	https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/description/
+326	Power of Three	0.4099999964237213	Easy	https://leetcode.com/problems/power-of-three/description/
+327	Count of Range Sum	0.3109999895095825	Hard	https://leetcode.com/problems/count-of-range-sum/description/
+328	Odd Even Linked List	0.4620000123977661	Medium	https://leetcode.com/problems/odd-even-linked-list/description/
+329	Longest Increasing Path in a Matrix	0.37700000405311584	Hard	https://leetcode.com/problems/longest-increasing-path-in-a-matrix/description/
+330	Patching Array	0.3290000259876251	Hard	https://leetcode.com/problems/patching-array/description/
+331	Verify Preorder Serialization of a Binary Tree	0.37599998712539673	Medium	https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/description/
+332	Reconstruct Itinerary	0.3009999990463257	Medium	https://leetcode.com/problems/reconstruct-itinerary/description/
+333	Largest BST Subtree	0.3149999976158142	Medium	https://leetcode.com/problems/largest-bst-subtree/description/
+334	Increasing Triplet Subsequence	0.39500001072883606	Medium	https://leetcode.com/problems/increasing-triplet-subsequence/description/
+335	Self Crossing	0.26499998569488525	Hard	https://leetcode.com/problems/self-crossing/description/
+336	Palindrome Pairs	0.27799999713897705	Hard	https://leetcode.com/problems/palindrome-pairs/description/
+337	House Robber III	0.4559999704360962	Medium	https://leetcode.com/problems/house-robber-iii/description/
+338	Counting Bits	0.628000020980835	Medium	https://leetcode.com/problems/counting-bits/description/
+339	Nested List Weight Sum	0.6439999938011169	Easy	https://leetcode.com/problems/nested-list-weight-sum/description/
+340	Longest Substring with At Most K Distinct Characters	0.3840000033378601	Hard	https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/description/
+341	Flatten Nested List Iterator	0.44200000166893005	Medium	https://leetcode.com/problems/flatten-nested-list-iterator/description/
+342	Power of Four	0.39500001072883606	Easy	https://leetcode.com/problems/power-of-four/description/
+343	Integer Break	0.46700000762939453	Medium	https://leetcode.com/problems/integer-break/description/
+344	Reverse String	0.6129999756813049	Easy	https://leetcode.com/problems/reverse-string/description/
+345	Reverse Vowels of a String	0.39800000190734863	Easy	https://leetcode.com/problems/reverse-vowels-of-a-string/description/
+346	Moving Average from Data Stream	0.6179999709129333	Easy	https://leetcode.com/problems/moving-average-from-data-stream/description/
+347	Top K Frequent Elements	0.5070000290870667	Medium	https://leetcode.com/problems/top-k-frequent-elements/description/
+348	Design Tic-Tac-Toe	0.46799999475479126	Medium	https://leetcode.com/problems/design-tic-tac-toe/description/
+349	Intersection of Two Arrays	0.49300000071525574	Easy	https://leetcode.com/problems/intersection-of-two-arrays/description/
+350	Intersection of Two Arrays II	0.4449999928474426	Easy	https://leetcode.com/problems/intersection-of-two-arrays-ii/description/
+351	Android Unlock Patterns	0.44699999690055847	Medium	https://leetcode.com/problems/android-unlock-patterns/description/
+352	Data Stream as Disjoint Intervals	0.41499999165534973	Hard	https://leetcode.com/problems/data-stream-as-disjoint-intervals/description/
+353	Design Snake Game	0.27799999713897705	Medium	https://leetcode.com/problems/design-snake-game/description/
+354	Russian Doll Envelopes	0.3279999792575836	Hard	https://leetcode.com/problems/russian-doll-envelopes/description/
+355	Design Twitter	0.26100000739097595	Medium	https://leetcode.com/problems/design-twitter/description/
+356	Line Reflection	0.30399999022483826	Medium	https://leetcode.com/problems/line-reflection/description/
+357	Count Numbers with Unique Digits	0.460999995470047	Medium	https://leetcode.com/problems/count-numbers-with-unique-digits/description/
+358	Rearrange String k Distance Apart	0.31700000166893005	Hard	https://leetcode.com/problems/rearrange-string-k-distance-apart/description/
+359	Logger Rate Limiter	0.6159999966621399	Easy	https://leetcode.com/problems/logger-rate-limiter/description/
+360	Sort Transformed Array	0.4529999792575836	Medium	https://leetcode.com/problems/sort-transformed-array/description/
+361	Bomb Enemy	0.4099999964237213	Medium	https://leetcode.com/problems/bomb-enemy/description/
+362	Design Hit Counter	0.5590000152587891	Medium	https://leetcode.com/problems/design-hit-counter/description/
+363	Max Sum of Rectangle No Larger Than K	0.3409999907016754	Hard	https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/description/
+364	Nested List Weight Sum II	0.5440000295639038	Medium	https://leetcode.com/problems/nested-list-weight-sum-ii/description/
+365	Water and Jug Problem	0.28299999237060547	Medium	https://leetcode.com/problems/water-and-jug-problem/description/
+366	Find Leaves of Binary Tree	0.6200000047683716	Medium	https://leetcode.com/problems/find-leaves-of-binary-tree/description/
+367	Valid Perfect Square	0.3890000283718109	Easy	https://leetcode.com/problems/valid-perfect-square/description/
+368	Largest Divisible Subset	0.3400000035762787	Medium	https://leetcode.com/problems/largest-divisible-subset/description/
+369	Plus One Linked List	0.550000011920929	Medium	https://leetcode.com/problems/plus-one-linked-list/description/
+370	Range Addition	0.5809999704360962	Medium	https://leetcode.com/problems/range-addition/description/
+371	Sum of Two Integers	0.5080000162124634	Easy	https://leetcode.com/problems/sum-of-two-integers/description/
+372	Super Pow	0.3490000069141388	Medium	https://leetcode.com/problems/super-pow/description/
+373	Find K Pairs with Smallest Sums	0.3179999887943268	Medium	https://leetcode.com/problems/find-k-pairs-with-smallest-sums/description/
+374	Guess Number Higher or Lower	0.375	Easy	https://leetcode.com/problems/guess-number-higher-or-lower/description/
+375	Guess Number Higher or Lower II	0.3620000183582306	Medium	https://leetcode.com/problems/guess-number-higher-or-lower-ii/description/
+376	Wiggle Subsequence	0.3630000054836273	Medium	https://leetcode.com/problems/wiggle-subsequence/description/
+377	Combination Sum IV	0.4309999942779541	Medium	https://leetcode.com/problems/combination-sum-iv/description/
+378	Kth Smallest Element in a Sorted Matrix	0.460999995470047	Medium	https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/
+379	Design Phone Directory	0.37599998712539673	Medium	https://leetcode.com/problems/design-phone-directory/description/
+380	Insert Delete GetRandom O(1)	1.403999924659729	Medium	https://leetcode.com/problems/insert-delete-getrandom-o(1)/description/
+381	Insert Delete GetRandom O(1) - Duplicates allowed	1.2999999523162842	Hard	https://leetcode.com/problems/insert-delete-getrandom-o(1)---duplicates-allowed/description/
+382	Linked List Random Node	0.4790000021457672	Medium	https://leetcode.com/problems/linked-list-random-node/description/
+383	Ransom Note	0.4829999804496765	Easy	https://leetcode.com/problems/ransom-note/description/
+384	Shuffle an Array	0.4790000021457672	Medium	https://leetcode.com/problems/shuffle-an-array/description/
+385	Mini Parser	0.3100000023841858	Medium	https://leetcode.com/problems/mini-parser/description/
+386	Lexicographical Numbers	0.4320000112056732	Medium	https://leetcode.com/problems/lexicographical-numbers/description/
+387	First Unique Character in a String	0.4749999940395355	Easy	https://leetcode.com/problems/first-unique-character-in-a-string/description/
+388	Longest Absolute File Path	0.3779999911785126	Medium	https://leetcode.com/problems/longest-absolute-file-path/description/
+389	Find the Difference	0.5180000066757202	Easy	https://leetcode.com/problems/find-the-difference/description/
+390	Elimination Game	0.42800000309944153	Medium	https://leetcode.com/problems/elimination-game/description/
+391	Perfect Rectangle	0.2770000100135803	Hard	https://leetcode.com/problems/perfect-rectangle/description/
+392	Is Subsequence	0.4479999840259552	Medium	https://leetcode.com/problems/is-subsequence/description/
+393	UTF-8 Validation	8.348999977111816	Medium	https://leetcode.com/problems/utf-8-validation/description/
+394	Decode String	0.4220000207424164	Medium	https://leetcode.com/problems/decode-string/description/
+395	Longest Substring with At Least K Repeating Characters	0.3609999716281891	Medium	https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/description/
+396	Rotate Function	0.34200000762939453	Medium	https://leetcode.com/problems/rotate-function/description/
+397	Integer Replacement	0.3059999942779541	Medium	https://leetcode.com/problems/integer-replacement/description/
+398	Random Pick Index	0.4580000042915344	Medium	https://leetcode.com/problems/random-pick-index/description/
+399	Evaluate Division	0.4309999942779541	Medium	https://leetcode.com/problems/evaluate-division/description/
+400	Nth Digit	0.29899999499320984	Easy	https://leetcode.com/problems/nth-digit/description/
+401	Binary Watch	0.4479999840259552	Easy	https://leetcode.com/problems/binary-watch/description/
+402	Remove K Digits	0.25699999928474426	Medium	https://leetcode.com/problems/remove-k-digits/description/
+403	Frog Jump	0.3330000042915344	Hard	https://leetcode.com/problems/frog-jump/description/
+404	Sum of Left Leaves	0.47999998927116394	Easy	https://leetcode.com/problems/sum-of-left-leaves/description/
+405	Convert a Number to Hexadecimal	0.41200000047683716	Easy	https://leetcode.com/problems/convert-a-number-to-hexadecimal/description/
+406	Queue Reconstruction by Height	0.5680000185966492	Medium	https://leetcode.com/problems/queue-reconstruction-by-height/description/
+407	Trapping Rain Water II	0.3779999911785126	Hard	https://leetcode.com/problems/trapping-rain-water-ii/description/
+408	Valid Word Abbreviation	0.2849999964237213	Easy	https://leetcode.com/problems/valid-word-abbreviation/description/
+409	Longest Palindrome	0.46400001645088196	Easy	https://leetcode.com/problems/longest-palindrome/description/
+410	Split Array Largest Sum	0.4009999930858612	Hard	https://leetcode.com/problems/split-array-largest-sum/description/
+411	Minimum Unique Word Abbreviation	0.33799999952316284	Hard	https://leetcode.com/problems/minimum-unique-word-abbreviation/description/
+412	Fizz Buzz	0.5799999833106995	Easy	https://leetcode.com/problems/fizz-buzz/description/
+413	Arithmetic Slices	0.5450000166893005	Medium	https://leetcode.com/problems/arithmetic-slices/description/
+414	Third Maximum Number	0.28200000524520874	Easy	https://leetcode.com/problems/third-maximum-number/description/
+415	Add Strings	0.41999998688697815	Easy	https://leetcode.com/problems/add-strings/description/
+416	Partition Equal Subset Sum	0.3869999945163727	Medium	https://leetcode.com/problems/partition-equal-subset-sum/description/
+417	Pacific Atlantic Water Flow	0.35199999809265137	Medium	https://leetcode.com/problems/pacific-atlantic-water-flow/description/
+418	Sentence Screen Fitting	0.2879999876022339	Medium	https://leetcode.com/problems/sentence-screen-fitting/description/
+419	Battleships in a Board	0.6389999985694885	Medium	https://leetcode.com/problems/battleships-in-a-board/description/
+420	Strong Password Checker	0.1899999976158142	Hard	https://leetcode.com/problems/strong-password-checker/description/
+421	Maximum XOR of Two Numbers in an Array	0.49000000953674316	Medium	https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/description/
+422	Valid Word Square	0.36500000953674316	Easy	https://leetcode.com/problems/valid-word-square/description/
+423	Reconstruct Original Digits from English	0.4479999840259552	Medium	https://leetcode.com/problems/reconstruct-original-digits-from-english/description/
+424	Longest Repeating Character Replacement	0.42500001192092896	Medium	https://leetcode.com/problems/longest-repeating-character-replacement/description/
+425	Word Squares	0.42900002002716064	Hard	https://leetcode.com/problems/word-squares/description/
+426	Convert Binary Search Tree to Sorted Doubly Linked List	0.3160000145435333	Medium	https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/description/
+427	Construct Quad Tree	0.4729999899864197	Easy	https://leetcode.com/problems/construct-quad-tree/description/
+428	Serialize and Deserialize N-ary Tree	0.4020000100135803	Hard	https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/description/
+429	N-ary Tree Level Order Traversal	0.5370000004768372	Easy	https://leetcode.com/problems/n-ary-tree-level-order-traversal/description/
+430	Flatten a Multilevel Doubly Linked List	0.3140000104904175	Medium	https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/description/
+431	Encode N-ary Tree to Binary Tree	0.4529999792575836	Hard	https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree/description/
+432	All O`one Data Structure	0.2770000100135803	Hard	https://leetcode.com/problems/all-o`one-data-structure/description/
+433	Minimum Genetic Mutation	0.3579999804496765	Medium	https://leetcode.com/problems/minimum-genetic-mutation/description/
+434	Number of Segments in a String	0.36500000953674316	Easy	https://leetcode.com/problems/number-of-segments-in-a-string/description/
+435	Non-overlapping Intervals	0.41099998354911804	Medium	https://leetcode.com/problems/non-overlapping-intervals/description/
+436	Find Right Interval	0.4179999828338623	Medium	https://leetcode.com/problems/find-right-interval/description/
+437	Path Sum III	0.40400001406669617	Easy	https://leetcode.com/problems/path-sum-iii/description/
+438	Find All Anagrams in a String	0.34200000762939453	Easy	https://leetcode.com/problems/find-all-anagrams-in-a-string/description/
+439	Ternary Expression Parser	0.5189999938011169	Medium	https://leetcode.com/problems/ternary-expression-parser/description/
+440	K-th Smallest in Lexicographical Order	0.25699999928474426	Hard	https://leetcode.com/problems/k-th-smallest-in-lexicographical-order/description/
+441	Arranging Coins	0.367000013589859	Easy	https://leetcode.com/problems/arranging-coins/description/
+442	Find All Duplicates in an Array	0.5799999833106995	Medium	https://leetcode.com/problems/find-all-duplicates-in-an-array/description/
+443	String Compression	0.3569999933242798	Easy	https://leetcode.com/problems/string-compression/description/
+444	Sequence Reconstruction	0.19700001180171967	Medium	https://leetcode.com/problems/sequence-reconstruction/description/
+445	Add Two Numbers II	0.47099998593330383	Medium	https://leetcode.com/problems/add-two-numbers-ii/description/
+446	Arithmetic Slices II - Subsequence	0.2800000011920929	Hard	https://leetcode.com/problems/arithmetic-slices-ii---subsequence/description/
+447	Number of Boomerangs	0.4749999940395355	Easy	https://leetcode.com/problems/number-of-boomerangs/description/
+448	Find All Numbers Disappeared in an Array	0.5139999985694885	Easy	https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/
+449	Serialize and Deserialize BST	0.4309999942779541	Medium	https://leetcode.com/problems/serialize-and-deserialize-bst/description/
+450	Delete Node in a BST	0.3779999911785126	Medium	https://leetcode.com/problems/delete-node-in-a-bst/description/
+451	Sort Characters By Frequency	0.5270000100135803	Medium	https://leetcode.com/problems/sort-characters-by-frequency/description/
+452	Minimum Number of Arrows to Burst Balloons	0.44699999690055847	Medium	https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/
+453	Minimum Moves to Equal Array Elements	0.4829999804496765	Easy	https://leetcode.com/problems/minimum-moves-to-equal-array-elements/description/
+454	4Sum II	4.480999946594238	Medium	https://leetcode.com/problems/4sum-ii/description/
+455	Assign Cookies	0.4749999940395355	Easy	https://leetcode.com/problems/assign-cookies/description/
+456	132 Pattern	132.27499389648438	Medium	https://leetcode.com/problems/132-pattern/description/
+457	Circular Array Loop	0.23799999058246613	Medium	https://leetcode.com/problems/circular-array-loop/description/
+458	Poor Pigs	0.43400001525878906	Easy	https://leetcode.com/problems/poor-pigs/description/
+459	Repeated Substring Pattern	0.38499999046325684	Easy	https://leetcode.com/problems/repeated-substring-pattern/description/
+460	LFU Cache	0.257999986410141	Hard	https://leetcode.com/problems/lfu-cache/description/
+461	Hamming Distance	0.6949999928474426	Easy	https://leetcode.com/problems/hamming-distance/description/
+462	Minimum Moves to Equal Array Elements II	0.5189999938011169	Medium	https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/description/
+463	Island Perimeter	0.5839999914169312	Easy	https://leetcode.com/problems/island-perimeter/description/
+464	Can I Win	0.2590000033378601	Medium	https://leetcode.com/problems/can-i-win/description/
+465	Optimal Account Balancing	0.4000000059604645	Hard	https://leetcode.com/problems/optimal-account-balancing/description/
+466	Count The Repetitions	0.2720000147819519	Hard	https://leetcode.com/problems/count-the-repetitions/description/
+467	Unique Substrings in Wraparound String	0.3330000042915344	Medium	https://leetcode.com/problems/unique-substrings-in-wraparound-string/description/
+468	Validate IP Address	0.20499999821186066	Medium	https://leetcode.com/problems/validate-ip-address/description/
+469	Convex Polygon	0.3479999899864197	Medium	https://leetcode.com/problems/convex-polygon/description/
+470	Implement Rand10() Using Rand7()	107.43099975585938	Medium	https://leetcode.com/problems/implement-rand10()-using-rand7()/description/
+471	Encode String with Shortest Length	0.43700000643730164	Hard	https://leetcode.com/problems/encode-string-with-shortest-length/description/
+472	Concatenated Words	0.3190000057220459	Hard	https://leetcode.com/problems/concatenated-words/description/
+473	Matchsticks to Square	0.3529999852180481	Medium	https://leetcode.com/problems/matchsticks-to-square/description/
+474	Ones and Zeroes	0.3869999945163727	Medium	https://leetcode.com/problems/ones-and-zeroes/description/
+475	Heaters	0.29899999499320984	Easy	https://leetcode.com/problems/heaters/description/
+476	Number Complement	0.6140000224113464	Easy	https://leetcode.com/problems/number-complement/description/
+477	Total Hamming Distance	0.4779999852180481	Medium	https://leetcode.com/problems/total-hamming-distance/description/
+478	Generate Random Point in a Circle	0.3229999840259552	Medium	https://leetcode.com/problems/generate-random-point-in-a-circle/description/
+479	Largest Palindrome Product	0.26100000739097595	Easy	https://leetcode.com/problems/largest-palindrome-product/description/
+480	Sliding Window Median	0.3059999942779541	Hard	https://leetcode.com/problems/sliding-window-median/description/
+481	Magical String	0.4559999704360962	Medium	https://leetcode.com/problems/magical-string/description/
+482	License Key Formatting	0.390999972820282	Easy	https://leetcode.com/problems/license-key-formatting/description/
+483	Smallest Good Base	0.335999995470047	Hard	https://leetcode.com/problems/smallest-good-base/description/
+484	Find Permutation	0.5609999895095825	Medium	https://leetcode.com/problems/find-permutation/description/
+485	Max Consecutive Ones	0.5370000004768372	Easy	https://leetcode.com/problems/max-consecutive-ones/description/
+486	Predict the Winner	0.45500001311302185	Medium	https://leetcode.com/problems/predict-the-winner/description/
+487	Max Consecutive Ones II	0.45500001311302185	Medium	https://leetcode.com/problems/max-consecutive-ones-ii/description/
+488	Zuma Game	0.3659999966621399	Hard	https://leetcode.com/problems/zuma-game/description/
+489	Robot Room Cleaner	0.4449999928474426	Hard	https://leetcode.com/problems/robot-room-cleaner/description/
+490	The Maze	0.4399999976158142	Medium	https://leetcode.com/problems/the-maze/description/
+491	Increasing Subsequences	0.39500001072883606	Medium	https://leetcode.com/problems/increasing-subsequences/description/
+492	Construct the Rectangle	0.4790000021457672	Easy	https://leetcode.com/problems/construct-the-rectangle/description/
+493	Reverse Pairs	0.20999999344348907	Hard	https://leetcode.com/problems/reverse-pairs/description/
+494	Target Sum	0.4399999976158142	Medium	https://leetcode.com/problems/target-sum/description/
+495	Teemo Attacking	0.5139999985694885	Medium	https://leetcode.com/problems/teemo-attacking/description/
+496	Next Greater Element I	0.5690000057220459	Easy	https://leetcode.com/problems/next-greater-element-i/description/
+497	Random Point in Non-overlapping Rectangles	0.33900001645088196	Medium	https://leetcode.com/problems/random-point-in-non-overlapping-rectangles/description/
+498	Diagonal Traverse	0.4449999928474426	Medium	https://leetcode.com/problems/diagonal-traverse/description/
+499	The Maze III	0.34599998593330383	Hard	https://leetcode.com/problems/the-maze-iii/description/
+500	Keyboard Row	0.6050000190734863	Easy	https://leetcode.com/problems/keyboard-row/description/
+501	Find Mode in Binary Search Tree	0.3790000081062317	Easy	https://leetcode.com/problems/find-mode-in-binary-search-tree/description/
+502	IPO	0.3659999966621399	Hard	https://leetcode.com/problems/ipo/description/
+503	Next Greater Element II	0.484000027179718	Medium	https://leetcode.com/problems/next-greater-element-ii/description/
+504	Base 7	7.439000129699707	Easy	https://leetcode.com/problems/base-7/description/
+505	The Maze II	0.3920000195503235	Medium	https://leetcode.com/problems/the-maze-ii/description/
+506	Relative Ranks	0.47099998593330383	Easy	https://leetcode.com/problems/relative-ranks/description/
+507	Perfect Number	0.3270000219345093	Easy	https://leetcode.com/problems/perfect-number/description/
+508	Most Frequent Subtree Sum	0.527999997138977	Medium	https://leetcode.com/problems/most-frequent-subtree-sum/description/
+509	Find Bottom Left Tree Value	0.5680000185966492	Medium	https://leetcode.com/problems/find-bottom-left-tree-value/description/
+510	Freedom Trail	0.3959999978542328	Hard	https://leetcode.com/problems/freedom-trail/description/
+511	Find Largest Value in Each Tree Row	0.5609999895095825	Medium	https://leetcode.com/problems/find-largest-value-in-each-tree-row/description/
+512	Longest Palindromic Subsequence	0.4350000023841858	Medium	https://leetcode.com/problems/longest-palindromic-subsequence/description/
+513	Super Washing Machines	0.36400002241134644	Hard	https://leetcode.com/problems/super-washing-machines/description/
+514	Coin Change 2	2.373000144958496	Medium	https://leetcode.com/problems/coin-change-2/description/
+515	Random Flip Matrix	0.3160000145435333	Medium	https://leetcode.com/problems/random-flip-matrix/description/
+516	Detect Capital	0.5189999938011169	Easy	https://leetcode.com/problems/detect-capital/description/
+517	Longest Uncommon Subsequence I	0.5579999685287476	Easy	https://leetcode.com/problems/longest-uncommon-subsequence-i/description/
+518	Longest Uncommon Subsequence II	0.32199999690055847	Medium	https://leetcode.com/problems/longest-uncommon-subsequence-ii/description/
+519	Continuous Subarray Sum	0.23399999737739563	Medium	https://leetcode.com/problems/continuous-subarray-sum/description/
+520	Longest Word in Dictionary through Deleting	0.4350000023841858	Medium	https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/description/
+521	Contiguous Array	0.4190000295639038	Medium	https://leetcode.com/problems/contiguous-array/description/
+522	Beautiful Arrangement	0.5299999713897705	Medium	https://leetcode.com/problems/beautiful-arrangement/description/
+523	Word Abbreviation	0.44599997997283936	Hard	https://leetcode.com/problems/word-abbreviation/description/
+524	Random Pick with Weight	0.42800000309944153	Medium	https://leetcode.com/problems/random-pick-with-weight/description/
+525	Minesweeper	0.49799999594688416	Medium	https://leetcode.com/problems/minesweeper/description/
+526	Minimum Absolute Difference in BST	0.4829999804496765	Easy	https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/
+527	Lonely Pixel I	0.5659999847412109	Medium	https://leetcode.com/problems/lonely-pixel-i/description/
+528	K-diff Pairs in an Array	0.2840000092983246	Easy	https://leetcode.com/problems/k-diff-pairs-in-an-array/description/
+529	Lonely Pixel II	0.4540000259876251	Medium	https://leetcode.com/problems/lonely-pixel-ii/description/
+530	Encode and Decode TinyURL	0.7409999966621399	Medium	https://leetcode.com/problems/encode-and-decode-tinyurl/description/
+531	Construct Binary Tree from String	0.42800000309944153	Medium	https://leetcode.com/problems/construct-binary-tree-from-string/description/
+532	Complex Number Multiplication	0.640999972820282	Medium	https://leetcode.com/problems/complex-number-multiplication/description/
+533	Convert BST to Greater Tree	0.48900002241134644	Easy	https://leetcode.com/problems/convert-bst-to-greater-tree/description/
+534	Minimum Time Difference	0.4650000035762787	Medium	https://leetcode.com/problems/minimum-time-difference/description/
+535	Single Element in a Sorted Array	0.562000036239624	Medium	https://leetcode.com/problems/single-element-in-a-sorted-array/description/
+536	Reverse String II	0.44200000166893005	Easy	https://leetcode.com/problems/reverse-string-ii/description/
+537	01 Matrix	1.3360000848770142	Medium	https://leetcode.com/problems/01-matrix/description/
+538	Diameter of Binary Tree	0.4509999752044678	Easy	https://leetcode.com/problems/diameter-of-binary-tree/description/
+539	Output Contest Matches	0.7149999737739563	Medium	https://leetcode.com/problems/output-contest-matches/description/
+540	Boundary of Binary Tree	0.3279999792575836	Medium	https://leetcode.com/problems/boundary-of-binary-tree/description/
+541	Remove Boxes	0.36800000071525574	Hard	https://leetcode.com/problems/remove-boxes/description/
+542	Friend Circles	0.49900001287460327	Medium	https://leetcode.com/problems/friend-circles/description/
+543	Split Array with Equal Sum	0.382999986410141	Medium	https://leetcode.com/problems/split-array-with-equal-sum/description/
+544	Binary Tree Longest Consecutive Sequence II	0.42900002002716064	Medium	https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-ii/description/
+545	Student Attendance Record I	0.4490000009536743	Easy	https://leetcode.com/problems/student-attendance-record-i/description/
+546	Student Attendance Record II	0.3160000145435333	Hard	https://leetcode.com/problems/student-attendance-record-ii/description/
+547	Optimal Division	0.5509999990463257	Medium	https://leetcode.com/problems/optimal-division/description/
+548	Brick Wall	0.46700000762939453	Medium	https://leetcode.com/problems/brick-wall/description/
+549	Split Concatenated Strings	0.38199999928474426	Medium	https://leetcode.com/problems/split-concatenated-strings/description/
+550	Next Greater Element III	0.28999999165534973	Medium	https://leetcode.com/problems/next-greater-element-iii/description/
+551	Reverse Words in a String III	0.6140000224113464	Easy	https://leetcode.com/problems/reverse-words-in-a-string-iii/description/
+552	Quad Tree Intersection	0.3320000171661377	Easy	https://leetcode.com/problems/quad-tree-intersection/description/
+553	Maximum Depth of N-ary Tree	0.609000027179718	Easy	https://leetcode.com/problems/maximum-depth-of-n-ary-tree/description/
+554	Subarray Sum Equals K	0.39900001883506775	Medium	https://leetcode.com/problems/subarray-sum-equals-k/description/
+555	Array Partition I	0.6700000166893005	Easy	https://leetcode.com/problems/array-partition-i/description/
+556	Longest Line of Consecutive One in Matrix	0.4129999876022339	Medium	https://leetcode.com/problems/longest-line-of-consecutive-one-in-matrix/description/
+557	Binary Tree Tilt	0.46700000762939453	Easy	https://leetcode.com/problems/binary-tree-tilt/description/
+558	Find the Closest Palindrome	0.17000000178813934	Hard	https://leetcode.com/problems/find-the-closest-palindrome/description/
+559	Array Nesting	0.5020000338554382	Medium	https://leetcode.com/problems/array-nesting/description/
+560	Reshape the Matrix	0.578000009059906	Easy	https://leetcode.com/problems/reshape-the-matrix/description/
+561	Permutation in String	0.36500000953674316	Medium	https://leetcode.com/problems/permutation-in-string/description/
+562	Maximum Vacation Days	0.36400002241134644	Hard	https://leetcode.com/problems/maximum-vacation-days/description/
+563	Median Employee Salary	0.3930000066757202	Hard	https://leetcode.com/problems/median-employee-salary/description/
+564	Managers with at Least 5 Direct Reports	5.579999923706055	Medium	https://leetcode.com/problems/managers-with-at-least-5-direct-reports/description/
+565	Find Median Given Frequency of Numbers	0.42800000309944153	Hard	https://leetcode.com/problems/find-median-given-frequency-of-numbers/description/
+566	Subtree of Another Tree	0.40400001406669617	Easy	https://leetcode.com/problems/subtree-of-another-tree/description/
+567	Squirrel Simulation	0.5259999632835388	Medium	https://leetcode.com/problems/squirrel-simulation/description/
+568	Winning Candidate	0.3409999907016754	Medium	https://leetcode.com/problems/winning-candidate/description/
+569	Distribute Candies	0.5830000042915344	Easy	https://leetcode.com/problems/distribute-candies/description/
+570	Out of Boundary Paths	0.3070000112056732	Medium	https://leetcode.com/problems/out-of-boundary-paths/description/
+571	Employee Bonus	0.5230000019073486	Easy	https://leetcode.com/problems/employee-bonus/description/
+572	Get Highest Answer Rate Question	0.3149999976158142	Medium	https://leetcode.com/problems/get-highest-answer-rate-question/description/
+573	Find Cumulative Salary of an Employee	0.3009999990463257	Hard	https://leetcode.com/problems/find-cumulative-salary-of-an-employee/description/
+574	Count Student Number in Departments	0.3920000195503235	Medium	https://leetcode.com/problems/count-student-number-in-departments/description/
+575	Shortest Unsorted Continuous Subarray	0.2929999828338623	Easy	https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/
+576	Kill Process	0.5239999890327454	Medium	https://leetcode.com/problems/kill-process/description/
+577	Delete Operation for Two Strings	0.4479999840259552	Medium	https://leetcode.com/problems/delete-operation-for-two-strings/description/
+578	Find Customer Referee	0.625	Easy	https://leetcode.com/problems/find-customer-referee/description/
+579	Investments in 2016	2016.4429931640625	Medium	https://leetcode.com/problems/investments-in-2016/description/
+580	Customer Placing the Largest Number of Orders	0.6140000224113464	Easy	https://leetcode.com/problems/customer-placing-the-largest-number-of-orders/description/
+581	Erect the Fence	0.33799999952316284	Hard	https://leetcode.com/problems/erect-the-fence/description/
+582	Design In-Memory File System	0.3630000054836273	Hard	https://leetcode.com/problems/design-in-memory-file-system/description/
+583	N-ary Tree Preorder Traversal	0.5609999895095825	Easy	https://leetcode.com/problems/n-ary-tree-preorder-traversal/description/
+584	N-ary Tree Postorder Traversal	0.5950000286102295	Easy	https://leetcode.com/problems/n-ary-tree-postorder-traversal/description/
+585	Tag Validator	0.3140000104904175	Hard	https://leetcode.com/problems/tag-validator/description/
+586	Fraction Addition and Subtraction	0.4620000123977661	Medium	https://leetcode.com/problems/fraction-addition-and-subtraction/description/
+587	Valid Square	0.39800000190734863	Medium	https://leetcode.com/problems/valid-square/description/
+588	Longest Harmonious Subsequence	0.41499999165534973	Easy	https://leetcode.com/problems/longest-harmonious-subsequence/description/
+589	Big Countries	0.7169999480247498	Easy	https://leetcode.com/problems/big-countries/description/
+590	Classes More Than 5 Students	5.325999736785889	Easy	https://leetcode.com/problems/classes-more-than-5-students/description/
+591	Friend Requests I: Overall Acceptance Rate	0.3790000081062317	Easy	https://leetcode.com/problems/friend-requests-i:-overall-acceptance-rate/description/
+592	Range Addition II	0.4790000021457672	Easy	https://leetcode.com/problems/range-addition-ii/description/
+593	Minimum Index Sum of Two Lists	0.46400001645088196	Easy	https://leetcode.com/problems/minimum-index-sum-of-two-lists/description/
+594	Non-negative Integers without Consecutive Ones	0.3190000057220459	Hard	https://leetcode.com/problems/non-negative-integers-without-consecutive-ones/description/
+595	Human Traffic of Stadium	0.3370000123977661	Hard	https://leetcode.com/problems/human-traffic-of-stadium/description/
+596	Friend Requests II: Who Has the Most Friends	0.4220000207424164	Medium	https://leetcode.com/problems/friend-requests-ii:-who-has-the-most-friends/description/
+597	Consecutive Available Seats	0.5370000004768372	Easy	https://leetcode.com/problems/consecutive-available-seats/description/
+598	Design Compressed String Iterator	0.3370000123977661	Easy	https://leetcode.com/problems/design-compressed-string-iterator/description/
+599	Can Place Flowers	0.3009999990463257	Easy	https://leetcode.com/problems/can-place-flowers/description/
+600	Construct String from Binary Tree	0.5020000338554382	Easy	https://leetcode.com/problems/construct-string-from-binary-tree/description/
+601	Sales Person	0.49799999594688416	Easy	https://leetcode.com/problems/sales-person/description/
+602	Tree Node	0.5400000214576721	Medium	https://leetcode.com/problems/tree-node/description/
+603	Find Duplicate File in System	0.527999997138977	Medium	https://leetcode.com/problems/find-duplicate-file-in-system/description/
+604	Triangle Judgement	0.5839999914169312	Easy	https://leetcode.com/problems/triangle-judgement/description/
+605	Valid Triangle Number	0.4240000247955322	Medium	https://leetcode.com/problems/valid-triangle-number/description/
+606	Shortest Distance in a Plane	0.5109999775886536	Medium	https://leetcode.com/problems/shortest-distance-in-a-plane/description/
+607	Shortest Distance in a Line	0.703000009059906	Easy	https://leetcode.com/problems/shortest-distance-in-a-line/description/
+608	Second Degree Follower	0.23000000417232513	Medium	https://leetcode.com/problems/second-degree-follower/description/
+609	Average Salary: Departments VS Company	0.3190000057220459	Hard	https://leetcode.com/problems/average-salary:-departments-vs-company/description/
+610	Add Bold Tag in String	0.382999986410141	Medium	https://leetcode.com/problems/add-bold-tag-in-string/description/
+611	Merge Two Binary Trees	0.6830000281333923	Easy	https://leetcode.com/problems/merge-two-binary-trees/description/
+612	Students Report By Geography	0.39800000190734863	Hard	https://leetcode.com/problems/students-report-by-geography/description/
+613	Biggest Single Number	0.3609999716281891	Easy	https://leetcode.com/problems/biggest-single-number/description/
+614	Not Boring Movies	0.5950000286102295	Easy	https://leetcode.com/problems/not-boring-movies/description/
+615	Task Scheduler	0.4270000159740448	Medium	https://leetcode.com/problems/task-scheduler/description/
+616	Design Circular Queue	0.36400002241134644	Medium	https://leetcode.com/problems/design-circular-queue/description/
+617	Add One Row to Tree	0.4620000123977661	Medium	https://leetcode.com/problems/add-one-row-to-tree/description/
+618	Maximum Distance in Arrays	0.359000027179718	Easy	https://leetcode.com/problems/maximum-distance-in-arrays/description/
+619	Minimum Factorization	0.3149999976158142	Medium	https://leetcode.com/problems/minimum-factorization/description/
+620	Exchange Seats	0.49000000953674316	Medium	https://leetcode.com/problems/exchange-seats/description/
+621	Swap Salary	0.671999990940094	Easy	https://leetcode.com/problems/swap-salary/description/
+622	Maximum Product of Three Numbers	0.4479999840259552	Easy	https://leetcode.com/problems/maximum-product-of-three-numbers/description/
+623	K Inverse Pairs Array	0.27799999713897705	Hard	https://leetcode.com/problems/k-inverse-pairs-array/description/
+624	Course Schedule III	0.29600000381469727	Hard	https://leetcode.com/problems/course-schedule-iii/description/
+625	Design Excel Sum Formula	0.2849999964237213	Hard	https://leetcode.com/problems/design-excel-sum-formula/description/
+626	Smallest Range	0.43299999833106995	Hard	https://leetcode.com/problems/smallest-range/description/
+627	Sum of Square Numbers	0.3240000009536743	Easy	https://leetcode.com/problems/sum-of-square-numbers/description/
+628	Find the Derangement of An Array	0.36500000953674316	Medium	https://leetcode.com/problems/find-the-derangement-of-an-array/description/
+629	Design Log Storage System	0.49799999594688416	Medium	https://leetcode.com/problems/design-log-storage-system/description/
+630	Exclusive Time of Functions	0.4509999752044678	Medium	https://leetcode.com/problems/exclusive-time-of-functions/description/
+631	Average of Levels in Binary Tree	0.5649999976158142	Easy	https://leetcode.com/problems/average-of-levels-in-binary-tree/description/
+632	Shopping Offers	0.46000000834465027	Medium	https://leetcode.com/problems/shopping-offers/description/
+633	Decode Ways II	0.242000013589859	Hard	https://leetcode.com/problems/decode-ways-ii/description/
+634	Solve the Equation	0.3869999945163727	Medium	https://leetcode.com/problems/solve-the-equation/description/
+635	Design Circular Deque	0.4880000054836273	Medium	https://leetcode.com/problems/design-circular-deque/description/
+636	Design Search Autocomplete System	0.3140000104904175	Hard	https://leetcode.com/problems/design-search-autocomplete-system/description/
+637	Maximum Average Subarray I	0.3799999952316284	Easy	https://leetcode.com/problems/maximum-average-subarray-i/description/
+638	Maximum Average Subarray II	0.26100000739097595	Hard	https://leetcode.com/problems/maximum-average-subarray-ii/description/
+639	Set Mismatch	0.3970000147819519	Easy	https://leetcode.com/problems/set-mismatch/description/
+640	Maximum Length of Pair Chain	0.4749999940395355	Medium	https://leetcode.com/problems/maximum-length-of-pair-chain/description/
+641	Palindromic Substrings	0.5440000295639038	Medium	https://leetcode.com/problems/palindromic-substrings/description/
+642	Replace Words	0.48900002241134644	Medium	https://leetcode.com/problems/replace-words/description/
+643	Dota2 Senate	2.36899995803833	Medium	https://leetcode.com/problems/dota2-senate/description/
+644	2 Keys Keyboard	2.4600000381469727	Medium	https://leetcode.com/problems/2-keys-keyboard/description/
+645	4 Keys Keyboard	4.497999668121338	Medium	https://leetcode.com/problems/4-keys-keyboard/description/
+646	Find Duplicate Subtrees	0.3930000066757202	Medium	https://leetcode.com/problems/find-duplicate-subtrees/description/
+647	Two Sum IV - Input is a BST	0.5049999952316284	Easy	https://leetcode.com/problems/two-sum-iv---input-is-a-bst/description/
+648	Maximum Binary Tree	0.7089999914169312	Medium	https://leetcode.com/problems/maximum-binary-tree/description/
+649	Print Binary Tree	0.48900002241134644	Medium	https://leetcode.com/problems/print-binary-tree/description/
+650	Coin Path	0.257999986410141	Hard	https://leetcode.com/problems/coin-path/description/
+651	Judge Route Circle	0.6890000104904175	Easy	https://leetcode.com/problems/judge-route-circle/description/
+652	Find K Closest Elements	0.34700000286102295	Medium	https://leetcode.com/problems/find-k-closest-elements/description/
+653	Split Array into Consecutive Subsequences	0.375	Medium	https://leetcode.com/problems/split-array-into-consecutive-subsequences/description/
+654	Remove 9	9.503000259399414	Hard	https://leetcode.com/problems/remove-9/description/
+655	Image Smoother	0.47099998593330383	Easy	https://leetcode.com/problems/image-smoother/description/
+656	Maximum Width of Binary Tree	0.3840000033378601	Medium	https://leetcode.com/problems/maximum-width-of-binary-tree/description/
+657	Equal Tree Partition	0.36500000953674316	Medium	https://leetcode.com/problems/equal-tree-partition/description/
+658	Strange Printer	0.3479999899864197	Hard	https://leetcode.com/problems/strange-printer/description/
+659	Non-decreasing Array	0.19900000095367432	Easy	https://leetcode.com/problems/non-decreasing-array/description/
+660	Path Sum IV	0.5090000033378601	Medium	https://leetcode.com/problems/path-sum-iv/description/
+661	Beautiful Arrangement II	0.5090000033378601	Medium	https://leetcode.com/problems/beautiful-arrangement-ii/description/
+662	Kth Smallest Number in Multiplication Table	0.39500001072883606	Hard	https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/description/
+663	Trim a Binary Search Tree	0.5839999914169312	Easy	https://leetcode.com/problems/trim-a-binary-search-tree/description/
+664	Maximum Swap	0.3879999816417694	Medium	https://leetcode.com/problems/maximum-swap/description/
+665	Second Minimum Node In a Binary Tree	0.4220000207424164	Easy	https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/description/
+666	Bulb Switcher II	0.492000013589859	Medium	https://leetcode.com/problems/bulb-switcher-ii/description/
+667	Number of Longest Increasing Subsequence	0.32099997997283936	Medium	https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/
+668	Longest Continuous Increasing Subsequence	0.42800000309944153	Easy	https://leetcode.com/problems/longest-continuous-increasing-subsequence/description/
+669	Cut Off Trees for Golf Event	0.27399998903274536	Hard	https://leetcode.com/problems/cut-off-trees-for-golf-event/description/
+670	Implement Magic Dictionary	0.49400001764297485	Medium	https://leetcode.com/problems/implement-magic-dictionary/description/
+671	Map Sum Pairs	0.5070000290870667	Medium	https://leetcode.com/problems/map-sum-pairs/description/
+672	Valid Parenthesis String	0.2979999780654907	Medium	https://leetcode.com/problems/valid-parenthesis-string/description/
+673	24 Game	24.391000747680664	Hard	https://leetcode.com/problems/24-game/description/
+674	Valid Palindrome II	0.32499998807907104	Easy	https://leetcode.com/problems/valid-palindrome-ii/description/
+675	Next Closest Time	0.41599997878074646	Medium	https://leetcode.com/problems/next-closest-time/description/
+676	Baseball Game	0.5870000123977661	Easy	https://leetcode.com/problems/baseball-game/description/
+677	K Empty Slots	0.33500000834465027	Hard	https://leetcode.com/problems/k-empty-slots/description/
+678	Redundant Connection	0.4570000171661377	Medium	https://leetcode.com/problems/redundant-connection/description/
+679	Redundant Connection II	0.2800000011920929	Hard	https://leetcode.com/problems/redundant-connection-ii/description/
+680	Repeated String Match	0.3140000104904175	Easy	https://leetcode.com/problems/repeated-string-match/description/
+681	Longest Univalue Path	0.3270000219345093	Easy	https://leetcode.com/problems/longest-univalue-path/description/
+682	Knight Probability in Chessboard	0.4059999883174896	Medium	https://leetcode.com/problems/knight-probability-in-chessboard/description/
+683	Maximum Sum of 3 Non-Overlapping Subarrays	3.4179999828338623	Hard	https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/description/
+684	Employee Importance	0.5180000066757202	Easy	https://leetcode.com/problems/employee-importance/description/
+685	Stickers to Spell Word	0.3579999804496765	Hard	https://leetcode.com/problems/stickers-to-spell-word/description/
+686	Top K Frequent Words	0.4209999740123749	Medium	https://leetcode.com/problems/top-k-frequent-words/description/
+687	Binary Number with Alternating Bits	0.562999963760376	Easy	https://leetcode.com/problems/binary-number-with-alternating-bits/description/
+688	Number of Distinct Islands	0.460999995470047	Medium	https://leetcode.com/problems/number-of-distinct-islands/description/
+689	Max Area of Island	0.5290000438690186	Easy	https://leetcode.com/problems/max-area-of-island/description/
+690	Count Binary Substrings	0.5120000243186951	Easy	https://leetcode.com/problems/count-binary-substrings/description/
+691	Degree of an Array	0.47200000286102295	Easy	https://leetcode.com/problems/degree-of-an-array/description/
+692	Partition to K Equal Sum Subsets	0.38499999046325684	Medium	https://leetcode.com/problems/partition-to-k-equal-sum-subsets/description/
+693	Falling Squares	0.3790000081062317	Hard	https://leetcode.com/problems/falling-squares/description/
+694	Search in a Binary Search Tree	0.5899999737739563	Easy	https://leetcode.com/problems/search-in-a-binary-search-tree/description/
+695	Insert into a Binary Search Tree	0.574999988079071	Medium	https://leetcode.com/problems/insert-into-a-binary-search-tree/description/
+696	Search in a Sorted Array of Unknown Size	0.37299999594688416	Medium	https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size/description/
+697	Kth Largest Element in a Stream	0.33000001311302185	Easy	https://leetcode.com/problems/kth-largest-element-in-a-stream/description/
+698	Binary Search	0.3179999887943268	Easy	https://leetcode.com/problems/binary-search/description/
+699	Design HashSet	0.33500000834465027	Easy	https://leetcode.com/problems/design-hashset/description/
+700	Design HashMap	0.4009999930858612	Easy	https://leetcode.com/problems/design-hashmap/description/
+701	Design Linked List	0.15600000321865082	Easy	https://leetcode.com/problems/design-linked-list/description/
+702	Insert into a Cyclic Sorted List	0.19600000977516174	Medium	https://leetcode.com/problems/insert-into-a-cyclic-sorted-list/description/
+703	To Lower Case	0.7450000047683716	Easy	https://leetcode.com/problems/to-lower-case/description/
+704	Random Pick with Blacklist	0.2970000207424164	Hard	https://leetcode.com/problems/random-pick-with-blacklist/description/
+705	Number of Distinct Islands II	0.4309999942779541	Hard	https://leetcode.com/problems/number-of-distinct-islands-ii/description/
+706	Minimum ASCII Delete Sum for Two Strings	0.5170000195503235	Medium	https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/description/
+707	Subarray Product Less Than K	0.3330000042915344	Medium	https://leetcode.com/problems/subarray-product-less-than-k/description/
+708	Best Time to Buy and Sell Stock with Transaction Fee	0.4749999940395355	Medium	https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/description/
+709	Range Module	0.3100000023841858	Hard	https://leetcode.com/problems/range-module/description/
+710	Max Stack	0.3700000047683716	Hard	https://leetcode.com/problems/max-stack/description/
+711	1-bit and 2-bit Characters	12.48900032043457	Easy	https://leetcode.com/problems/1-bit-and-2-bit-characters/description/
+712	Maximum Length of Repeated Subarray	0.4220000207424164	Medium	https://leetcode.com/problems/maximum-length-of-repeated-subarray/description/
+713	Find K-th Smallest Pair Distance	0.2800000011920929	Hard	https://leetcode.com/problems/find-k-th-smallest-pair-distance/description/
+714	Longest Word in Dictionary	0.4190000295639038	Easy	https://leetcode.com/problems/longest-word-in-dictionary/description/
+715	Accounts Merge	0.35099998116493225	Medium	https://leetcode.com/problems/accounts-merge/description/
+716	Remove Comments	0.2840000092983246	Medium	https://leetcode.com/problems/remove-comments/description/
+717	Candy Crush	0.5649999976158142	Medium	https://leetcode.com/problems/candy-crush/description/
+718	Find Pivot Index	0.3920000195503235	Easy	https://leetcode.com/problems/find-pivot-index/description/
+719	Split Linked List in Parts	0.4729999899864197	Medium	https://leetcode.com/problems/split-linked-list-in-parts/description/
+720	Number of Atoms	0.43700000643730164	Hard	https://leetcode.com/problems/number-of-atoms/description/
+721	Minimum Window Subsequence	0.3259999752044678	Hard	https://leetcode.com/problems/minimum-window-subsequence/description/
+722	Self Dividing Numbers	0.6700000166893005	Easy	https://leetcode.com/problems/self-dividing-numbers/description/
+723	My Calendar I	0.4350000023841858	Medium	https://leetcode.com/problems/my-calendar-i/description/
+724	Count Different Palindromic Subsequences	0.3630000054836273	Hard	https://leetcode.com/problems/count-different-palindromic-subsequences/description/
+725	My Calendar II	0.390999972820282	Medium	https://leetcode.com/problems/my-calendar-ii/description/
+726	My Calendar III	0.5	Hard	https://leetcode.com/problems/my-calendar-iii/description/
+727	Flood Fill	0.4779999852180481	Easy	https://leetcode.com/problems/flood-fill/description/
+728	Sentence Similarity	0.3869999945163727	Easy	https://leetcode.com/problems/sentence-similarity/description/
+729	Asteroid Collision	0.3709999918937683	Medium	https://leetcode.com/problems/asteroid-collision/description/
+730	Parse Lisp Expression	0.414000004529953	Hard	https://leetcode.com/problems/parse-lisp-expression/description/
+731	Sentence Similarity II	0.4020000100135803	Medium	https://leetcode.com/problems/sentence-similarity-ii/description/
+732	Monotone Increasing Digits	0.41200000047683716	Medium	https://leetcode.com/problems/monotone-increasing-digits/description/
+733	Daily Temperatures	0.5460000038146973	Medium	https://leetcode.com/problems/daily-temperatures/description/
+734	Delete and Earn	0.44200000166893005	Medium	https://leetcode.com/problems/delete-and-earn/description/
+735	Cherry Pickup	0.24799999594688416	Hard	https://leetcode.com/problems/cherry-pickup/description/
+736	Closest Leaf in a Binary Tree	0.35499998927116394	Medium	https://leetcode.com/problems/closest-leaf-in-a-binary-tree/description/
+737	Network Delay Time	0.3700000047683716	Medium	https://leetcode.com/problems/network-delay-time/description/
+738	Find Smallest Letter Greater Than Target	0.4309999942779541	Easy	https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/
+739	Prefix and Suffix Search	0.2670000195503235	Hard	https://leetcode.com/problems/prefix-and-suffix-search/description/
+740	Min Cost Climbing Stairs	0.4399999976158142	Easy	https://leetcode.com/problems/min-cost-climbing-stairs/description/
+741	Largest Number At Least Twice of Others	0.4020000100135803	Easy	https://leetcode.com/problems/largest-number-at-least-twice-of-others/description/
+742	Shortest Completing Word	0.5259999632835388	Medium	https://leetcode.com/problems/shortest-completing-word/description/
+743	Contain Virus	0.40299999713897705	Hard	https://leetcode.com/problems/contain-virus/description/
+744	Number Of Corner Rectangles	0.5859999656677246	Medium	https://leetcode.com/problems/number-of-corner-rectangles/description/
+745	IP to CIDR	0.5220000147819519	Easy	https://leetcode.com/problems/ip-to-cidr/description/
+746	Open the Lock	0.41200000047683716	Medium	https://leetcode.com/problems/open-the-lock/description/
+747	Cracking the Safe	0.4169999957084656	Hard	https://leetcode.com/problems/cracking-the-safe/description/
+748	Reach a Number	0.289000004529953	Medium	https://leetcode.com/problems/reach-a-number/description/
+749	Pour Water	0.35499998927116394	Medium	https://leetcode.com/problems/pour-water/description/
+750	Pyramid Transition Matrix	0.4779999852180481	Medium	https://leetcode.com/problems/pyramid-transition-matrix/description/
+751	Set Intersection Size At Least Two	0.3529999852180481	Hard	https://leetcode.com/problems/set-intersection-size-at-least-two/description/
+752	Bold Words in String	0.4000000059604645	Easy	https://leetcode.com/problems/bold-words-in-string/description/
+753	Employee Free Time	0.5360000133514404	Hard	https://leetcode.com/problems/employee-free-time/description/
+754	Find Anagram Mappings	0.7680000066757202	Easy	https://leetcode.com/problems/find-anagram-mappings/description/
+755	Special Binary String	0.4490000009536743	Hard	https://leetcode.com/problems/special-binary-string/description/
+756	Prime Number of Set Bits in Binary Representation	0.562999963760376	Easy	https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/description/
+757	Partition Labels	0.6499999761581421	Medium	https://leetcode.com/problems/partition-labels/description/
+758	Largest Plus Sign	0.4099999964237213	Medium	https://leetcode.com/problems/largest-plus-sign/description/
+759	Couples Holding Hands	0.4829999804496765	Hard	https://leetcode.com/problems/couples-holding-hands/description/
+760	Toeplitz Matrix	0.5889999866485596	Easy	https://leetcode.com/problems/toeplitz-matrix/description/
+761	Reorganize String	0.3790000081062317	Medium	https://leetcode.com/problems/reorganize-string/description/
+762	Max Chunks To Make Sorted II	0.4359999895095825	Hard	https://leetcode.com/problems/max-chunks-to-make-sorted-ii/description/
+763	Max Chunks To Make Sorted	0.48900002241134644	Medium	https://leetcode.com/problems/max-chunks-to-make-sorted/description/
+764	Basic Calculator IV	0.4350000023841858	Hard	https://leetcode.com/problems/basic-calculator-iv/description/
+765	Jewels and Stones	0.8180000185966492	Easy	https://leetcode.com/problems/jewels-and-stones/description/
+766	Basic Calculator III	0.40799999237060547	Hard	https://leetcode.com/problems/basic-calculator-iii/description/
+767	Sliding Puzzle	0.47200000286102295	Hard	https://leetcode.com/problems/sliding-puzzle/description/
+768	Minimize Max Distance to Gas Station	0.34599998593330383	Hard	https://leetcode.com/problems/minimize-max-distance-to-gas-station/description/
+769	Global and Local Inversions	0.35199999809265137	Medium	https://leetcode.com/problems/global-and-local-inversions/description/
+770	Split BST	0.49799999594688416	Medium	https://leetcode.com/problems/split-bst/description/
+771	Swap Adjacent in LR String	0.29600000381469727	Medium	https://leetcode.com/problems/swap-adjacent-in-lr-string/description/
+772	Swim in Rising Water	0.4479999840259552	Hard	https://leetcode.com/problems/swim-in-rising-water/description/
+773	K-th Symbol in Grammar	0.375	Medium	https://leetcode.com/problems/k-th-symbol-in-grammar/description/
+774	Reaching Points	0.24400000274181366	Hard	https://leetcode.com/problems/reaching-points/description/
+775	Rabbits in Forest	0.5	Medium	https://leetcode.com/problems/rabbits-in-forest/description/
+776	Transform to Chessboard	0.37400001287460327	Hard	https://leetcode.com/problems/transform-to-chessboard/description/
+777	Minimum Distance Between BST Nodes	0.4829999804496765	Easy	https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/
+778	Letter Case Permutation	0.534000039100647	Easy	https://leetcode.com/problems/letter-case-permutation/description/
+779	Is Graph Bipartite?	0.39400002360343933	Medium	https://leetcode.com/problems/is-graph-bipartite?/description/
+780	K-th Smallest Prime Fraction	0.34200000762939453	Hard	https://leetcode.com/problems/k-th-smallest-prime-fraction/description/
+781	Cheapest Flights Within K Stops	0.3009999990463257	Medium	https://leetcode.com/problems/cheapest-flights-within-k-stops/description/
+782	Rotated Digits	0.5090000033378601	Easy	https://leetcode.com/problems/rotated-digits/description/
+783	Escape The Ghosts	0.5259999632835388	Medium	https://leetcode.com/problems/escape-the-ghosts/description/
+784	Domino and Tromino Tiling	0.335999995470047	Medium	https://leetcode.com/problems/domino-and-tromino-tiling/description/
+785	Custom Sort String	0.5959999561309814	Medium	https://leetcode.com/problems/custom-sort-string/description/
+786	Number of Matching Subsequences	0.3779999911785126	Medium	https://leetcode.com/problems/number-of-matching-subsequences/description/
+787	Preimage Size of Factorial Zeroes Function	0.40299999713897705	Hard	https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function/description/
+788	Valid Tic-Tac-Toe State	0.2789999842643738	Medium	https://leetcode.com/problems/valid-tic-tac-toe-state/description/
+789	Number of Subarrays with Bounded Maximum	0.414000004529953	Medium	https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/description/
+790	Rotate String	0.492000013589859	Easy	https://leetcode.com/problems/rotate-string/description/
+791	All Paths From Source to Target	0.6740000247955322	Medium	https://leetcode.com/problems/all-paths-from-source-to-target/description/
+792	Smallest Rotation with Highest Score	0.35499998927116394	Hard	https://leetcode.com/problems/smallest-rotation-with-highest-score/description/
+793	Champagne Tower	0.30300000309944153	Medium	https://leetcode.com/problems/champagne-tower/description/
+794	Similar RGB Color	0.5490000247955322	Easy	https://leetcode.com/problems/similar-rgb-color/description/
+795	Minimum Swaps To Make Sequences Increasing	0.3190000057220459	Medium	https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/description/
+796	Find Eventual Safe States	0.4000000059604645	Medium	https://leetcode.com/problems/find-eventual-safe-states/description/
+797	Bricks Falling When Hit	0.23600000143051147	Hard	https://leetcode.com/problems/bricks-falling-when-hit/description/
+798	Unique Morse Code Words	0.7149999737739563	Easy	https://leetcode.com/problems/unique-morse-code-words/description/
+799	Split Array With Same Average	0.21700000762939453	Hard	https://leetcode.com/problems/split-array-with-same-average/description/
+800	Number of Lines To Write String	0.6200000047683716	Easy	https://leetcode.com/problems/number-of-lines-to-write-string/description/
+801	Max Increase to Keep City Skyline	0.7990000247955322	Medium	https://leetcode.com/problems/max-increase-to-keep-city-skyline/description/
+802	Soup Servings	0.3400000035762787	Medium	https://leetcode.com/problems/soup-servings/description/
+803	Expressive Words	0.38199999928474426	Medium	https://leetcode.com/problems/expressive-words/description/
+804	Chalkboard XOR Game	0.4000000059604645	Hard	https://leetcode.com/problems/chalkboard-xor-game/description/
+805	Subdomain Visit Count	0.6129999756813049	Easy	https://leetcode.com/problems/subdomain-visit-count/description/
+806	Largest Triangle Area	0.5379999876022339	Easy	https://leetcode.com/problems/largest-triangle-area/description/
+807	Largest Sum of Averages	0.4179999828338623	Medium	https://leetcode.com/problems/largest-sum-of-averages/description/
+808	Binary Tree Pruning	0.6850000023841858	Medium	https://leetcode.com/problems/binary-tree-pruning/description/
+809	Bus Routes	0.33900001645088196	Hard	https://leetcode.com/problems/bus-routes/description/
+810	Ambiguous Coordinates	0.4240000247955322	Medium	https://leetcode.com/problems/ambiguous-coordinates/description/
+811	Linked List Components	0.5109999775886536	Medium	https://leetcode.com/problems/linked-list-components/description/
+812	Race Car	0.2879999876022339	Hard	https://leetcode.com/problems/race-car/description/
+813	Most Common Word	0.4859999716281891	Easy	https://leetcode.com/problems/most-common-word/description/
+814	Short Encoding of Words	0.43700000643730164	Medium	https://leetcode.com/problems/short-encoding-of-words/description/
+815	Shortest Distance to a Character	0.6040000319480896	Easy	https://leetcode.com/problems/shortest-distance-to-a-character/description/
+816	Card Flipping Game	0.37299999594688416	Medium	https://leetcode.com/problems/card-flipping-game/description/
+817	Binary Trees With Factors	0.3020000159740448	Medium	https://leetcode.com/problems/binary-trees-with-factors/description/
+818	Goat Latin	0.5490000247955322	Easy	https://leetcode.com/problems/goat-latin/description/
+819	Friends Of Appropriate Ages	0.3160000145435333	Medium	https://leetcode.com/problems/friends-of-appropriate-ages/description/
+820	Most Profit Assigning Work	0.3279999792575836	Medium	https://leetcode.com/problems/most-profit-assigning-work/description/
+821	Making A Large Island	0.4050000011920929	Hard	https://leetcode.com/problems/making-a-large-island/description/
+822	Unique Letter String	0.3479999899864197	Hard	https://leetcode.com/problems/unique-letter-string/description/
+823	Consecutive Numbers Sum	0.2770000100135803	Medium	https://leetcode.com/problems/consecutive-numbers-sum/description/
+824	Positions of Large Groups	0.46400001645088196	Easy	https://leetcode.com/problems/positions-of-large-groups/description/
+825	Masking Personal Information	0.4209999740123749	Medium	https://leetcode.com/problems/masking-personal-information/description/
+826	Flipping an Image	0.6880000233650208	Easy	https://leetcode.com/problems/flipping-an-image/description/
+827	Find And Replace in String	0.3890000283718109	Medium	https://leetcode.com/problems/find-and-replace-in-string/description/
+828	Sum of Distances in Tree	0.33900001645088196	Hard	https://leetcode.com/problems/sum-of-distances-in-tree/description/
+829	Image Overlap	0.4209999740123749	Medium	https://leetcode.com/problems/image-overlap/description/
+830	Rectangle Overlap	0.4309999942779541	Easy	https://leetcode.com/problems/rectangle-overlap/description/
+831	New 21 Game	21.260000228881836	Medium	https://leetcode.com/problems/new-21-game/description/
+832	Push Dominoes	0.41200000047683716	Medium	https://leetcode.com/problems/push-dominoes/description/
+833	Similar String Groups	0.33799999952316284	Hard	https://leetcode.com/problems/similar-string-groups/description/
+834	Magic Squares In Grid	0.34299999475479126	Easy	https://leetcode.com/problems/magic-squares-in-grid/description/
+835	Keys and Rooms	0.5690000057220459	Medium	https://leetcode.com/problems/keys-and-rooms/description/
+836	Split Array into Fibonacci Sequence	0.3370000123977661	Medium	https://leetcode.com/problems/split-array-into-fibonacci-sequence/description/
+837	Guess the Word	0.3529999852180481	Hard	https://leetcode.com/problems/guess-the-word/description/
+838	Backspace String Compare	0.44099998474121094	Easy	https://leetcode.com/problems/backspace-string-compare/description/
+839	Longest Mountain in Array	0.3149999976158142	Medium	https://leetcode.com/problems/longest-mountain-in-array/description/
+840	Hand of Straights	0.4429999887943268	Medium	https://leetcode.com/problems/hand-of-straights/description/
+841	Shortest Path Visiting All Nodes	0.4229999780654907	Hard	https://leetcode.com/problems/shortest-path-visiting-all-nodes/description/
+842	Shifting Letters	0.36000001430511475	Medium	https://leetcode.com/problems/shifting-letters/description/
+843	Maximize Distance to Closest Person	0.3779999911785126	Easy	https://leetcode.com/problems/maximize-distance-to-closest-person/description/
+844	Rectangle Area II	0.4169999957084656	Hard	https://leetcode.com/problems/rectangle-area-ii/description/
+845	Loud and Rich	0.44200000166893005	Medium	https://leetcode.com/problems/loud-and-rich/description/
+846	Peak Index in a Mountain Array	0.671999990940094	Easy	https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
+847	Car Fleet	0.32099997997283936	Medium	https://leetcode.com/problems/car-fleet/description/
+848	K-Similar Strings	0.3009999990463257	Hard	https://leetcode.com/problems/k-similar-strings/description/
+849	Exam Room	0.3020000159740448	Medium	https://leetcode.com/problems/exam-room/description/
+850	Score of Parentheses	0.5400000214576721	Medium	https://leetcode.com/problems/score-of-parentheses/description/
+851	Minimum Cost to Hire K Workers	0.4000000059604645	Hard	https://leetcode.com/problems/minimum-cost-to-hire-k-workers/description/
+852	Mirror Reflection	0.4909999966621399	Medium	https://leetcode.com/problems/mirror-reflection/description/
+853	Buddy Strings	0.2670000195503235	Easy	https://leetcode.com/problems/buddy-strings/description/
+854	Lemonade Change	0.4950000047683716	Easy	https://leetcode.com/problems/lemonade-change/description/
+855	Score After Flipping Matrix	0.6759999990463257	Medium	https://leetcode.com/problems/score-after-flipping-matrix/description/
+856	Shortest Subarray with Sum at Least K	0.17899999022483826	Hard	https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/
+857	All Nodes Distance K in Binary Tree	0.4099999964237213	Medium	https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/description/
+858	Shortest Path to Get All Keys	0.3190000057220459	Hard	https://leetcode.com/problems/shortest-path-to-get-all-keys/description/
+859	Smallest Subtree with all the Deepest Nodes	0.5120000243186951	Medium	https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/description/
+860	Prime Palindrome	0.18400000035762787	Medium	https://leetcode.com/problems/prime-palindrome/description/
+861	Transpose Matrix	0.6509999632835388	Easy	https://leetcode.com/problems/transpose-matrix/description/
+862	Binary Gap	0.5990000367164612	Easy	https://leetcode.com/problems/binary-gap/description/
+863	Reordered Power of 2	2.4769999980926514	Medium	https://leetcode.com/problems/reordered-power-of-2/description/
+864	Advantage Shuffle	0.39400002360343933	Medium	https://leetcode.com/problems/advantage-shuffle/description/
+865	Minimum Number of Refueling Stops	0.2590000033378601	Hard	https://leetcode.com/problems/minimum-number-of-refueling-stops/description/
+866	Leaf-Similar Trees	0.6150000095367432	Easy	https://leetcode.com/problems/leaf-similar-trees/description/
+867	Length of Longest Fibonacci Subsequence	0.4099999964237213	Medium	https://leetcode.com/problems/length-of-longest-fibonacci-subsequence/description/
+868	Walking Robot Simulation	0.281000018119812	Easy	https://leetcode.com/problems/walking-robot-simulation/description/
+869	Koko Eating Bananas	0.4099999964237213	Medium	https://leetcode.com/problems/koko-eating-bananas/description/
+870	Middle of the Linked List	0.6430000066757202	Easy	https://leetcode.com/problems/middle-of-the-linked-list/description/
+871	Stone Game	0.5559999942779541	Medium	https://leetcode.com/problems/stone-game/description/
+872	Nth Magical Number	0.22499999403953552	Hard	https://leetcode.com/problems/nth-magical-number/description/
+873	Profitable Schemes	0.3140000104904175	Hard	https://leetcode.com/problems/profitable-schemes/description/
+874	Decoded String at Index	0.22200000286102295	Medium	https://leetcode.com/problems/decoded-string-at-index/description/
+875	Boats to Save People	0.3890000283718109	Medium	https://leetcode.com/problems/boats-to-save-people/description/
+876	Reachable Nodes In Subdivided Graph	0.33400002121925354	Hard	https://leetcode.com/problems/reachable-nodes-in-subdivided-graph/description/
+877	Projection Area of 3D Shapes	3.6660001277923584	Easy	https://leetcode.com/problems/projection-area-of-3d-shapes/description/
+878	Uncommon Words from Two Sentences	0.6060000061988831	Easy	https://leetcode.com/problems/uncommon-words-from-two-sentences/description/
+879	Spiral Matrix III	0.6359999775886536	Medium	https://leetcode.com/problems/spiral-matrix-iii/description/
+880	Possible Bipartition	0.3720000088214874	Medium	https://leetcode.com/problems/possible-bipartition/description/
+881	Super Egg Drop	0.21700000762939453	Hard	https://leetcode.com/problems/super-egg-drop/description/
+882	Fair Candy Swap	0.5519999861717224	Easy	https://leetcode.com/problems/fair-candy-swap/description/
+883	Construct Binary Tree from Preorder and Postorder Traversal	0.5460000038146973	Medium	https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/description/
+884	Find and Replace Pattern	0.7019999623298645	Medium	https://leetcode.com/problems/find-and-replace-pattern/description/
+885	Sum of Subsequence Widths	0.23999999463558197	Hard	https://leetcode.com/problems/sum-of-subsequence-widths/description/
+886	Surface Area of 3D Shapes	3.547999858856201	Easy	https://leetcode.com/problems/surface-area-of-3d-shapes/description/
+887	Groups of Special-Equivalent Strings	0.609000027179718	Easy	https://leetcode.com/problems/groups-of-special-equivalent-strings/description/
+888	All Possible Full Binary Trees	0.6449999809265137	Medium	https://leetcode.com/problems/all-possible-full-binary-trees/description/
+889	Maximum Frequency Stack	0.492000013589859	Hard	https://leetcode.com/problems/maximum-frequency-stack/description/
+890	Monotonic Array	0.6449999809265137	Easy	https://leetcode.com/problems/monotonic-array/description/
+891	Increasing Order Search Tree	0.5130000114440918	Easy	https://leetcode.com/problems/increasing-order-search-tree/description/
+892	Bitwise ORs of Subarrays	0.09600000083446503	Medium	https://leetcode.com/problems/bitwise-ors-of-subarrays/description/
+893	Orderly Queue	0.2370000034570694	Hard	https://leetcode.com/problems/orderly-queue/description/

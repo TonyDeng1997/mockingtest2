@@ -13,6 +13,29 @@ Need to integrate with webpack to organize the resource.
 3. CD to the folder `cd FOLDERNAME`
 * Run `./mvnw spring-boot:run` to install everything (mvnw.bat for Windows users)
 
+4. If you see error in the above step to start the web server in development mode. Try to do the following,
+
+* In application.properties, change your database password.
+* Create a database by `create database notes_app;`
+<pre>
+xiaofeng@tvlx:~/projects/mockingtest2$ mysql -uroot -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 14
+Server version: 5.7.22-0ubuntu0.16.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database notes_app;
+Query OK, 1 row affected (0.00 sec)
+</pre>
+
 
 ## Possible Error Solution
 
@@ -26,19 +49,19 @@ Need to integrate with webpack to organize the resource.
 ### Create your branch off develop branch
 
 1/ git checkout develop <br>
+
 2/ git pull or git fetch origin -p (sync origin/develop and remove your local branch that was deleted on remote) <br>
+
 3/ Create your branch with -b <br>
 git checkout -b xiaofeng/add-img-slider <br>
 
-For example, 
 
-E:\extremehunter.us\extremehunter.us>git add README.md
+ git add README.md
 
-E:\extremehunter.us\extremehunter.us>git add app/routes/index.js
+ git add app/routes/index.js
 
-E:\extremehunter.us\extremehunter.us>git status
+ git status
 
-On branch xiaofeng/show-git-cmd
 
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
@@ -53,7 +76,40 @@ Untracked files:
 
 Please do not commit node_modules.
 
+
 ## Send pull request to develop branch
 
+* Always make your PR to develop branch
+* Do not commit files in node_modules
+* Do not commit hidden files .* files
+ 
 ## Merge from develop to master branch
 Master branch is always the most trustable branch.
+
+## Troubleshooting
+
+* If you have any issues on not able to install mvn package, please 
+  remove the node_modules dir in your project root.
+* cd ~/.m2, and remove everything under it.
+* If you see test file issue, then please do:
+** mvn clean
+** mvn test
+** mvn spring-boot:run
+
+## Flyway Integration
+`https://flywaydb.org/getstarted/firststeps/maven`
+
+## Create a db user for development
+Throughtout the whole project, developer is going to connect to their own local db but in the configuration file
+we have to change the user password and user name all the time, so for the convinience, we decided to set a dummy user account
+called `mockingtest`, password: `!LetUsUseThis2018`. The following script will help you create such db user in your 
+local db, and grant permissiosn.
+
+`
+CREATE USER 'mockingtest'@'localhost' IDENTIFIED BY '!LetUsUseThis2018';
+`
+
+`
+GRANT ALL PRIVILEGES ON * . * TO 'mockingtest'@'localhost';
+`
+ref: https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
