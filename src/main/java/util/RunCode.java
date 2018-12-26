@@ -116,9 +116,9 @@ public class RunCode {
                 System.out.println(compileCommand);
                 System.out.println(runCommand);
                 
-                builder.command("/usr/bin/sh", "-c", compileCommand + ";" + runCommand);
+                builder.command("/bin/sh", "-c", compileCommand + ";" + runCommand);
             } else {
-                builder.command("/usr/bin/sh", "-c", "python " + sourceFilePath.toString());
+                builder.command("/bin/sh", "-c", "python " + sourceFilePath.toString());
             }
             generatelog();
         }
