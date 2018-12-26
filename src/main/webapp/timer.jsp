@@ -149,6 +149,12 @@ body {
 -->
 
 <script>
+
+function disableF5(e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); };
+$(document).on("keydown", disableF5);
+</script>
+
+<script>
   // Set the date we're counting down to
 
   var testTime= 1;
@@ -184,6 +190,7 @@ body {
       }
   }, 1000);
   </script>
+  
   <script>
       CodeMirror.commands.autocomplete = function(cm) {
         cm.showHint({hint: CodeMirror.hint.anyword});
