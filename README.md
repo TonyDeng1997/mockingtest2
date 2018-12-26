@@ -97,7 +97,10 @@ Master branch is always the most trustable branch.
 ** mvn spring-boot:run
 
 ## Flyway Integration
-`https://flywaydb.org/getstarted/firststeps/maven`
+For flyway integration, please check the pom.xml in the root of the project.
+Also checkout the Flyway.md and flyway.sh for the usage.
+
+ref: `https://flywaydb.org/getstarted/firststeps/maven`
 
 ## Create a db user for development
 Throughtout the whole project, developer is going to connect to their own local db but in the configuration file
