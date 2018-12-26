@@ -102,11 +102,11 @@ Master branch is always the most trustable branch.
 ## Create a db user for development
 Throughtout the whole project, developer is going to connect to their own local db but in the configuration file
 we have to change the user password and user name all the time, so for the convinience, we decided to set a dummy user account
-called `mockingtest`, password: `mockingtest`. The following script will help you create such db user in your 
+called `mockingtest`, password: `!LetUsUseThis2018`. The following script will help you create such db user in your 
 local db, and grant permissiosn.
 
 `
-CREATE USER 'mockingtest'@'localhost' IDENTIFIED BY 'mockingtest';
+CREATE USER 'mockingtest'@'localhost' IDENTIFIED BY '!LetUsUseThis2018';
 `
 
 `

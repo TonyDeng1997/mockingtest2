@@ -57,32 +57,16 @@ public class QuestionCurator {
 				newquestion.setDescriptionUrl(descriptionUrl);
 				String articleUrl = "";
 				newquestion.setArticleUrl(articleUrl);
-				//double acceptance_rate = Float.parseFloat(line.replaceAll("[^\\d+\\.\\d+]",""))/100;
-				//System.out.println(line);
-				//System.out.println(line.replaceAll("[^\\d+\\.\\d+]",""));
-				//newquestion.setAcceptance(acceptance_rate);
 				System.out.println(Arrays.toString(finals));
 				double acceptance_rate=Float.parseFloat(finals[1].trim().split("\\s")[0].split("%")[0])/100;
 				newquestion.setAcceptance(acceptance_rate);
-				
-				//String hello="hello3ooo 34.5% sd3d";
 				System.out.println(acceptance_rate);
-				//System.out.println(hello.replaceAll("[^\\d+\\.\\d+]",""));
-				// Be careful of the following call
-				/*
-				String content = QuestionScanner.scrap(descriptionUrl);
-				newquestion.setQuestionContent(content);
-				*/
-				
 				questionlist.add(newquestion);
-				
-			
 				
 				//Prepare string to write to a txt file for raw data except question 's content
 				String formattedQuestion= newquestion.getQuestionId() + "\t" + newquestion.getQuestionName() + "\t" + newquestion.getAcceptance() + "\t" + 
 						newquestion.getDifficulty() + "\t" + newquestion.getDescriptionUrl();
 				sb.append(formattedQuestion + "\n");
-				
 				
 				//TODO code generation of sql statements and write to a different V1__Question__Data.sql
 				
@@ -105,13 +89,11 @@ public class QuestionCurator {
 			System.out.println("Done!");
 		}
 		
-		
 		return questionlist;
 	}
 	
 	
 	public static void main(String[] args) throws IOException {
-
 		QuestionCurator.preprocess("/Users/TonyDeng/Desktop/mockingtestold/scraper/src/scraper/lt_code_data.txt", 
 				"/Users/TonyDeng/Desktop/mockingtestold/scraper/src/scraper/formattedInitialData.txt", true);
 

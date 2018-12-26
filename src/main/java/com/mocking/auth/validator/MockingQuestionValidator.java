@@ -30,9 +30,6 @@ public class MockingQuestionValidator implements Validator  {
         if (mockingQuestionService.findMockingQuestions(config.getMocking_config_id()) != null) {
             errors.rejectValue("mocking_config_id", "Duplicate.userForm.username");
         }
-
-
-		
 	}
     
 }

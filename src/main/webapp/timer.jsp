@@ -118,6 +118,9 @@ body {
 </form:form>
 
 </div>
+
+
+<!-- This is ACE editor configuration 
 <script src="/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
@@ -143,6 +146,14 @@ body {
     }
     
 </script>
+-->
+
+<script>
+
+function disableF5(e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); };
+$(document).on("keydown", disableF5);
+</script>
+
 <script>
   // Set the date we're counting down to
 /*
@@ -224,6 +235,7 @@ window.onload = function () {
 
 
   </script>
+  
   <script>
       CodeMirror.commands.autocomplete = function(cm) {
         cm.showHint({hint: CodeMirror.hint.anyword});

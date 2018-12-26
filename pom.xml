@@ -37,8 +37,8 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<!-- <scope>runtime</scope> -->
-			<!--  <version>8.0.11</version>-->
-			<version>5.1.46</version>
+			<version>8.0.11</version>
+			<!-- <version>5.1.46</version>-->
 		</dependency>
 		
 		<dependency>
@@ -86,10 +86,11 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>5.1.4</version>
  				<configuration> 
-		  	<url>jdbc:mysql://localhost:3306/mockingtest?useSSL=false</url> 
+		  	<url>jdbc:mysql://localhost:3306/mocking_test?useSSL=false</url> 
 				<user>mockingtest</user> 
  				<password>mockingtest</password> 
  				<basedir>db/migration</basedir> 
+ 				<baselineOnMigrate>true</baselineOnMigrate>
 				</configuration> 
  			</plugin> 
 

@@ -31,9 +31,6 @@ public class ClientValidator implements Validator  {
         if (ClientService.findByClientname(config.getName()) != null) {
             errors.rejectValue("name", "Duplicate.userForm.username");
         }
-
-
-		
 	}
     
 }

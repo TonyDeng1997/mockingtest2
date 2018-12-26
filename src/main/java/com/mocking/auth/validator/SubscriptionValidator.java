@@ -30,9 +30,6 @@ public class SubscriptionValidator implements Validator  {
         if (mockingQuestionService.findMockingQuestions(config.getMocking_config_id()) != null) {
             errors.rejectValue("username", "Duplicate.userForm.username");
         }
-
-
-		
 	}
     
 }
