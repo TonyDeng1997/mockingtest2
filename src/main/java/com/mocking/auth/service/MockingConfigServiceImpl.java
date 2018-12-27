@@ -1,5 +1,7 @@
 package com.mocking.auth.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,7 +23,7 @@ public class MockingConfigServiceImpl implements MockingConfigService {
 
 		@Override
 		@Transactional(readOnly = true)
-		public MockingConfig findMockingConfig(Long id) {
+		public Optional<MockingConfig> findMockingConfig(Long id) {
 			return mockingConfigDao.findById(id);
 			
 		}
