@@ -7,6 +7,7 @@ import com.mocking.auth.service.UserService;
 import com.mocking.auth.validator.UserValidator;
 import util.RunCode;
 import util.SourceCode;
+import util.ConfigProperties;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -83,10 +84,14 @@ public class UserController {
         return "timer";
     }
     @RequestMapping(value = {"/test"}, method = RequestMethod.POST)
-    public ModelAndView test(@ModelAttribute("form") TestForm form,Model model)  {
+    public ModelAndView test(@ModelAttribute("form") TestForm form,Model model) throws IOException  {
     	System.out.println(form.getSource_code());
+    	ConfigProperties ohla=new ConfigProperties();
     	
-    	SourceCode UserCode=new SourceCode("hello",form.getSource_code(),"java");
+    	
+    
+    	SourceCode UserCode=new SourceCode("Hello",form.getSource_code(),"java");
+    	
     	RunCode TheProcess=new RunCode(UserCode);
     	Path hello = TheProcess.executeCode();
     	Map<String, Object> params = new HashMap<>();

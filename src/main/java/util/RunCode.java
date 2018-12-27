@@ -4,6 +4,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Properties;
 import java.util.UUID;
 
 
@@ -18,19 +19,24 @@ public class RunCode {
 	private String sourceFilePath;
 	private ProcessBuilder builder; // Use for compiling and running
 	private SourceCode sourceCode ;
-
+	Properties prop = new Properties();
+	InputStream input = null;
+	
 	
 
-	@Autowired
-	private ApplicationContext context;
-	ConfigProperties sc = (ConfigProperties)context.getBean(ConfigProperties.class);
-	public RunCode(SourceCode sourceCode) {
+	//@Autowired
+	//private ApplicationContext context;
+	//ConfigProperties sc = (ConfigProperties)context.getBean(ConfigProperties.class);
+	public RunCode(SourceCode sourceCode) throws IOException {
 		this.sourceCode = sourceCode;
 		userFolderPath = Paths.get(System.getProperty("user.dir") + "/src/main/resources/user/" + getUserId());
 		sourceFilePath = userFolderPath.toString() + "/" + sourceCode.getTitle() + "." + sourceCode.getFileExt();
         builder = new ProcessBuilder();
+        input = new FileInputStream("src/main/resources/jvm.properties");
+        prop.load(input);
+        String gMapReportUrl = prop.getProperty("java_jvm");
         System.out.println("****************************************************");
-        System.out.println(sc.getJava_jvm());
+        System.out.println(gMapReportUrl);
         System.out.println("****************************************************");
 
         // Create working directory
