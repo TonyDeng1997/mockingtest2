@@ -206,12 +206,14 @@ var clearint=setInterval(function () {
       display.textContent = "Expired";
       localStorage.clear();
       clearInterval(clearint);
+      $("#code")
       
     }
   console.log(parseInt(seconds))
   
   window.localStorage.setItem("seconds",seconds)
   window.localStorage.setItem("minutes",minutes)
+  window.localStorage.setItem("timer",timer)
 }, 1000);
 
 
@@ -222,11 +224,12 @@ var clearint=setInterval(function () {
 window.onload = function () {
   sec  = parseInt(window.localStorage.getItem("seconds"))
   min = parseInt(window.localStorage.getItem("minutes"))
+  timer=parseInt(window.localStorage.getItem("timer"))
 
-  if(parseInt(min)==0 && parseInt(sec)==0){
+  if(timer>0){
     var fiveMinutes = (parseInt(min*60)+sec);
   }else{
-    var fiveMinutes = 120;
+    var fiveMinutes = 30;
   }
     // var fiveMinutes = 60 * 5;
   display = document.querySelector('#demo');
@@ -251,6 +254,7 @@ window.onload = function () {
     alert( "U just RELOADAED!" );
   } else {
     console.info( "This page is not reloaded");
+    localStorage.clear();
   }
       
       
