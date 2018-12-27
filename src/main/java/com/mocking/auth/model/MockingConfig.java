@@ -4,6 +4,10 @@ import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
 
+/*
+ * This object maps to a table that stores candidate's mocking preference.
+ * */
+
 @Entity
 @Table(name = "mocking_config")
 public class MockingConfig {
