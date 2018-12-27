@@ -6,19 +6,32 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.UUID;
 
+
 import javax.swing.JFrame;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Service;
+@Service
 public class RunCode {
 	private Path userFolderPath; 
 	private String sourceFilePath;
 	private ProcessBuilder builder; // Use for compiling and running
 	private SourceCode sourceCode ;
 
+	
+
+	@Autowired
+	private ApplicationContext context;
+	ConfigProperties sc = (ConfigProperties)context.getBean(ConfigProperties.class);
 	public RunCode(SourceCode sourceCode) {
 		this.sourceCode = sourceCode;
 		userFolderPath = Paths.get(System.getProperty("user.dir") + "/src/main/resources/user/" + getUserId());
 		sourceFilePath = userFolderPath.toString() + "/" + sourceCode.getTitle() + "." + sourceCode.getFileExt();
         builder = new ProcessBuilder();
+        System.out.println("****************************************************");
+        System.out.println(sc.getJava_jvm());
+        System.out.println("****************************************************");
 
         // Create working directory
         createWorkingDirectory(userFolderPath);
@@ -140,5 +153,4 @@ public class RunCode {
         data = new String(Files.readAllBytes(Paths.get(fileName)));
         return data;
     }
->>>>>>> develop
 }
