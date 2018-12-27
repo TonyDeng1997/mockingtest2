@@ -37,8 +37,7 @@ public class DatabaseLoader implements CommandLineRunner {
 	private final SubscriptionDao subscriptions;
 
 	@Autowired
-	public DatabaseLoader(ClientDao ClientDao,
-						  SubscriptionDao SubscriptionDao) {
+	public DatabaseLoader(ClientDao ClientDao, SubscriptionDao SubscriptionDao) {
 
 		this.clients = ClientDao;
 		this.subscriptions = SubscriptionDao;
@@ -47,8 +46,8 @@ public class DatabaseLoader implements CommandLineRunner {
 	@Override
 	public void run(String... strings) throws Exception {
 
-		Client Tony=new Client("hello","hello","hello","hello","hello","hello");
+		Client Tony = new Client("hello", "hello", "hello", "hello", "hello", "hello");
 		this.clients.save(Tony);
-		//this.clients.findAll();
+		// this.clients.findAll();
 	}
 }

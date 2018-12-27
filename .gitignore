@@ -1,4 +1,12 @@
-target/
+#ignore all node_modules/
+**/node_modules
+
+#ignore all target/
+**/target
+
+#ignore all the .class file
+*.class
+
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
@@ -30,3 +38,5 @@ src/main/resources/static/built/bundle.js.map
 
 ### others ###
 log.txt
+
+

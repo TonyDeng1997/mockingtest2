@@ -2,7 +2,11 @@ package com.mocking.auth.model;
 
 import javax.persistence.*;
 
-/*@author feifei*/
+/*@author feifei
+ * 
+ * client is the object to store company client's info.
+ * 
+ * */
 
 @Entity
 @Table(name = "client")
