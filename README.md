@@ -8,6 +8,8 @@ Need to integrate with webpack to organize the resource.
     - [maven]
     - [java]
     - [NodeJS/NPM]
+    
+eclipse plugin: tomcat plugin, sonarlint plugin, markdown plugin and nodejs plugin
         
 ## Checkout source code
 Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) `> git clone CLONEURL`
