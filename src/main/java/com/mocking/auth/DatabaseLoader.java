@@ -17,11 +17,7 @@ package com.mocking.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
-
 import com.mocking.auth.model.Client;
 import com.mocking.auth.repository.ClientDao;
 import com.mocking.auth.repository.SubscriptionDao;
