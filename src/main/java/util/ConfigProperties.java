@@ -7,7 +7,8 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.stereotype.Component;
 
 @Component
-@PropertySource("classpath:jvm.properties")
+// must have the following line
+@PropertySource("classpath:jvm.properties") 
 public class ConfigProperties {
     @Value("${java.jvm}")
     private String javaJVM;
