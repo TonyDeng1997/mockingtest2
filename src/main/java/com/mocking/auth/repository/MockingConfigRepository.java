@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 import com.mocking.auth.model.MockingConfig;
 
 
-public interface MockingConfigDao extends JpaRepository<MockingConfig, Long> {
+public interface MockingConfigRepository extends JpaRepository<MockingConfig, Long> {
 	Optional<MockingConfig> findById(Long id);
 	
 	@Query("SELECT p FROM MockingConfig p WHERE LOWER(p.candidate_id) = LOWER(:candidate_id)")

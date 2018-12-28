@@ -6,6 +6,4 @@ public interface ClientService {
     void save(Client client);
 
     Client findByClientname(String username);
-
-
 }

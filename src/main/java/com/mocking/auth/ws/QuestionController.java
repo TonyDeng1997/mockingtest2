@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.mocking.auth.model.Question_data;
+import com.mocking.auth.model.QuestionData;
 import com.mocking.auth.service.QuestionService;
 
 
@@ -25,14 +25,14 @@ public class QuestionController {
     //https://leetcode.com/problems/two-sum/description/
     @RequestMapping(value = "problem/{title}/description", method = RequestMethod.GET)
     public String getQuestion(Model model, @PathVariable String title) {
-    	Question_data question = questionService.findQuestionDataByTitle(title);
+    	QuestionData question = questionService.findQuestionDataByTitle(title);
         model.addAttribute("questionForm", question);
         return "show_question"; // show_question.jsp
     }
 
     //TODO, need to create a web form just like userForm
     @RequestMapping(value = "problems/submit", method = RequestMethod.POST)
-    public String saveMockdingConfig(@ModelAttribute("questionForm") Question_data questionForm, Model model) {
+    public String saveMockdingConfig(@ModelAttribute("questionForm") QuestionData questionForm, Model model) {
         // TODO need to implement a mockingConfigValidator
     	questionService.save(questionForm);
         return "redirect:/welcome";
