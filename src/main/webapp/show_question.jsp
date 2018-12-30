@@ -31,11 +31,10 @@
 <div class="container">
 
     <form:form method="POST" modelAttribute="questionForm" class="form-signin">
-        <h2 class="form-signin-heading">Create your account</h2>
+        <h2 class="form-signin-heading">Here is your Question</h2>
         <spring:bind path="title">
             <div class="form-group ${status.error ? 'has-error' : ''}">
-                <form:input type="text" path="title" class="form-control" placeholder="title"
-                            autofocus="true"></form:input>
+                 <textarea id="display_result" cols='100' rows='1' disabled id="feedback" >${title}</textarea>
                  <textarea id="display_result" cols='100' rows='20' disabled id="feedback" >${question}</textarea>
             </div>
         </spring:bind>
