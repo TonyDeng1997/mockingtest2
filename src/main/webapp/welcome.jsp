@@ -68,7 +68,7 @@
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
 
-        <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
+        <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Click Here to Logout</a></h2>
         <h4 class="text-center"><a href="${contextPath}/mocking/configtest">Click here for mocking config test</a></h4>
         <h4 class="text-center"><a href="${contextPath}/mocking/questiontest">Click here for mocking question test</a></h4>
         <h4 class="text-center"><a href="${contextPath}/mocking/clienttest">Click here for client test</a></h4>
