@@ -1,15 +1,17 @@
 package com.mocking.auth.repository;
 
+import java.util.Optional;
+
 /*@author feifei*/
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-
 import com.mocking.auth.model.MockingConfig;
 
 
-public interface MockingConfigDao extends JpaRepository<MockingConfig, Long> {
-	MockingConfig findById(Long id);
+public interface MockingConfigRepository extends JpaRepository<MockingConfig, Long> {
+	Optional<MockingConfig> findById(Long id);
+	
 	@Query("SELECT p FROM MockingConfig p WHERE LOWER(p.candidate_id) = LOWER(:candidate_id)")
     public MockingConfig findByCandidateId(@Param("candidate_id") String candidate_id);
 	
