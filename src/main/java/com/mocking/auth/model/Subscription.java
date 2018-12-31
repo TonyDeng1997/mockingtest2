@@ -13,7 +13,6 @@ public class Subscription {
     private Date expiration_date;
     private String status;
     private long product_id;
-     
     private Client client;
  
     public Subscription() {
@@ -28,8 +27,6 @@ public class Subscription {
     public void setId(long id) {
         this.id = id;
     }
- 
-
  
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "client_id")
@@ -72,6 +69,4 @@ public class Subscription {
 	public void setProduct_id(long product_id) {
 		this.product_id = product_id;
 	}
-
-    
 }

@@ -8,7 +8,7 @@ import com.mocking.auth.model.MockingQuestion;
 
 /*@author feifei*/
 
-public interface MockingQuestionDao extends JpaRepository<MockingQuestion, Long> {
+public interface MockingQuestionRepository extends JpaRepository<MockingQuestion, Long> {
 
 	@Query("SELECT p FROM MockingQuestion p WHERE LOWER(p.mocking_config_id) = LOWER(:mocking_config_id)")
     public List<MockingQuestion> findByMocking_Config_Id(@Param("mocking_config_id") Long mockingConfigId);

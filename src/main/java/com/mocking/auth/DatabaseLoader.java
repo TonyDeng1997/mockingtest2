@@ -17,14 +17,10 @@ package com.mocking.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
-
 import com.mocking.auth.model.Client;
-import com.mocking.auth.repository.ClientDao;
-import com.mocking.auth.repository.SubscriptionDao;
+import com.mocking.auth.repository.ClientRepository;
+import com.mocking.auth.repository.SubscriptionRepository;
 
 /**
  * @author Greg Turnquist
@@ -32,23 +28,21 @@ import com.mocking.auth.repository.SubscriptionDao;
 // tag::code[]
 @Component
 public class DatabaseLoader implements CommandLineRunner {
-
-	private final ClientDao clients;
-	private final SubscriptionDao subscriptions;
+	private final ClientRepository clients;
+	private final SubscriptionRepository subscriptions;
 
 	@Autowired
-	public DatabaseLoader(ClientDao ClientDao,
-						  SubscriptionDao SubscriptionDao) {
-
-		this.clients = ClientDao;
-		this.subscriptions = SubscriptionDao;
+	public DatabaseLoader(ClientRepository ClientRepository, SubscriptionRepository SubscriptionRepository) {
+		this.clients = ClientRepository;
+		this.subscriptions = SubscriptionRepository;
 	}
 
 	@Override
 	public void run(String... strings) throws Exception {
-
-		Client Tony=new Client("hello","hello","hello","hello","hello","hello");
+		/*
+		Client Tony = new Client("hello", "hello", "hello", "hello", "hello", "hello");
 		this.clients.save(Tony);
-		//this.clients.findAll();
+		this.clients.findAll();
+		*/
 	}
 }

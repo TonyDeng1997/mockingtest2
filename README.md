@@ -1,19 +1,21 @@
 # Building a Website with Node.js and Express.js
 Need to integrate with webpack to organize the resource.
 
-## Installing
+## Installing Tools
 1. Make sure you have these installed
-	- [react]
-	- [springboot]
 	- [eclipse]
 	- [tomcat]
     - [maven]
     - [java]
-2. Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) `> git clone CLONEURL`
-3. CD to the folder `cd FOLDERNAME`
-* Run `./mvnw spring-boot:run` to install everything (mvnw.bat for Windows users)
+    - [NodeJS/NPM]
+    
+    Other eclipse plugins that you would need, nodejs plugin, tomcat plugin, checkstyle plugin and sonarlint plugin.
+        
+## Checkout source code
+Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) `> git clone CLONEURL`
 
-4. If you see error in the above step to start the web server in development mode. Try to do the following,
+## Create a database
+Create a database called `notes_app` for now,
 
 * In application.properties, change your database password.
 * Create a database by `create database notes_app;`
@@ -36,13 +38,81 @@ mysql> create database notes_app;
 Query OK, 1 row affected (0.00 sec)
 </pre>
 
+## Create a database user account for development
+Throughtout the whole project, developer is going to connect to their own local db but in the configuration file
+we have to change the user password and user name all the time, so for the convinience, we decided to set a dummy user account
+called `mockingtest`, password: `!LetUsUseThis2018`. The following script will help you create such db user in your 
+local db, and grant permissiosn.
 
-## Possible Error Solution
+`CREATE USER 'mockingtest'@'localhost' IDENTIFIED BY '!LetUsUseThis2018';`
+
+`GRANT ALL PRIVILEGES ON * . * TO 'mockingtest'@'localhost';`
+
+This database account should be used in pom.xml for connecting to database by flyway.
+It is better not to use your default root account for development and this is close to real deployment.
+
+ref: https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
+
+## Start the server and run the code
+Enter the project folder by `cd FOLDERNAME`, and make sure you see the pom.xml, then:
+
+Run `./mvnw spring-boot:run` to install jars and start tomcat server for you (mvnw.bat for Windows users)
+
+The above command installs all the jar and library dependencies project will need for you, and they are defined in pom.xml.
+
+Note, the embeded tomcat server is just used for fast development, it is not the real deployment. In the reality, we will have a 
+dedicated server and need to deploy the war file.
+
+## Generate war file
+Run `mvn package`, and/or run maven build to generate a war file in the target/ directory.
+Drop this war file to tomcat's webapps/ directory.
+
+## Flyway integration
+For flyway integration, please check the pom.xml in the root of the project.
+Also checkout the Flyway.md and flyway.sh for the usage.
+
+Note, flyway is to database schema version control, simply say it is used to incrementally alter database, tables schemas and data.
+
+Run the following commands to update your database schemas.
+
+`mvn flyway:migrate`
+
+ref: `https://flywaydb.org/getstarted/firststeps/maven`
+
+## Possible Maven error solution
 
 * if mention about Java, check JAVA_HOME path, and version, java10 is not supported. [how to change java version](https://stackoverflow.com/questions/21964709/how-to-set-or-change-the-default-java-jdk-version-on-os-x)
 * if mention about port being used, open process manager to kill java process and try again. 
 * if everything fails, try mvn clean and build again.
 
+## Trouble shooting root password of MySQL
+
+```
+If you don't remember the password you set for root and need to reset it, follow these steps:
+
+Stop the mysqld server, this varies per install
+Run the server in safe mode with privilege bypass
+sudo mysqld_safe --skip-grant-tables;
+
+In a new window connect to the database, set a new password and flush the permissions & quit:
+mysql -u root
+
+For MySQL older than MySQL 5.7 use:
+
+UPDATE mysql.user SET Password=PASSWORD('your-password') WHERE User='root';
+
+For MySQL 5.7+ use:
+
+USE mysql;
+
+UPDATE mysql.user SET authentication_string=PASSWORD("your-password") WHERE User='root';
+
+Refresh and quit:
+
+FLUSH PRIVILEGES;
+
+\q
+```
 
 ## Code commit and contribution
 
@@ -96,20 +166,3 @@ Master branch is always the most trustable branch.
 ** mvn test
 ** mvn spring-boot:run
 
-## Flyway Integration
-`https://flywaydb.org/getstarted/firststeps/maven`
-
-## Create a db user for development
-Throughtout the whole project, developer is going to connect to their own local db but in the configuration file
-we have to change the user password and user name all the time, so for the convinience, we decided to set a dummy user account
-called `mockingtest`, password: `!LetUsUseThis2018`. The following script will help you create such db user in your 
-local db, and grant permissiosn.
-
-`
-CREATE USER 'mockingtest'@'localhost' IDENTIFIED BY '!LetUsUseThis2018';
-`
-
-`
-GRANT ALL PRIVILEGES ON * . * TO 'mockingtest'@'localhost';
-`
-ref: https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
