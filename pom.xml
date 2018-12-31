@@ -84,7 +84,9 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <!--  <version>5.2.4</version>-->
  				<configuration> 
+
 		  		<url>jdbc:mysql://localhost:3306/mocking_test?useSSL=false</url> 
+
 				<user>mockingtest</user> 
  				<password>!LetUsUseThis2018</password> 
  				<basedir>db/migration</basedir> 
@@ -111,4 +113,6 @@
       </resource>
     </resources>
     </build>
+
 </project>
+
