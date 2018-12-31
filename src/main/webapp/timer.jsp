@@ -19,8 +19,6 @@
 <script src="resources/code-mirror-5.40.0/addon/hint/anyword-hint.js"></script>
 <script src="resources/code-mirror-5.40.0/mode/javascript/javascript.js"></script>
 
-
-
 <style>
 p {
   text-align: right;
@@ -60,11 +58,9 @@ body {
     }
 </style>
 
-
-
 <sec:csrfMetaTags/>
-   
-<script></script>
+<script src= "resources/javascript/timer.js" ></script>
+
 </head>
 
 
@@ -109,68 +105,15 @@ body {
 	</div>
 </div>
 </form:form>
-
 </div>
 
 
 <script>
-
-function disableF5(e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); };
 $(document).on("keydown", disableF5);
 </script>
 
+<!--Code mirror Init--->
 <script>
-
-  function startTimer(duration, display) {
-var timer = duration, minutes, seconds;
-var clearint=setInterval(function () {
-    minutes = parseInt(timer / 60, 10)
-    seconds = parseInt(timer % 60, 10);
-
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-
-    display.textContent = minutes + " " + " " + seconds;
-
-    if (--timer < 0) {
-      timer = -1;
-      display.textContent = "Expired";
-      localStorage.clear();
-      clearInterval(clearint);
-      $("#code")
-      
-    }
-  console.log(parseInt(seconds))
-  
-  window.localStorage.setItem("seconds",seconds)
-  window.localStorage.setItem("minutes",minutes)
-  window.localStorage.setItem("timer",timer)
-}, 1000);
-
-
-
-}
-
-
-window.onload = function () {
-  sec  = parseInt(window.localStorage.getItem("seconds"))
-  min = parseInt(window.localStorage.getItem("minutes"))
-  timer=parseInt(window.localStorage.getItem("timer"))
-
-  if(timer>0){
-    var fiveMinutes = (parseInt(min*60)+sec);
-  }else{
-    var fiveMinutes = 30;
-  }
-    // var fiveMinutes = 60 * 5;
-  display = document.querySelector('#demo');
-  startTimer(fiveMinutes, display);
-};
-
-
-</script>
-  
-  <script>
       CodeMirror.commands.autocomplete = function(cm) {
         cm.showHint({hint: CodeMirror.hint.anyword});
       }
@@ -187,8 +130,7 @@ window.onload = function () {
     console.info( "This page is not reloaded");
     localStorage.clear();
   }
-      
-      
-    </script>
+</script>
+
 </body>
 </html>
