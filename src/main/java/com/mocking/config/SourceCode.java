@@ -1,7 +1,12 @@
-package util;
+package com.mocking.config;
+
+/*
+ * xiaofeng li
+ * xlics05@gmail.com
+ * */
 
 public class SourceCode {
-	private String title;
+	private String fileName;
 	private String code;
 	private String fileExt;
 
@@ -19,31 +24,25 @@ public class SourceCode {
 		this.fileExt = fileExt;
 	}
 
-	public SourceCode(String title, String code) {
+	public SourceCode(String fileName, String code) {
 		super();
-		this.title = title;
+		this.fileName = fileName;
 		this.code = code;
 	}
 
-	public SourceCode(String title, String code, String fileExt) {
+	public SourceCode(String fileName, String code, String fileExt) {
 		super();
-		this.title = title;
+		this.fileName = fileName;
 		this.code = code;
 		this.fileExt = fileExt;
 	}
 
-	/**
-	 * @return the title
-	 */
-	public String getTitle() {
-		return title;
+	public String getFileName() {
+		return fileName;
 	}
 
-	/**
-	 * @param title the title to set
-	 */
-	public void setTitle(String title) {
-		this.title = title;
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
 	}
 
 	/**
@@ -60,4 +59,10 @@ public class SourceCode {
 		this.code = code;
 	}
 	
+	/*
+	 * @return full filename with extention
+	 * */
+	public String getFileFullName() {
+		return this.fileName+ this.fileExt;
+	}
 }

@@ -5,15 +5,15 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-<link rel=stylesheet href="resources/resources/code-mirror-5.40.0/doc/docs.css">
 
+<!-- The following are jquery and bulma -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<!-- The followings are code mirror -->
+<link rel=stylesheet href="resources/code-mirror-5.40.0/doc/docs.css">
 <link rel="stylesheet" href="resources/code-mirror-5.40.0/lib/codemirror.css">
 <link rel="stylesheet" href="resources/code-mirror-5.40.0/addon/hint/show-hint.css">
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
 <script src="resources/code-mirror-5.40.0/lib/codemirror.js"></script>
 <script src="resources/code-mirror-5.40.0/addon/hint/show-hint.js"></script>
 <script src="resources/code-mirror-5.40.0/addon/hint/anyword-hint.js"></script>
@@ -62,13 +62,12 @@ body {
 
 
 
-   <sec:csrfMetaTags/>
+<sec:csrfMetaTags/>
    
-<script>
-
-
-</script>
+<script></script>
 </head>
+
+
 <body>
 
 <!-- Use bulma.io css and use flexbox -->
@@ -76,7 +75,6 @@ body {
 
 
 <div id="container">
-
 
 <div id="lang" class="center" >
  <select name="p_language" id="lang_selector"  onchange="changefunction()">
@@ -89,16 +87,11 @@ body {
 <!--<div id="editor"></div>-->
 <!--   <div id="editor2">${feedback}</div>-->
 
-
-
-<form:form action="/test?${_csrf.parameterName}=${_csrf.token}" modelAttribute="form" method ="post"  enctype="multipart/form-data">
+<form:form action="/runcode?${_csrf.parameterName}=${_csrf.token}" modelAttribute="form" method ="post"  enctype="multipart/form-data">
 <!--  <div class="columns  is-desktop center">-->
 	<div class="column level-left">
 	<spring:bind path="source_code">
-	
-		<!--<form:textarea cols='100' rows='20' path="source_code" value="hello" id ="editor" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"></form:textarea>>-->
-		<form:textarea cols='100' rows='20' path="source_code" value="hello" id="code" name="code"  ></form:textarea>
-	
+		<form:textarea cols='100' rows='20' path="source_code" value="hello" id="code" name="code"  placeholder="public class Solution {}" ></form:textarea>
 	</spring:bind>
 	</div>
 
@@ -120,34 +113,6 @@ body {
 </div>
 
 
-<!-- This is ACE editor configuration 
-<script src="/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/chrome");
-    editor.session.setMode("ace/mode/java");
-    editor.resize();
-    editor.setValue("the new text here");
-    var myElement = document.getElementById("intro");
-   
-    var editor2=ace.edit("editor2");
-    editor2.setTheme("ace/theme/chrome");
- //   editor2.session.setMode("ace/mode/javascript");
-    editor2.resize();
-    editor2.setReadOnly(true);  // false to make it editable
-    editor2.setValue(document.getElementById("feedback").innerHTML);
-    function runCode() {
-    	document.getElementById("code").innerHTML = editor.getValue();
-    }
-    function changefunction() {
-        var x = document.getElementById("lang_selector").value;
-        editor.setValue(x);
-        editor.session.setMode("ace/mode/"+x);
-    }
-    
-</script>
--->
-
 <script>
 
 function disableF5(e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); };
@@ -155,41 +120,7 @@ $(document).on("keydown", disableF5);
 </script>
 
 <script>
-  // Set the date we're counting down to
-/*
-  var testTime= 1;
-  var testends=0;
-  if(testends == 0){
-    testends=new Date().getTime()+testTime*60000;
-  }
-  
-  // Update the count down every 1 second
-  var x = setInterval(function() {
-  
-      // Get todays date and time
-      var now = new Date().getTime();
-      
-      // Find the distance between now and the count down date
-      var distance = testends - now;
-      
-      // Time calculations for days, hours, minutes and seconds
-     
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      
-      // Output the result in an element with id="demo"
-      document.getElementById("demo").innerHTML =hours + "h "
-      + minutes + "m " + seconds + "s ";
-      
-      // If the count down is over, write some text 
-      if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("demo").innerHTML = "EXPIRED";
-          editor.setReadOnly(true);
-      }
-  }, 1000);
-  */
+
   function startTimer(duration, display) {
 var timer = duration, minutes, seconds;
 var clearint=setInterval(function () {
@@ -237,7 +168,7 @@ window.onload = function () {
 };
 
 
-  </script>
+</script>
   
   <script>
       CodeMirror.commands.autocomplete = function(cm) {

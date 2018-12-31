@@ -1,6 +1,11 @@
-package util;
+package com.mocking.config;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -11,7 +16,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.mocking.auth.WebApplication;
+/*
+ * xiaofeng li
+ * xlics05@gmail.com
+ * */
 
 public class RunCode {
 	private Path userFolderPath;
@@ -38,19 +46,24 @@ public class RunCode {
 		this.sourceCode = sourceCode;
 		builder = new ProcessBuilder();
 		
-		
-		/*TODO, the following directory should be assigned to a user uniquely upon their account creation
-		 * We should only grab the userFoledPath string from the UserService and then set it here.
+		/*TODO, the following directory should be assigned to a user 
+		 * uniquely upon their account creation
+		 * We should only grab the userFoledPath string from the UserService 
+		 * and then set it here.
 		 * */
 		
 		userFolderPath = Paths.get(System.getProperty("user.dir") + "/src/main/resources/user/" + getUserId());
-		sourceFilePath = userFolderPath.toString() + "/" + sourceCode.getTitle() + "." + sourceCode.getFileExt();
+		sourceFilePath = userFolderPath.toString() + "/" + sourceCode.getFileName() + "." + sourceCode.getFileExt();
 		// Create working directory
 		createWorkingDirectory(userFolderPath);
 		// Set working directory
 		builder.directory(userFolderPath.toFile());
 	}
 
+	public String getUserFolderPath() {
+		return this.userFolderPath.toString();
+	}
+	
 	private void createWorkingDirectory(Path path) {
 		if (!Files.exists(path)) {
 			try {
@@ -78,86 +91,80 @@ public class RunCode {
 		}
 	}
 
-	// generate std1 sterr to a txt file
-	private void generateOutput() throws IOException {
-		Process p = builder.start();
-		CodeResult codeResult = new CodeResult();
-		System.out.println("User Folder Path:" + userFolderPath);
-	
-		// TODO, need to fix this
-		PrintWriter printWriter = new PrintWriter(userFolderPath + "/" + "log.txt");
-		BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
-		BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
-
-		// read the output from the command
-		System.out.println("Here is the standard output of the command:\n");
-		printWriter.println("Ouput: Here is the standard output of the command:\n");
-		StringBuilder output = new StringBuilder();
-		String line;
-		while ((line = stdInput.readLine()) != null) {
-			printWriter.println(line);
-			output.append(line);
-			output.append(System.getProperty("line.separator"));
-		}
-		codeResult.setStdout(output.toString());
-		System.out.println(codeResult.getStdout());
-
-		// read any errors from the attempted command
-		System.out.println("Here is the standard error of the command (if any):\n");
-		printWriter.println("Error: Here is the standard error of the command (if any):\n");
-		StringBuilder error = new StringBuilder();
-		while ((line = stdError.readLine()) != null) {
-			printWriter.println(line);
-			error.append(line);
-			error.append(System.getProperty("line.separator"));
-		}
-		codeResult.setException(error.toString());
-		System.out.println(codeResult.getException());
-		printWriter.close();
-	}
-
-	public Path executeCode() {
+	public CodeResult executeCode() {
+		CodeResult result = new CodeResult();
 		try {
-			System.out.println("Java Home: " + System.getProperty("java.home") + "\\bin/java");
-			System.out.println("User Home: " + System.getProperty("user.home"));
 			System.out.println("User Directory: " + System.getProperty("user.dir"));
 
 			// Generate java file in the file system
 			generateSourceFile(sourceFilePath);
 
-			// TODO check file exists?
+			// TODO check file exists? make our own exception
 			File sourceFile = new File(sourceFilePath);
 			if (!sourceFile.exists() || sourceFile.isDirectory()) {
 				System.out.println("source file creation failed");
 			}
 
 			if (sourceCode.getFileExt().equals("java")) {
-				String compileCommand = "javac " + sourceCode.getTitle() + "." + sourceCode.getFileExt();
-				String runCommand = "java " + sourceCode.getTitle();
-
-				System.out.println(compileCommand);
-				System.out.println(runCommand);
-
+				String compileCommand = "javac " + sourceCode.getFileFullName();
+				String runCommand = "java " + sourceCode.getFileName();
 				builder.command("/bin/sh", "-c", compileCommand + ";" + runCommand);
 			} else {
 				builder.command("/bin/sh", "-c", "python " + sourceFilePath.toString());
 			}
-			generateOutput();
+			result = generateOutput(false);
 		} catch (IOException e) {
 			System.out.println("IOException happened - here's what I know: ");
-			e.printStackTrace();
-			// System.exit(-1);
+			log.error(e.getMessage());
+	
 		} catch (Exception e) {
 			System.out.println("Exception happened - here's what I know: ");
-			e.printStackTrace();
-			// System.exit(-1);
+			log.error(e.getMessage());
 		}
-		return userFolderPath;
+		return result;
 	}
+	
+	// Generate stdout sterr and persist them into object, and optionally it can be 
+	// saved on file system
+	private CodeResult generateOutput(boolean saveOutput) throws IOException {
+		Process p = builder.start();
+		CodeResult codeResult = new CodeResult();
+		System.out.println("User Folder Path:" + userFolderPath);
+	
+		// TODO, need to fix this
+		PrintWriter printWriter = new PrintWriter(userFolderPath + "/" + "output.txt");
+		BufferedReader stdOutput = new BufferedReader(new InputStreamReader(p.getInputStream()));
+		BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
 
-	public static String readFileAsString(String fileName) throws Exception {
-		String data = "";
-		data = new String(Files.readAllBytes(Paths.get(fileName)));
-		return data;
+		// read the output from the command
+		if (saveOutput) {
+			printWriter.println("Ouput: Here is the standard output of the command:\n");
+		}
+		StringBuilder output = readFromStreams(stdOutput,saveOutput, printWriter);
+		codeResult.setStdOut(output.toString());
+	
+		// read any errors from the attempted command
+		if (saveOutput) {
+			printWriter.println("Error: Here is the standard error of the command (if any):\n");
+		}
+		StringBuilder error = readFromStreams(stdError,saveOutput, printWriter);
+		codeResult.setStdErr(error.toString());
+		if (saveOutput) {
+			printWriter.close();
+		}
+		return codeResult;
+	}
+	
+	private StringBuilder readFromStreams(BufferedReader br, boolean saveOutput, PrintWriter printWriter) throws IOException {
+		StringBuilder sb = new StringBuilder();
+		String line;
+		while ((line = br.readLine()) != null) {
+				if (saveOutput) {
+					printWriter.println(line);
+				}
+				sb.append(line);
+				sb.append(System.getProperty("line.separator"));
+		}
+		return sb;
 	}
 }
