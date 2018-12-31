@@ -3,7 +3,7 @@
 function startTimer(duration, display) {
 	var timer = duration, minutes, seconds;
 	var clearint = setInterval(function () {
-	    minutes = parseInt(timer / 60, 10)
+	    minutes = parseInt(timer / 60, 10);
 	    seconds = parseInt(timer % 60, 10);
 	
 	    minutes = minutes < 10 ? "0" + minutes : minutes;
@@ -25,11 +25,12 @@ function startTimer(duration, display) {
 	}, 1000);
 }
 
+
 function disableF5(e) { 
 	if ((e.which || e.keyCode) == 116) { 
-		e.preventDefault(); };
-	}
-
+		e.preventDefault(); 
+	};
+}
 
 window.onload = function () {
 	  sec = parseInt(window.localStorage.getItem("seconds"));
@@ -44,6 +45,6 @@ window.onload = function () {
 	    // var fiveMinutes = 60 * 5;
 	  display = document.querySelector('#demo');
 	  startTimer(fiveMinutes, display);
-};
+}
 
 </script>  

@@ -59,8 +59,6 @@ body {
 </style>
 
 <sec:csrfMetaTags/>
-<script src= "resources/javascript/timer.js" ></script>
-
 </head>
 
 
@@ -107,6 +105,7 @@ body {
 </form:form>
 </div>
 
+<script src= "resources/javascript/timer.js" ></script>
 
 <script>
 $(document).on("keydown", disableF5);
@@ -121,14 +120,26 @@ $(document).on("keydown", disableF5);
         lineNumbers: true,
         extraKeys: {"Ctrl-Space": "autocomplete"}
       });
+      /*TODO for different language, let us select different template ?
+       * hackrank? or leetcode? feifei:)
+       * public class Solution {
+    	public static void main(String[] args) {
+    		return;
+    	}  
+      }
+       * */
+      var template = 'public class Solution {\n'+ 
+    		  '\b public static void main() {\n'+
+    		  '\b return; \n\b} \n}';
+      editor.getDoc().setValue(template);
       if (window.performance) {
-  console.info("window.performance works fine on this browser");
-}
-  if (performance.navigation.type == 1) {
-    alert( "U just RELOADAED!" );
-  } else {
-    console.info( "This page is not reloaded");
-    localStorage.clear();
+    	  console.info("window.performance works fine on this browser");
+      }
+      if (performance.navigation.type == 1) {
+    	  alert( "U just RELOADAED!" );
+      } else {
+    	  console.info( "This page is not reloaded");
+    	  localStorage.clear();
   }
 </script>
 
