@@ -63,6 +63,6 @@ public class SourceCode {
 	 * @return full filename with extention
 	 * */
 	public String getFileFullName() {
-		return this.fileName+ this.fileExt;
+		return this.fileName+"." + this.fileExt;
 	}
 }

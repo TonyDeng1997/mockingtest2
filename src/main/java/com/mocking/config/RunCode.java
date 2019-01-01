@@ -31,6 +31,8 @@ public class RunCode {
 	private static String pythonJVM;
 	private static String kotlinJVM;
 	private static String nodeJsJVM;
+	private static String shellPath;
+	
 	private static final Logger log = LoggerFactory.getLogger(RunCode.class);
 	
 	static {
@@ -40,6 +42,7 @@ public class RunCode {
 		pythonJVM = sc.getPythonJVM();
 		kotlinJVM = sc.getKotlinJVM();
 		nodeJsJVM = sc.getNodeJsJVM();
+		shellPath = sc.getShellPath();
 	}
 
 	public RunCode(SourceCode sourceCode) {
@@ -52,7 +55,8 @@ public class RunCode {
 		 * and then set it here.
 		 * */
 		
-		userFolderPath = Paths.get(System.getProperty("user.dir") + "/src/main/resources/user/" + getUserId());
+		userFolderPath = Paths.get(System.getProperty("user.dir") + 
+				"/src/main/resources/user/" + getUserId());
 		sourceFilePath = userFolderPath.toString() + "/" + sourceCode.getFileName() + "." + sourceCode.getFileExt();
 		// Create working directory
 		createWorkingDirectory(userFolderPath);
@@ -108,9 +112,9 @@ public class RunCode {
 			if (sourceCode.getFileExt().equals("java")) {
 				String compileCommand = "javac " + sourceCode.getFileFullName();
 				String runCommand = "java " + sourceCode.getFileName();
-				builder.command("/bin/sh", "-c", compileCommand + ";" + runCommand);
+				builder.command(shellPath, "-c", compileCommand + ";" + runCommand);
 			} else {
-				builder.command("/bin/sh", "-c", "python " + sourceFilePath.toString());
+				builder.command(shellPath, "-c", "python " + sourceFilePath.toString());
 			}
 			result = generateOutput(false);
 		} catch (IOException e) {

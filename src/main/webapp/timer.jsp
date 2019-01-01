@@ -120,17 +120,13 @@ $(document).on("keydown", disableF5);
         lineNumbers: true,
         extraKeys: {"Ctrl-Space": "autocomplete"}
       });
-      /*TODO for different language, let us select different template ?
-       * hackrank? or leetcode? feifei:)
-       * public class Solution {
-    	public static void main(String[] args) {
-    		return;
-    	}  
-      }
-       * */
-      var template = 'public class Solution {\n'+ 
-    		  '\b public static void main() {\n'+
-    		  '\b return; \n\b} \n}';
+      // Set default template for java code. TODO please add
+      // a design pattern for other languages
+      var template = 'public class Solution {\n'+
+    		  '\tpublic static void main(String[] args) {\n'+
+    		  '\t System.out.println(\"Hello world\");\n' +
+    		  '\t return;\n\t}' +
+    		  '\n}';
       editor.getDoc().setValue(template);
       if (window.performance) {
     	  console.info("window.performance works fine on this browser");
@@ -140,7 +136,7 @@ $(document).on("keydown", disableF5);
       } else {
     	  console.info( "This page is not reloaded");
     	  localStorage.clear();
-  }
+      }
 </script>
 
 </body>
