@@ -68,7 +68,7 @@ public class RuncodeController {
 		Map<String, Object> params = new HashMap<>();
 		
 		// Please change key from 'feedback' to 'consoleOutput'
-		params.put("feedback", codeResult.getFullConsoleOutput());
+		params.put("output", codeResult.getFullConsoleOutput());
 		return new ModelAndView("timer", params);
 	}
 	

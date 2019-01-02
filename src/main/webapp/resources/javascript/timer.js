@@ -1,5 +1,3 @@
-<script>
-
 function startTimer(duration, display) {
 	var timer = duration, minutes, seconds;
 	var clearint = setInterval(function () {
@@ -16,6 +14,9 @@ function startTimer(duration, display) {
 	      display.textContent = "Expired";
 	      localStorage.clear();
 	      clearInterval(clearint);
+	      
+	      // Disable the coding area
+	      $("#code").prop('disabled', true);
 	    }
 	    console.log(parseInt(seconds));
 	  
@@ -25,11 +26,10 @@ function startTimer(duration, display) {
 	}, 1000);
 }
 
-
 function disableF5(e) { 
 	if ((e.which || e.keyCode) == 116) { 
 		e.preventDefault(); 
-	};
+	}
 }
 
 window.onload = function () {
@@ -43,8 +43,11 @@ window.onload = function () {
 	    var fiveMinutes = 30;
 	  }
 	    // var fiveMinutes = 60 * 5;
-	  display = document.querySelector('#demo');
+	  var display = document.querySelector('#demo');
 	  startTimer(fiveMinutes, display);
+	  
+	  // Disable keyboard for refreshing
+	  $(document).on("keydown", disableF5);
 }
 
-</script>  
+

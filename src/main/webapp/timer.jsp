@@ -67,7 +67,6 @@ body {
 <!-- Use bulma.io css and use flexbox -->
 <p id="demo"></p>
 
-
 <div id="container">
 
 <div id="lang" class="center" >
@@ -78,11 +77,9 @@ body {
  </select>
 </div>
 
-<!--<div id="editor"></div>-->
-<!--   <div id="editor2">${feedback}</div>-->
+<form:form action="/runcode?${_csrf.parameterName}=${_csrf.token}" 
+	modelAttribute="form" method ="post" enctype="multipart/form-data">
 
-<form:form action="/runcode?${_csrf.parameterName}=${_csrf.token}" modelAttribute="form" method ="post"  enctype="multipart/form-data">
-<!--  <div class="columns  is-desktop center">-->
 	<div class="column level-left">
 	<spring:bind path="source_code">
 		<form:textarea cols='100' rows='20' path="source_code" value="hello" id="code" name="code"  placeholder="public class Solution {}" ></form:textarea>
@@ -90,9 +87,9 @@ body {
 	</div>
 
 	<div class="column level-right">
-		<textarea id="display_result" cols='100' rows='20' disabled id="feedback" >${feedback}</textarea>
+		<textarea id="display_result" cols='100' rows='20' disabled id="output" >${output}</textarea>
 	</div>
-<!--   </div>-->
+
 
 <div class="level center">
 	<div class="level-item">
@@ -106,10 +103,6 @@ body {
 </div>
 
 <script src= "resources/javascript/timer.js" ></script>
-
-<script>
-$(document).on("keydown", disableF5);
-</script>
 
 <!--Code mirror Init--->
 <script>
