@@ -3,7 +3,7 @@ package com.mocking.auth.ws;
 import com.mocking.auth.model.TestForm;
 import com.mocking.vm.CodeResult;
 import com.mocking.vm.ConfigProperties;
-import com.mocking.vm.RunCode;
+import com.mocking.vm.RunCodeService;
 import com.mocking.vm.SourceCode;
 import java.util.HashMap;
 import java.util.Map;
@@ -63,7 +63,7 @@ public class RuncodeController {
 		*/
 		
 		// Generate source file
-		RunCode runCodeProcess= context.getBean(RunCode.class);
+		RunCodeService runCodeProcess= context.getBean(RunCodeService.class);
 		runCodeProcess.config(new SourceCode("Solution", sourceCode, "java"));
 		
 		// Run code and produce output

@@ -21,8 +21,8 @@ public class ConfigProperties {
 
     @Value("${java.compiler}")
     private String javaCompiler;
-    
-    @Value("${python.jvm}")
+
+	@Value("${python.jvm}")
     private String pythonJVM;
     
     @Value("${kotlin.jvm}")
@@ -36,6 +36,12 @@ public class ConfigProperties {
     
     @Value("${display.output}")
     private String displayOutput;
+    
+    
+    public String getJavaCompiler() {
+		return javaCompiler;
+	}
+
     
 	public String getShellPath() {
 		return shellPath;
