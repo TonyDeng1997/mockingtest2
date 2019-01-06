@@ -3,8 +3,8 @@ package util.test;
 import java.nio.file.Paths;
 import org.junit.Test;
 
-import com.mocking.config.RunCode;
-import com.mocking.config.SourceCode;
+import com.mocking.vm.RunCode;
+import com.mocking.vm.SourceCode;
 
 // TODO need to write Sping mocking test as I do not have time for now
 

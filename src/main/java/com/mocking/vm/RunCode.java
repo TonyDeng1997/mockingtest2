@@ -1,4 +1,4 @@
-package com.mocking.config;
+package com.mocking.vm;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -43,6 +43,12 @@ public class RunCode {
 		kotlinJVM = sc.getKotlinJVM();
 		nodeJsJVM = sc.getNodeJsJVM();
 		shellPath = sc.getShellPath();
+		
+			System.out.println("debugging:" + nodeJsJVM);
+			
+			System.out.println("debugging:" + javaJVM);
+			System.out.println("debugging:" + pythonJVM);
+		
 	}
 
 	public RunCode(SourceCode sourceCode) {
@@ -56,7 +62,7 @@ public class RunCode {
 		 * */
 		
 		userFolderPath = Paths.get(System.getProperty("user.dir") + 
-				"/src/main/resources/user/" + getUserId());
+				"/src/main/resources/user/" + RunCodeUtil.getUserId());
 		sourceFilePath = userFolderPath.toString() + "/" + sourceCode.getFileName() + "." + sourceCode.getFileExt();
 		// Create working directory
 		createWorkingDirectory(userFolderPath);
@@ -79,21 +85,6 @@ public class RunCode {
 		}
 	}
 
-	/* TODO should also get a UserID+ UUID
-	 * Unpon user creation we will have to create a unique path for the user and save 
-	 * it to the database table.
-	 */
-	private String getUserId() {
-		return UUID.randomUUID().toString();
-	}
-
-	private void generateSourceFile(String sourceFilePath) {
-		try (FileWriter fileWriter = new FileWriter(sourceFilePath)) {
-			fileWriter.write(sourceCode.getCode());
-		} catch (IOException e) {
-			log.error(e.getMessage());
-		}
-	}
 
 	public CodeResult executeCode() {
 		CodeResult result = new CodeResult();
@@ -101,7 +92,7 @@ public class RunCode {
 			System.out.println("User Directory: " + System.getProperty("user.dir"));
 
 			// Generate java file in the file system
-			generateSourceFile(sourceFilePath);
+			RunCodeUtil.generateSourceFile(sourceCode,sourceFilePath);
 
 			// TODO check file exists? make our own exception
 			File sourceFile = new File(sourceFilePath);
@@ -144,14 +135,14 @@ public class RunCode {
 		if (saveOutput) {
 			printWriter.println("Ouput: Here is the standard output of the command:\n");
 		}
-		StringBuilder output = readFromStreams(stdOutput,saveOutput, printWriter);
+		StringBuilder output = RunCodeUtil.readFromStreams(stdOutput,saveOutput, printWriter);
 		codeResult.setStdOut(output.toString());
 	
 		// read any errors from the attempted command
 		if (saveOutput) {
 			printWriter.println("Error: Here is the standard error of the command (if any):\n");
 		}
-		StringBuilder error = readFromStreams(stdError,saveOutput, printWriter);
+		StringBuilder error = RunCodeUtil.readFromStreams(stdError,saveOutput, printWriter);
 		codeResult.setStdErr(error.toString());
 		if (saveOutput) {
 			printWriter.close();
@@ -159,16 +150,5 @@ public class RunCode {
 		return codeResult;
 	}
 	
-	private StringBuilder readFromStreams(BufferedReader br, boolean saveOutput, PrintWriter printWriter) throws IOException {
-		StringBuilder sb = new StringBuilder();
-		String line;
-		while ((line = br.readLine()) != null) {
-				if (saveOutput) {
-					printWriter.println(line);
-				}
-				sb.append(line);
-				sb.append(System.getProperty("line.separator"));
-		}
-		return sb;
-	}
+	
 }

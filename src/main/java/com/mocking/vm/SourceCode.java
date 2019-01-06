@@ -1,4 +1,4 @@
-package com.mocking.config;
+package com.mocking.vm;
 
 /*
  * xiaofeng li

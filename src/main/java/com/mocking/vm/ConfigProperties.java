@@ -1,4 +1,4 @@
-package com.mocking.config;
+package com.mocking.vm;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -58,6 +58,7 @@ public class ConfigProperties {
 		return nodeJsJVM;
 	}
 
+	
 	// The following is required otherwise it can not find the properties file.
 	@Bean 
 	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {

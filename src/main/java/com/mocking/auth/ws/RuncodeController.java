@@ -1,10 +1,11 @@
 package com.mocking.auth.ws;
 
 import com.mocking.auth.model.TestForm;
-import com.mocking.config.CodeResult;
-import com.mocking.config.ConfigProperties;
-import com.mocking.config.RunCode;
-import com.mocking.config.SourceCode;
+import com.mocking.vm.CodeResult;
+import com.mocking.vm.ConfigProperties;
+import com.mocking.vm.RunCode;
+import com.mocking.vm.SourceCode;
+
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
