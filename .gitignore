@@ -3,12 +3,13 @@
 
 #ignore all target/
 **/target
+scraper/target
 
 #ignore all the .class file
 *.class
 
 #ignore generated java files
-**/src/main/resources/user/*.java
+**/src/main/resources/user/*
 
 !.mvn/wrapper/maven-wrapper.jar
 
