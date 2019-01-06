@@ -23,22 +23,23 @@ import org.springframework.stereotype.Service;
  * xiaofeng li
  * xlics05@gmail.com
  * */
-@Component
-public class RunCode {
+@Service
+public class RunCodeService {
 	private Path userFolderPath;
 	private String sourceFilePath;
 	private ProcessBuilder builder; // Use for compiling and running
 	private SourceCode sourceCode;
-	
-	private static String javaJVM;
-	private static String pythonJVM;
-	private static String kotlinJVM;
-	private static String nodeJsJVM;
-	private static String shellPath;
-	private static final Logger log = LoggerFactory.getLogger(RunCode.class);
+	private  String javaJVM;
+	private  String pythonJVM;
+	private  String kotlinJVM;
+	private  String nodeJsJVM;
+	private  String shellPath;
+	private static final Logger log = LoggerFactory.getLogger(RunCodeService.class);
 	
 	@Autowired
 	ApplicationContext context;
+	@Autowired
+	RunCodeUtil runcodeUtil;
 	
 	public void init() {
 		ConfigProperties sc = context.getBean(ConfigProperties.class);
@@ -52,11 +53,6 @@ public class RunCode {
 		System.out.println("debugging:" + pythonJVM);
 	}
 	
-	public RunCode() {
-		
-		System.out.println("testing me");
-	}
-
 	public void config(SourceCode sourceCode) {
 		init();
 		this.sourceCode = sourceCode;
@@ -69,7 +65,7 @@ public class RunCode {
 		 * */
 		
 		userFolderPath = Paths.get(System.getProperty("user.dir") + 
-				"/src/main/resources/user/" + RunCodeUtil.getUserId());
+				"/src/main/resources/user/" + runcodeUtil.getUserId());
 		sourceFilePath = userFolderPath.toString() + "/" + sourceCode.getFileName() + "." + sourceCode.getFileExt();
 		// Create working directory
 		createWorkingDirectory(userFolderPath);
@@ -92,14 +88,13 @@ public class RunCode {
 		}
 	}
 
-
 	public CodeResult executeCode() {
 		CodeResult result = new CodeResult();
 		try {
 			System.out.println("User Directory: " + System.getProperty("user.dir"));
 
 			// Generate java file in the file system
-			RunCodeUtil.generateSourceFile(sourceCode,sourceFilePath);
+			runcodeUtil.generateSourceFile(sourceCode,sourceFilePath);
 
 			// TODO check file exists? make our own exception
 			File sourceFile = new File(sourceFilePath);
@@ -142,20 +137,18 @@ public class RunCode {
 		if (saveOutput) {
 			printWriter.println("Ouput: Here is the standard output of the command:\n");
 		}
-		StringBuilder output = RunCodeUtil.readFromStreams(stdOutput,saveOutput, printWriter);
+		StringBuilder output = runcodeUtil.readFromStreams(stdOutput,saveOutput, printWriter);
 		codeResult.setStdOut(output.toString());
 	
 		// read any errors from the attempted command
 		if (saveOutput) {
 			printWriter.println("Error: Here is the standard error of the command (if any):\n");
 		}
-		StringBuilder error = RunCodeUtil.readFromStreams(stdError,saveOutput, printWriter);
+		StringBuilder error = runcodeUtil.readFromStreams(stdError,saveOutput, printWriter);
 		codeResult.setStdErr(error.toString());
 		if (saveOutput) {
 			printWriter.close();
 		}
 		return codeResult;
 	}
-	
-	
 }

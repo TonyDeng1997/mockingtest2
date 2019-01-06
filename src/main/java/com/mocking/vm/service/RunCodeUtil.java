@@ -1,4 +1,4 @@
-package com.mocking.vm;
+package com.mocking.vm.service;
 
 import java.io.BufferedReader;
 import java.io.FileWriter;
@@ -8,6 +8,7 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+import com.mocking.vm.SourceCode;
 
 @Component
 public class RunCodeUtil {
@@ -16,11 +17,11 @@ public class RunCodeUtil {
 	private RunCodeUtil() {}
 	
 	//TODO throw exceptions
-	public void checkVMs() {
+	protected void checkVMs() {
 		
 	}
 	
-	public  StringBuilder readFromStreams(BufferedReader br, boolean saveOutput, PrintWriter printWriter) throws IOException {
+	protected  StringBuilder readFromStreams(BufferedReader br, boolean saveOutput, PrintWriter printWriter) throws IOException {
 		StringBuilder sb = new StringBuilder();
 		String line;
 		while ((line = br.readLine()) != null) {
@@ -37,11 +38,11 @@ public class RunCodeUtil {
 	 * Unpon user creation we will have to create a unique path for the user and save 
 	 * it to the database table. Move the following two functions to UserUtil.java
 	 */
-	public  String getUserId() {
+	protected  String getUserId() {
 		return UUID.randomUUID().toString();
 	}
 
-	public void generateSourceFile(SourceCode sourceCode, String sourceFilePath) {
+	public  void generateSourceFile(SourceCode sourceCode, String sourceFilePath) {
 		try (FileWriter fileWriter = new FileWriter(sourceFilePath)) {
 			fileWriter.write(sourceCode.getCode());
 		} catch (IOException e) {
