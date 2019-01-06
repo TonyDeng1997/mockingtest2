@@ -8,7 +8,7 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-import com.mocking.vm.SourceCode;
+import com.mocking.vm.component.SourceCode;
 
 @Component
 public class RunCodeUtil {

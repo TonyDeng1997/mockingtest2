@@ -1,4 +1,4 @@
-package com.mocking.vm;
+package com.mocking.vm.component;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

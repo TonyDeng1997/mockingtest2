@@ -1,10 +1,10 @@
 package util.test;
 
 import java.nio.file.Paths;
+
 import org.junit.Test;
 
-import com.mocking.vm.RunCodeService;
-import com.mocking.vm.SourceCode;
+import com.mocking.vm.component.SourceCode;
 
 // TODO need to write Sping mocking test as I do not have time for now
 

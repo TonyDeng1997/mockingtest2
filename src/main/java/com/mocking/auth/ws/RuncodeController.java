@@ -1,12 +1,8 @@
 package com.mocking.auth.ws;
 
-import com.mocking.auth.model.TestForm;
-import com.mocking.vm.CodeResult;
-import com.mocking.vm.ConfigProperties;
-import com.mocking.vm.RunCodeService;
-import com.mocking.vm.SourceCode;
 import java.util.HashMap;
 import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -15,6 +11,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.mocking.auth.model.TestForm;
+import com.mocking.vm.component.CodeResult;
+import com.mocking.vm.component.ConfigProperties;
+import com.mocking.vm.component.SourceCode;
+import com.mocking.vm.service.RunCodeService;
 
 /*
  * xiaofeng li
