@@ -7,6 +7,9 @@
 #ignore all the .class file
 *.class
 
+#ignore generated java files
+**/src/main/resources/user/*.java
+
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
