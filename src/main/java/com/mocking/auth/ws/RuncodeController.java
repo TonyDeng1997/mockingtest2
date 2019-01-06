@@ -5,10 +5,10 @@ import com.mocking.vm.CodeResult;
 import com.mocking.vm.ConfigProperties;
 import com.mocking.vm.RunCode;
 import com.mocking.vm.SourceCode;
-
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,6 +41,9 @@ public class RuncodeController {
 		return "timer";
 	}
 
+	@Autowired
+	ApplicationContext context;
+	
 	@PostMapping(value = { "/runcode" })
 	public ModelAndView runCode(@ModelAttribute("form") TestForm form, Model model) throws Exception {
 		System.out.println("debugging in runcode controller \n" + form.getSource_code());
@@ -60,7 +63,8 @@ public class RuncodeController {
 		*/
 		
 		// Generate source file
-		RunCode runCodeProcess = new RunCode(new SourceCode("Solution", sourceCode, "java"));
+		RunCode runCodeProcess= context.getBean(RunCode.class);
+		runCodeProcess.config(new SourceCode("Solution", sourceCode, "java"));
 		
 		// Run code and produce output
 		CodeResult codeResult = runCodeProcess.executeCode();

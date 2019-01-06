@@ -12,7 +12,11 @@ import org.slf4j.LoggerFactory;
 public class RunCodeUtil {
 	private static final Logger log = LoggerFactory.getLogger(RunCodeUtil.class);
 	
-	static protected StringBuilder readFromStreams(BufferedReader br, boolean saveOutput, PrintWriter printWriter) throws IOException {
+	protected static void checkVMs() {
+		
+	}
+	
+	protected static StringBuilder readFromStreams(BufferedReader br, boolean saveOutput, PrintWriter printWriter) throws IOException {
 		StringBuilder sb = new StringBuilder();
 		String line;
 		while ((line = br.readLine()) != null) {
@@ -25,16 +29,15 @@ public class RunCodeUtil {
 		return sb;
 	}
 	
-
 	/* TODO should also get a UserID+ UUID
 	 * Unpon user creation we will have to create a unique path for the user and save 
 	 * it to the database table.
 	 */
-	static protected String getUserId() {
+	protected static  String getUserId() {
 		return UUID.randomUUID().toString();
 	}
 
-	static protected void generateSourceFile(SourceCode sourceCode, String sourceFilePath) {
+	protected static  void generateSourceFile(SourceCode sourceCode, String sourceFilePath) {
 		try (FileWriter fileWriter = new FileWriter(sourceFilePath)) {
 			fileWriter.write(sourceCode.getCode());
 		} catch (IOException e) {

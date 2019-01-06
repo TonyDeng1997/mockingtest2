@@ -19,6 +19,9 @@ public class ConfigProperties {
     @Value("${java.jvm}")
     private String javaJVM;
 
+    @Value("${java.compiler}")
+    private String javaCompiler;
+    
     @Value("${python.jvm}")
     private String pythonJVM;
     
