@@ -19,4 +19,10 @@ public class JavascriptVM implements Runtime {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public void handleException(String filePath) {
+		// TODO Auto-generated method stub
+		
+	}
 }

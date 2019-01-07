@@ -11,4 +11,6 @@ public interface Runtime {
 	public String getRunCommand(SourceCode source);
 
 	public String getCompileCommand(SourceCode source);
+	
+	public void handleException(String filePath) ;
 }

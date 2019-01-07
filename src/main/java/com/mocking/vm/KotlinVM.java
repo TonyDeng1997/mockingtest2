@@ -23,5 +23,11 @@ public class KotlinVM implements Runtime {
 		return null;
 	}
 
+	@Override
+	public void handleException(String filePath) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }

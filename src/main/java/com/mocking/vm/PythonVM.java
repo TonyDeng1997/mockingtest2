@@ -21,4 +21,10 @@ public class PythonVM implements Runtime {
 		return null;
 	}
 
+	@Override
+	public void handleException(String filePath) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
