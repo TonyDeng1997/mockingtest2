@@ -15,8 +15,13 @@ function startTimer(duration, display) {
 	      localStorage.clear();
 	      clearInterval(clearint);
 	      
-	      // Disable the coding area
-	      $("#code").prop('disabled', true);
+	      // Disable the coding area, TODO, this does not seem to work.
+	      $(".CodeMirror").addClass('disabledCodeMirror');
+	      
+	      
+	      // Workaround, redirect to logout. TODO, need a modal
+	      alert("The test is timed out. Your page will be redirected now.");
+	      window.location.href = "http://localhost:8080/login?logout";
 	    }
 	    console.log(parseInt(seconds));
 	  
@@ -40,7 +45,7 @@ window.onload = function () {
 	  if (timer>0) {
 	    var fiveMinutes = (parseInt(min*60)+sec);
 	  } else {
-	    var fiveMinutes = 30;
+	    var fiveMinutes = 10;
 	  }
 	    // var fiveMinutes = 60 * 5;
 	  var display = document.querySelector('#demo');

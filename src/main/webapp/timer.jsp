@@ -40,22 +40,31 @@ body {
         overflow: hidden;
     }
 
-    #editor {
+#editor {
        position: relative !important;
        border: 1px solid lightgray;
        margin: auto;
        height: 300px;
        width: 80%;
        
-    }
-    #editor2 {
+}
+ 
+ 
+#editor2 {
        position: relative !important;
        border: 1px solid lightgray;
        margin: auto;
        height: 300px;
        width: 80%;
        
-    }
+}
+    
+// disable div
+    
+.disabledCodeMirror {
+  pointer-events: none;
+  opacity: 0.4;
+}
 </style>
 
 <sec:csrfMetaTags/>
@@ -102,7 +111,9 @@ body {
 </form:form>
 </div>
 
+
 <script src= "resources/javascript/timer.js" ></script>
+
 
 <!--Code mirror Init--->
 <script>
