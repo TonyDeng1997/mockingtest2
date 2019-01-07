@@ -19,9 +19,10 @@ import com.mocking.vm.component.ConfigProperties;
 import com.mocking.vm.component.SourceCode;
 
 /*
- * xiaofeng li
- * xlics05@gmail.com
+ * @author: xiaofeng li
+ * 
  * */
+
 @Service
 public class RunCodeService {
 	private Path userFolderPath;
@@ -44,10 +45,15 @@ public class RunCodeService {
 	@Autowired
 	VMFactory vmFactory;
 
-
+	private RunCodeService() {}
+	
 	public void init() {
 		ConfigProperties sc = context.getBean(ConfigProperties.class);
 		shellPath = sc.getShellPath();
+		if (!runcodeUtil.fileExecutable(shellPath)) {
+			// TODO make our own exception class
+			throw new RuntimeException("Shell is not configured properly");
+		}
 	}
 
 	public void config(SourceCode sourceCode) {
@@ -91,7 +97,7 @@ public class RunCodeService {
 			System.out.println("User Directory: " + System.getProperty("user.dir"));
 
 			// Generate java file in the file system
-			runcodeUtil.generateSourceFile(sourceCode,sourceFilePath);
+			runcodeUtil.generateSourceFile(sourceCode, sourceFilePath);
 
 			File sourceFile = new File(sourceFilePath);
 			if (!sourceFile.exists() || sourceFile.isDirectory()) {
@@ -99,12 +105,10 @@ public class RunCodeService {
 				log.error("source file already exists!");
 			}
 
-			/*TODO
-			 * Java has been done.
-			 * Python requires testing and cleaning.
-			 * Kotlin is not done.
-			 * JS is not done.
-			 * */
+			/*
+			 * TODO Java has been done. Python requires testing and cleaning. Kotlin is not
+			 * done. JS is not done.
+			 */
 			if (sourceCode.getFileExt().equals("java")) {
 				String compileCommand = vmFactory.getVM("java").getCompileCommand(sourceCode);
 				String runCommand = vmFactory.getVM("java").getRunCommand(sourceCode);
@@ -112,15 +116,15 @@ public class RunCodeService {
 			} else if (sourceCode.getFileExt().equalsIgnoreCase("python")) {
 				builder.command(shellPath, "-c", "python " + sourceFilePath.toString());
 			} else if (sourceCode.getFileExt().equalsIgnoreCase("javascript")) {
-				
+
 			} else if (sourceCode.getFileExt().equalsIgnoreCase("kotlin")) {
-				
+
 			}
 			result = generateOutput(false);
 		} catch (IOException e) {
 			System.out.println("exception here" + e.getMessage());
 			log.error(e.getMessage());
-	
+
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			log.error(e.getMessage());

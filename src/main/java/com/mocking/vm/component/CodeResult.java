@@ -1,14 +1,13 @@
 package com.mocking.vm.component;
 
 /*
- * xiaofeng li
- * xlics05@gmail.com
+ * @author: xiaofeng li
  * 
  * */
 public class CodeResult {
 	private String stdOut;
 	private String stdErr;
-	
+
 	public String getStdOut() {
 		return stdOut;
 	}
@@ -24,7 +23,7 @@ public class CodeResult {
 	public void setStdErr(String stdErr) {
 		this.stdErr = stdErr;
 	}
-	
+
 	public String getFullConsoleOutput() {
 		return this.stdOut + this.stdErr;
 	}

@@ -1,8 +1,8 @@
 package com.mocking.vm.component;
 
 /*
- * xiaofeng li
- * xlics05@gmail.com
+ * @author: xiaofeng li
+ * 
  * */
 
 public class SourceCode {
@@ -58,11 +58,11 @@ public class SourceCode {
 	public void setCode(String code) {
 		this.code = code;
 	}
-	
+
 	/*
 	 * @return full filename with extention
-	 * */
+	 */
 	public String getFileFullName() {
-		return this.fileName+"." + this.fileExt;
+		return this.fileName + "." + this.fileExt;
 	}
 }

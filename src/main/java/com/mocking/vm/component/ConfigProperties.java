@@ -7,11 +7,12 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.stereotype.Component;
 
 /*
- * xiaofeng li
- * xlics05@gmail.com
+ * @author: xiaofeng li
  * 
  * This file is to load system configuration.
+ * 
  * */
+
 @Component
 // Must have the following line
 @PropertySource("classpath:jvm.properties") 
