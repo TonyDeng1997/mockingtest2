@@ -5,21 +5,19 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-<link rel=stylesheet href="resources/resources/code-mirror-5.40.0/doc/docs.css">
 
+<!-- The following are jquery and bulma -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<!-- The followings are code mirror -->
+<link rel=stylesheet href="resources/code-mirror-5.40.0/doc/docs.css">
 <link rel="stylesheet" href="resources/code-mirror-5.40.0/lib/codemirror.css">
 <link rel="stylesheet" href="resources/code-mirror-5.40.0/addon/hint/show-hint.css">
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
 <script src="resources/code-mirror-5.40.0/lib/codemirror.js"></script>
 <script src="resources/code-mirror-5.40.0/addon/hint/show-hint.js"></script>
 <script src="resources/code-mirror-5.40.0/addon/hint/anyword-hint.js"></script>
 <script src="resources/code-mirror-5.40.0/mode/javascript/javascript.js"></script>
-
-
 
 <style>
 p {
@@ -42,41 +40,43 @@ body {
         overflow: hidden;
     }
 
-    #editor {
+#editor {
        position: relative !important;
        border: 1px solid lightgray;
        margin: auto;
        height: 300px;
        width: 80%;
        
-    }
-    #editor2 {
+}
+ 
+ 
+#editor2 {
        position: relative !important;
        border: 1px solid lightgray;
        margin: auto;
        height: 300px;
        width: 80%;
        
-    }
+}
+    
+// disable div
+    
+.disabledCodeMirror {
+  pointer-events: none;
+  opacity: 0.4;
+}
 </style>
 
-
-
-   <sec:csrfMetaTags/>
-   
-<script>
-
-
-</script>
+<sec:csrfMetaTags/>
 </head>
+
+
 <body>
 
 <!-- Use bulma.io css and use flexbox -->
 <p id="demo"></p>
 
-
 <div id="container">
-
 
 <div id="lang" class="center" >
  <select name="p_language" id="lang_selector"  onchange="changefunction()">
@@ -86,26 +86,19 @@ body {
  </select>
 </div>
 
-<!--<div id="editor"></div>-->
-<!--   <div id="editor2">${feedback}</div>-->
+<form:form action="/runcode?${_csrf.parameterName}=${_csrf.token}" 
+	modelAttribute="form" method ="post" enctype="multipart/form-data">
 
-
-
-<form:form action="/test?${_csrf.parameterName}=${_csrf.token}" modelAttribute="form" method ="post"  enctype="multipart/form-data">
-<!--  <div class="columns  is-desktop center">-->
 	<div class="column level-left">
 	<spring:bind path="source_code">
-	
-		<!--<form:textarea cols='100' rows='20' path="source_code" value="hello" id ="editor" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"></form:textarea>>-->
-		<form:textarea cols='100' rows='20' path="source_code" value="hello" id="code" name="code"  ></form:textarea>
-	
+		<form:textarea cols='100' rows='20' path="source_code" value="hello" id="code" name="code"  placeholder="public class Solution {}" ></form:textarea>
 	</spring:bind>
 	</div>
 
 	<div class="column level-right">
-		<textarea id="display_result" cols='100' rows='20' disabled id="feedback" >${feedback}</textarea>
+		<textarea id="display_result" cols='100' rows='20' disabled id="output" >${output}</textarea>
 	</div>
-<!--   </div>-->
+
 
 <div class="level center">
 	<div class="level-item">
@@ -116,130 +109,14 @@ body {
 	</div>
 </div>
 </form:form>
-
 </div>
 
 
-<!-- This is ACE editor configuration 
-<script src="/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src= "resources/javascript/timer.js" ></script>
+
+
+<!--Code mirror Init--->
 <script>
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/chrome");
-    editor.session.setMode("ace/mode/java");
-    editor.resize();
-    editor.setValue("the new text here");
-    var myElement = document.getElementById("intro");
-   
-    var editor2=ace.edit("editor2");
-    editor2.setTheme("ace/theme/chrome");
- //   editor2.session.setMode("ace/mode/javascript");
-    editor2.resize();
-    editor2.setReadOnly(true);  // false to make it editable
-    editor2.setValue(document.getElementById("feedback").innerHTML);
-    function runCode() {
-    	document.getElementById("code").innerHTML = editor.getValue();
-    }
-    function changefunction() {
-        var x = document.getElementById("lang_selector").value;
-        editor.setValue(x);
-        editor.session.setMode("ace/mode/"+x);
-    }
-    
-</script>
--->
-
-<script>
-
-function disableF5(e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); };
-$(document).on("keydown", disableF5);
-</script>
-
-<script>
-  // Set the date we're counting down to
-/*
-  var testTime= 1;
-  var testends=0;
-  if(testends == 0){
-    testends=new Date().getTime()+testTime*60000;
-  }
-  
-  // Update the count down every 1 second
-  var x = setInterval(function() {
-  
-      // Get todays date and time
-      var now = new Date().getTime();
-      
-      // Find the distance between now and the count down date
-      var distance = testends - now;
-      
-      // Time calculations for days, hours, minutes and seconds
-     
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      
-      // Output the result in an element with id="demo"
-      document.getElementById("demo").innerHTML =hours + "h "
-      + minutes + "m " + seconds + "s ";
-      
-      // If the count down is over, write some text 
-      if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("demo").innerHTML = "EXPIRED";
-          editor.setReadOnly(true);
-      }
-  }, 1000);
-  */
-  function startTimer(duration, display) {
-var timer = duration, minutes, seconds;
-var clearint=setInterval(function () {
-    minutes = parseInt(timer / 60, 10)
-    seconds = parseInt(timer % 60, 10);
-
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-
-    display.textContent = minutes + " " + " " + seconds;
-
-    if (--timer < 0) {
-      timer = -1;
-      display.textContent = "Expired";
-      localStorage.clear();
-      clearInterval(clearint);
-      $("#code")
-      
-    }
-  console.log(parseInt(seconds))
-  
-  window.localStorage.setItem("seconds",seconds)
-  window.localStorage.setItem("minutes",minutes)
-  window.localStorage.setItem("timer",timer)
-}, 1000);
-
-
-
-}
-
-
-window.onload = function () {
-  sec  = parseInt(window.localStorage.getItem("seconds"))
-  min = parseInt(window.localStorage.getItem("minutes"))
-  timer=parseInt(window.localStorage.getItem("timer"))
-
-  if(timer>0){
-    var fiveMinutes = (parseInt(min*60)+sec);
-  }else{
-    var fiveMinutes = 30;
-  }
-    // var fiveMinutes = 60 * 5;
-  display = document.querySelector('#demo');
-  startTimer(fiveMinutes, display);
-};
-
-
-  </script>
-  
-  <script>
       CodeMirror.commands.autocomplete = function(cm) {
         cm.showHint({hint: CodeMirror.hint.anyword});
       }
@@ -247,17 +124,24 @@ window.onload = function () {
         lineNumbers: true,
         extraKeys: {"Ctrl-Space": "autocomplete"}
       });
+      // Set default template for java code. TODO please add
+      // a design pattern for other languages
+      var template = 'public class Solution {\n'+
+    		  '\tpublic static void main(String[] args) {\n'+
+    		  '\t System.out.println(\"Hello world\");\n' +
+    		  '\t return;\n\t}' +
+    		  '\n}';
+      editor.getDoc().setValue(template);
       if (window.performance) {
-  console.info("window.performance works fine on this browser");
-}
-  if (performance.navigation.type == 1) {
-    alert( "U just RELOADAED!" );
-  } else {
-    console.info( "This page is not reloaded");
-    localStorage.clear();
-  }
-      
-      
-    </script>
+    	  console.info("window.performance works fine on this browser");
+      }
+      if (performance.navigation.type == 1) {
+    	  alert( "U just RELOADAED!" );
+      } else {
+    	  console.info( "This page is not reloaded");
+    	  localStorage.clear();
+      }
+</script>
+
 </body>
 </html>

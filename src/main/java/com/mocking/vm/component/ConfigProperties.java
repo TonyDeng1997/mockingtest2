@@ -1,4 +1,4 @@
-package util;
+package com.mocking.vm.component;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -6,14 +6,24 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.stereotype.Component;
 
+/*
+ * @author: xiaofeng li
+ * 
+ * This file is to load system configuration.
+ * 
+ * */
+
 @Component
-// must have the following line
+// Must have the following line
 @PropertySource("classpath:jvm.properties") 
 public class ConfigProperties {
     @Value("${java.jvm}")
     private String javaJVM;
 
-    @Value("${python.jvm}")
+    @Value("${java.compiler}")
+    private String javaCompiler;
+
+	@Value("${python.jvm}")
     private String pythonJVM;
     
     @Value("${kotlin.jvm}")
@@ -22,25 +32,46 @@ public class ConfigProperties {
     @Value("${nodejs.jvm}")
     private String nodeJsJVM;
     
-	public String getJavaJVM() {
+    @Value("${shell.path}")
+    private String shellPath;
+    
+    @Value("${display.output}")
+    private String displayOutput;
+    
+    
+    public String getJavaCompiler() {
+		return javaCompiler;
+	}
+
+    
+	public String getShellPath() {
+		return shellPath;
+	}
+
+	public String getDisplayOutput() {
+		return displayOutput;
+	}
+
+	public String getJavaVM() {
 		return javaJVM;
 	}
 	
-	public String getPythonJVM() {
+	public String getPythonVM() {
 		return pythonJVM;
 	}
 
-	public String getKotlinJVM() {
+	public String getKotlinVM() {
 		return kotlinJVM;
 	}
 
-	public String getNodeJsJVM() {
+	public String getNodeJsVM() {
 		return nodeJsJVM;
 	}
 
+	
 	// The following is required otherwise it can not find the properties file.
 	@Bean 
 	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
-	return new PropertySourcesPlaceholderConfigurer();
+		return new PropertySourcesPlaceholderConfigurer();
 	}
 }

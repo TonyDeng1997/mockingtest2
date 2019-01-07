@@ -1,4 +1,4 @@
-# Building a Website with Node.js and Express.js
+# Building a Mocking Programming System with Node.js and Express.js
 Need to integrate with webpack to organize the resource.
 
 ## Installing Tools
@@ -8,8 +8,9 @@ Need to integrate with webpack to organize the resource.
     - [maven]
     - [java]
     - [NodeJS/NPM]
-    
-eclipse plugin: tomcat plugin, sonarlint plugin, markdown plugin and nodejs plugin
+
+Other eclipse plugins that you would need are: nodejs plugin, tomcat plugin, checkstyle plugin and sonarlint plugin.
+
         
 ## Checkout source code
 Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) `> git clone CLONEURL`
@@ -72,6 +73,10 @@ For flyway integration, please check the pom.xml in the root of the project.
 Also checkout the Flyway.md and flyway.sh for the usage.
 
 Note, flyway is to database schema version control, simply say it is used to incrementally alter database, tables schemas and data.
+
+Run the following commands to update your database schemas.
+
+`mvn flyway:migrate`
 
 ref: `https://flywaydb.org/getstarted/firststeps/maven`
 
