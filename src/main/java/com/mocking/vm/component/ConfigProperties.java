@@ -51,19 +51,19 @@ public class ConfigProperties {
 		return displayOutput;
 	}
 
-	public String getJavaJVM() {
+	public String getJavaVM() {
 		return javaJVM;
 	}
 	
-	public String getPythonJVM() {
+	public String getPythonVM() {
 		return pythonJVM;
 	}
 
-	public String getKotlinJVM() {
+	public String getKotlinVM() {
 		return kotlinJVM;
 	}
 
-	public String getNodeJsJVM() {
+	public String getNodeJsVM() {
 		return nodeJsJVM;
 	}
 

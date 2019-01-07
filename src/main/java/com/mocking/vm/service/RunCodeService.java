@@ -8,13 +8,11 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
-
 import com.mocking.vm.VMFactory;
 import com.mocking.vm.component.CodeResult;
 import com.mocking.vm.component.ConfigProperties;
@@ -46,16 +44,10 @@ public class RunCodeService {
 	@Autowired
 	VMFactory vmFactory;
 
+
 	public void init() {
 		ConfigProperties sc = context.getBean(ConfigProperties.class);
-		javaJVM = sc.getJavaJVM();
-		pythonJVM = sc.getPythonJVM();
-		kotlinJVM = sc.getKotlinJVM();
-		nodeJsJVM = sc.getNodeJsJVM();
 		shellPath = sc.getShellPath();
-		System.out.println("debugging:" + nodeJsJVM);
-		System.out.println("debugging:" + javaJVM);
-		System.out.println("debugging:" + pythonJVM);
 	}
 
 	public void config(SourceCode sourceCode) {
@@ -101,13 +93,18 @@ public class RunCodeService {
 			// Generate java file in the file system
 			runcodeUtil.generateSourceFile(sourceCode,sourceFilePath);
 
-			// TODO check file exists? make our own exception
 			File sourceFile = new File(sourceFilePath);
 			if (!sourceFile.exists() || sourceFile.isDirectory()) {
 				System.out.println("source file creation failed");
+				log.error("source file already exists!");
 			}
 
-			
+			/*TODO
+			 * Java has been done.
+			 * Python requires testing and cleaning.
+			 * Kotlin is not done.
+			 * JS is not done.
+			 * */
 			if (sourceCode.getFileExt().equals("java")) {
 				String compileCommand = vmFactory.getVM("java").getCompileCommand(sourceCode);
 				String runCommand = vmFactory.getVM("java").getRunCommand(sourceCode);
@@ -119,14 +116,13 @@ public class RunCodeService {
 			} else if (sourceCode.getFileExt().equalsIgnoreCase("kotlin")) {
 				
 			}
-			
 			result = generateOutput(false);
 		} catch (IOException e) {
-			System.out.println("IOException happened - here's what I know: ");
+			System.out.println("exception here" + e.getMessage());
 			log.error(e.getMessage());
 	
 		} catch (Exception e) {
-			System.out.println("Exception happened - here's what I know: ");
+			System.out.println(e.getMessage());
 			log.error(e.getMessage());
 		}
 		return result;
@@ -136,22 +132,23 @@ public class RunCodeService {
 	// saved on file system
 	private CodeResult generateOutput(boolean saveOutput) throws IOException {
 		Process p = builder.start();
+		System.out.println("hello debugging here");
 		CodeResult codeResult = new CodeResult();
 		System.out.println("User Folder Path:" + userFolderPath);
 
-		// TODO, need to fix this
+		// Don't hardcode file name
 		PrintWriter printWriter = new PrintWriter(userFolderPath + "/" + "output.txt");
 		BufferedReader stdOutput = new BufferedReader(new InputStreamReader(p.getInputStream()));
 		BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
 
-		// read the output from the command
+		// Read the output from the command
 		if (saveOutput) {
 			printWriter.println("Ouput: Here is the standard output of the command:\n");
 		}
 		StringBuilder output = runcodeUtil.readFromStreams(stdOutput, saveOutput, printWriter);
 		codeResult.setStdOut(output.toString());
 
-		// read any errors from the attempted command
+		// Read any errors from the attempted command
 		if (saveOutput) {
 			printWriter.println("Error: Here is the standard error of the command (if any):\n");
 		}

@@ -49,7 +49,6 @@ public class RuncodeController {
 	@PostMapping(value = { "/runcode" })
 	public ModelAndView runCode(@ModelAttribute("form") TestForm form, Model model) throws Exception {
 		System.out.println("debugging in runcode controller \n" + form.getSource_code());
-		System.out.println("debugging in runcode config obj \n" + config.getJavaJVM()); 
 		
 		/* TODO Parse the file from the source code string and find out the public class keyword {.
 		 * Currently we will provide a code template to start with.

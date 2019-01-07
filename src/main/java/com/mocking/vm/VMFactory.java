@@ -1,5 +1,6 @@
 package com.mocking.vm;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /*
@@ -16,16 +17,29 @@ public class VMFactory {
 	private static final  String PYTHON = "PYTHON";
 	private static final  String KOTLIN = "KOTLIN";
 	
+	@Autowired
+	JavaVM javaVM;
+	
+	@Autowired
+	JavascriptVM javascriptVM;
+	
+	@Autowired
+	PythonVM pythonVM;
+	
+	@Autowired
+	KotlinVM kotlinVM;
+	
+	
 	private VMFactory() {
 	}
 	
 	public Runtime getVM(String vmType) {
 		if (vmType == null ) {
-			return new JavaVM();
+			return javaVM;
 		}
 		
 		if (vmType.equalsIgnoreCase(VMFactory.JAVA)) {
-			return new JavaVM();
+			return javaVM;
 		}
 		
 		if (vmType.equalsIgnoreCase(VMFactory.PYTHON)) {
