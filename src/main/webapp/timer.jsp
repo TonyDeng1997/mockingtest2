@@ -59,12 +59,6 @@ body {
        
 }
     
-// disable div
-    
-.disabledCodeMirror {
-  pointer-events: none;
-  opacity: 0.4;
-}
 </style>
 
 <sec:csrfMetaTags/>
@@ -91,7 +85,7 @@ body {
 
 	<div class="column level-left">
 	<spring:bind path="source_code">
-		<form:textarea cols='100' rows='20' path="source_code" value="hello" id="code" name="code"  placeholder="public class Solution {}" ></form:textarea>
+		<form:textarea id="code" cols='100' rows='20' path="source_code" placeholder="" ></form:textarea>
 	</spring:bind>
 	</div>
 
@@ -120,7 +114,8 @@ body {
       CodeMirror.commands.autocomplete = function(cm) {
         cm.showHint({hint: CodeMirror.hint.anyword});
       }
-      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+      var domCodeElm = document.getElementById("code");
+      var editor = CodeMirror.fromTextArea(domCodeElm, {
         lineNumbers: true,
         extraKeys: {"Ctrl-Space": "autocomplete"}
       });
@@ -131,7 +126,12 @@ body {
     		  '\t System.out.println(\"Hello world\");\n' +
     		  '\t return;\n\t}' +
     		  '\n}';
-      editor.getDoc().setValue(template);
+      
+      if (!domCodeElm.value) {
+        editor.getDoc().setValue(template);
+      } else {
+        editor.getDoc().setValue(document.getElementById('#code').value);
+      }
       if (window.performance) {
     	  console.info("window.performance works fine on this browser");
       }
