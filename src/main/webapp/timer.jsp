@@ -10,15 +10,6 @@
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-<!-- The followings are code mirror -->
-<link rel=stylesheet href="resources/code-mirror-5.40.0/doc/docs.css">
-<link rel="stylesheet" href="resources/code-mirror-5.40.0/lib/codemirror.css">
-<link rel="stylesheet" href="resources/code-mirror-5.40.0/addon/hint/show-hint.css">
-<script src="resources/code-mirror-5.40.0/lib/codemirror.js"></script>
-<script src="resources/code-mirror-5.40.0/addon/hint/show-hint.js"></script>
-<script src="resources/code-mirror-5.40.0/addon/hint/anyword-hint.js"></script>
-<script src="resources/code-mirror-5.40.0/mode/javascript/javascript.js"></script>
-
 <style>
 p {
   text-align: right;
@@ -48,8 +39,7 @@ body {
        width: 80%;
        
 }
- 
- 
+  
 #editor2 {
        position: relative !important;
        border: 1px solid lightgray;
@@ -57,8 +47,7 @@ body {
        height: 300px;
        width: 80%;
        
-}
-    
+}   
 </style>
 
 <sec:csrfMetaTags/>
@@ -93,7 +82,6 @@ body {
 		<textarea id="display_result" cols='100' rows='20' disabled id="output" >${output}</textarea>
 	</div>
 
-
 <div class="level center">
 	<div class="level-item">
 		<input type="submit" id="run_code" onclick="runCode()" value="run" /> 
@@ -105,43 +93,9 @@ body {
 </form:form>
 </div>
 
-
 <script src= "resources/javascript/timer.js" ></script>
 
-
-<!--Code mirror Init--->
-<script>
-      CodeMirror.commands.autocomplete = function(cm) {
-        cm.showHint({hint: CodeMirror.hint.anyword});
-      }
-      var domCodeElm = document.getElementById("code");
-      var editor = CodeMirror.fromTextArea(domCodeElm, {
-        lineNumbers: true,
-        extraKeys: {"Ctrl-Space": "autocomplete"}
-      });
-      // Set default template for java code. TODO please add
-      // a design pattern for other languages
-      var template = 'public class Solution {\n'+
-    		  '\tpublic static void main(String[] args) {\n'+
-    		  '\t System.out.println(\"Hello world\");\n' +
-    		  '\t return;\n\t}' +
-    		  '\n}';
-      
-      if (!domCodeElm.value) {
-        editor.getDoc().setValue(template);
-      } else {
-        editor.getDoc().setValue(document.getElementById('#code').value);
-      }
-      if (window.performance) {
-    	  console.info("window.performance works fine on this browser");
-      }
-      if (performance.navigation.type == 1) {
-    	  alert( "U just RELOADAED!" );
-      } else {
-    	  console.info( "This page is not reloaded");
-    	  localStorage.clear();
-      }
-</script>
+<%@ include file="codeMirrorInit.html" %>
 
 </body>
 </html>

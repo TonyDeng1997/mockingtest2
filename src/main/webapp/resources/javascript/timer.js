@@ -1,5 +1,8 @@
 function startTimer(duration, display) {
-	var timer = duration, minutes, seconds;
+	var timer = duration; // in seconds
+	var minutes;
+	var seconds;
+	
 	var clearint = setInterval(function () {
 	    minutes = parseInt(timer / 60, 10);
 	    seconds = parseInt(timer % 60, 10);
@@ -7,22 +10,24 @@ function startTimer(duration, display) {
 	    minutes = minutes < 10 ? "0" + minutes : minutes;
 	    seconds = seconds < 10 ? "0" + seconds : seconds;
 	
-	    display.textContent = minutes + " " + " " + seconds;
+	    display.textContent = minutes + " mins " + " " + seconds + " secs";
 	
+	    // timer is counted down
 	    if (--timer < 0) {
 	      timer = -1;
 	      display.textContent = "Expired";
-	      localStorage.clear();
+	      window.localStorage.clear();
 	      clearInterval(clearint);
 	     
 	      // Workaround, redirect to logout. TODO, need a modal
 	      alert("The test is timed out. Your page will be redirected now.");
 	      window.location.href = "http://localhost:8080/login?logout";
 	    }
-	    console.log(parseInt(seconds));
+	    console.log(parseInt(timer));
 	  
 	    window.localStorage.setItem("seconds",seconds);
 	    window.localStorage.setItem("minutes",minutes);
+	    // Save timer (total seconds left) in local storage to prevent refreshing?
 	    window.localStorage.setItem("timer",timer);
 	}, 1000);
 }

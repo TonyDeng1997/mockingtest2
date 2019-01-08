@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<!-- The followings are code mirror -->
+<link rel=stylesheet href="resources/code-mirror-5.40.0/doc/docs.css">
+<link rel="stylesheet" href="resources/code-mirror-5.40.0/lib/codemirror.css">
+<link rel="stylesheet" href="resources/code-mirror-5.40.0/addon/hint/show-hint.css">
+<script src="resources/code-mirror-5.40.0/lib/codemirror.js"></script>
+<script src="resources/code-mirror-5.40.0/addon/hint/show-hint.js"></script>
+<script src="resources/code-mirror-5.40.0/addon/hint/anyword-hint.js"></script>
+<script src="resources/code-mirror-5.40.0/mode/javascript/javascript.js"></script>
+
+</head>
+<body>
+<script>
+      CodeMirror.commands.autocomplete = function(cm) {
+        cm.showHint({hint: CodeMirror.hint.anyword});
+      }
+      var domCodeElm = document.getElementById("code");
+      var editor = CodeMirror.fromTextArea(domCodeElm, {
+        lineNumbers: true,
+        extraKeys: {"Ctrl-Space": "autocomplete"}
+      });
+      // Set default template for java code. TODO please add
+      // a design pattern for other languages
+      var template = 'public class Solution {\n'+
+    		  '\tpublic static void main(String[] args) {\n'+
+    		  '\t System.out.println(\"Hello world\");\n' +
+    		  '\t return;\n\t}' +
+    		  '\n}';
+      
+      if (!domCodeElm.value) {
+        editor.getDoc().setValue(template);
+      } else {
+        editor.getDoc().setValue(document.getElementById('#code').value);
+      }
+      if (window.performance) {
+    	  console.info("window.performance works fine on this browser");
+      }
+      if (performance.navigation.type == 1) {
+    	  alert( "U just RELOADAED!" );
+      } else {
+    	  console.info( "This page is not reloaded");
+    	  localStorage.clear();
+      }
+</script>
+
+</body>
+</html>
