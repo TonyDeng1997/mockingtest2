@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.mocking.auth.model.QuestionData;
 import com.mocking.auth.service.QuestionService;
 
@@ -27,6 +26,14 @@ public class QuestionController {
     @Autowired
     private QuestionService questionService;
 
+    //TODO Get 
+    @GetMapping(value = "submitquestion")
+    public String getQuestion(Model model) {
+        model.addAttribute("questionForm", new QuestionData());
+
+        return "submitquestion";
+    }
+    
     //TODO test this and add a jsp file.
     //https://leetcode.com/problems/two-sum/description/
     @GetMapping(value = "problem/{title}")

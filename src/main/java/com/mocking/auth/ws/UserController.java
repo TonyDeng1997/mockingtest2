@@ -62,7 +62,7 @@ public class UserController {
 
 	@GetMapping(value = { "/", "/welcome" })
 	public String welcome(Model model) {
-		return "welcome";
+		return "index";
 	}
 
 }
