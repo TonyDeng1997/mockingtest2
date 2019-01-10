@@ -13,7 +13,7 @@ import com.mocking.auth.service.ClientService;
 public class ClientValidator implements Validator  {
 
 	@Autowired
-    private ClientService ClientService;
+    private ClientService clientService;
 	
 	@Override
     public boolean supports(Class<?> aClass) {
@@ -28,7 +28,7 @@ public class ClientValidator implements Validator  {
         if (config.getName().length()< 6 || config.getName().length() > 32) {
             errors.rejectValue("name", "Size.userForm.username");
         }
-        if (ClientService.findByClientname(config.getName()) != null) {
+        if (clientService.findByClientname(config.getName()) != null) {
             errors.rejectValue("name", "Duplicate.userForm.username");
         }
 	}
