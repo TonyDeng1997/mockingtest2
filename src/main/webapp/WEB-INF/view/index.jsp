@@ -36,7 +36,7 @@
                       <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
+                      <a class="nav-link" href="#">Mocking Test</a>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -54,31 +54,35 @@
                     <li class="nav-item">
                       <a class="nav-link disabled" href="${contextPath}/submitquestion">Submit a Question</a>
                     </li>
+                    
                   </ul>
+                  <!-- 
                   <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
+                  </form> 
+                  -->
+                  <div class="form-inline my-2 my-lg-0">
+                  <c:if test="${pageContext.request.userPrincipal.name != null}">
+        			<form id="logoutForm" method="POST" action="${contextPath}/logout">
+            			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        			</form>
+                    
+                    ${pageContext.request.userPrincipal.name} | <a class="nav-link" onclick="document.forms['logoutForm'].submit()">Logout</a>
+                  </c:if>
+                  </div>
                 </div>
               </nav>
+              
 <div class="container">
-
-    <c:if test="${pageContext.request.userPrincipal.name != null}">
-        <form id="logoutForm" method="POST" action="${contextPath}/logout">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
-
-        <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
         <h4 class="text-center"><a href="${contextPath}/mocking/configtest">Click here for mocking config test</a></h4>
         <h4 class="text-center"><a href="${contextPath}/mocking/questiontest">Click here for mocking question test</a></h4>
         <h4 class="text-center"><a href="${contextPath}/mocking/clienttest">Click here for client test</a></h4>
         <h4 class="text-center"><a href="${contextPath}/timer">Mocking Test</a></h4>
         <h4 class="text-center"><a href="${contextPath}/submitquestion">Submit your Question</a></h4>
-
-    </c:if>
-
 </div>
 <!-- /container -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

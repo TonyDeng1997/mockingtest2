@@ -5,11 +5,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+/*
+ * Need to scan root package otherwise the @Autowire some beans will not work,
+ * because it will not 
+ * */
+@SpringBootApplication (scanBasePackages = { "com.mocking" })
 public class WebApplication   {
 	private static final Logger log = LoggerFactory.getLogger(WebApplication.class);
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);
     }
 

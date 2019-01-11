@@ -1,4 +1,4 @@
-# Building a Website with Node.js and Express.js
+# Building a Mocking Programming System with Node.js and Express.js
 Need to integrate with webpack to organize the resource.
 
 ## Installing Tools
@@ -8,8 +8,9 @@ Need to integrate with webpack to organize the resource.
     - [maven]
     - [java]
     - [NodeJS/NPM]
-    
-    Other eclipse plugins that you would need, nodejs plugin, tomcat plugin, checkstyle plugin and sonarlint plugin.
+
+Other eclipse plugins that you would need are: nodejs plugin, tomcat plugin, checkstyle plugin and sonarlint plugin.
+
         
 ## Checkout source code
 Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) `> git clone CLONEURL`
