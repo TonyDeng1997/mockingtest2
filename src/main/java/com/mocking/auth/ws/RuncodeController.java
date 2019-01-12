@@ -50,10 +50,6 @@ public class RuncodeController {
 	public ModelAndView runCode(@ModelAttribute("form") TestForm form, Model model) throws Exception {
 		System.out.println("debugging in runcode controller \n" + form.getSource_code());
 		
-		/* TODO Parse the file from the source code string and find out the public class keyword {.
-		 * Currently we will provide a code template to start with.
-		 */
-		
 		/* TODO Fix here, big bug, should not use form but to use json and restful
 		 * This requires a redesign of UI.
 		 * */

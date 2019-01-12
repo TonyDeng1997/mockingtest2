@@ -26,8 +26,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-				.antMatchers("/resources/**", "/registration")
-				.permitAll().anyRequest().authenticated()
+				// the matcher allows the following authenticated users to access the followintg endpoints
+				// It is similar to intercept-url in the early spring versions
+				.antMatchers("/resources/**", "/registration", "/runcode", "/timer")
+				.permitAll()
+				.anyRequest()
+				.authenticated()
 				.and().
 			formLogin()
 				.loginPage("/login")

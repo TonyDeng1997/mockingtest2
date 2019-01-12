@@ -1,6 +1,6 @@
 
 
-CREATE TABLE question_data (
+CREATE TABLE IF NOT EXISTS question_data (
 id int auto_increment,
 title varchar(255) not null,
 acceptance_rate decimal(30,29) null,
@@ -12,7 +12,7 @@ PRIMARY KEY(id)
 
 CREATE INDEX idx_question_title ON question_data(title);
 
-CREATE TABLE question_test (
+CREATE TABLE IF NOT EXISTS question_test (
 id int auto_increment,
 question_id int,
 test_body text,

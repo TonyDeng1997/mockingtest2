@@ -5,14 +5,16 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
+
+import com.mocking.auth.service.UserServiceImpl;
 import com.mocking.vm.VMFactory;
 import com.mocking.vm.component.CodeResult;
 import com.mocking.vm.component.ConfigProperties;
@@ -25,9 +27,11 @@ import com.mocking.vm.component.SourceCode;
 
 @Service
 public class RunCodeService {
-	private Path userFolderPath;
+	private String userHomeDirecory;
 	private String sourceFilePath;
+	
 	private ProcessBuilder builder; // Use for compiling and running
+	
 	private SourceCode sourceCode;
 	private String javaJVM;
 	private String pythonJVM;
@@ -44,6 +48,9 @@ public class RunCodeService {
 
 	@Autowired
 	VMFactory vmFactory;
+	
+	@Autowired
+	UserServiceImpl userService;
 
 	private RunCodeService() {}
 	
@@ -55,40 +62,20 @@ public class RunCodeService {
 			throw new RuntimeException("Shell is not configured properly");
 		}
 	}
-
+	
 	public void config(SourceCode sourceCode) {
 		init();
 		this.sourceCode = sourceCode;
 		builder = new ProcessBuilder();
-
-		/*
-		 * TODO, the following directory should be assigned to a user uniquely upon
-		 * their account creation We should only grab the userFoledPath string from the
-		 * UserService and then set it here.
-		 */
-
-		userFolderPath = Paths
-				.get(System.getProperty("user.dir") + "/src/main/resources/user/" + runcodeUtil.getUserId());
-		sourceFilePath = userFolderPath.toString() + "/" + sourceCode.getFileName() + "." + sourceCode.getFileExt();
-		// Create working directory
-		createWorkingDirectory(userFolderPath);
+		userHomeDirecory = userService.findHomePathByUsername(userService.getUserLoginName());
+		sourceFilePath = getSourceFilePath(userHomeDirecory, this.sourceCode);
 		// Set working directory
-		builder.directory(userFolderPath.toFile());
+		builder.directory(new File(userHomeDirecory));
 	}
 
-	public String getUserFolderPath() {
-		return this.userFolderPath.toString();
-	}
-
-	private void createWorkingDirectory(Path path) {
-		if (!Files.exists(path)) {
-			try {
-				Files.createDirectories(path);
-			} catch (IOException e) {
-				// fail to create directory
-				e.printStackTrace();
-			}
-		}
+	private String getSourceFilePath(String userHomeDirectory, SourceCode sourceCode) {
+		return  userHomeDirecory + "/" + 
+				sourceCode.getFileName() + "." + sourceCode.getFileExt();
 	}
 
 	public CodeResult executeCode() {
@@ -138,10 +125,10 @@ public class RunCodeService {
 		Process p = builder.start();
 		System.out.println("hello debugging here");
 		CodeResult codeResult = new CodeResult();
-		System.out.println("User Folder Path:" + userFolderPath);
+		System.out.println("User Folder Path:" + this.userHomeDirecory);
 
 		// Don't hardcode file name
-		PrintWriter printWriter = new PrintWriter(userFolderPath + "/" + "output.txt");
+		PrintWriter printWriter = new PrintWriter(this.userHomeDirecory + "/" + "output.txt");
 		BufferedReader stdOutput = new BufferedReader(new InputStreamReader(p.getInputStream()));
 		BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
 
