@@ -81,9 +81,8 @@ public class RunCodeService {
 	public CodeResult executeCode() {
 		CodeResult result = new CodeResult();
 		try {
-			System.out.println("User Directory: " + System.getProperty("user.dir"));
-
-			// Generate java file in the file system
+		
+			// Generate source file in the file system
 			runcodeUtil.generateSourceFile(sourceCode, sourceFilePath);
 
 			File sourceFile = new File(sourceFilePath);

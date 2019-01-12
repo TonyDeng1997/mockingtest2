@@ -59,6 +59,12 @@ public class UserController {
 		return "login";
 	}
 
+	/*
+	@GetMapping(value = "/error")
+	public String error(Model model) {
+		return "login";
+	}*/
+	
 	@GetMapping(value = { "/", "/welcome" })
 	public String indexPage(Model model) {
 		// The loginName seems to be anonymous during /registration,

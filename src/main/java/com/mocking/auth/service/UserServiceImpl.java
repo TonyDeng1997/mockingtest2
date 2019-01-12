@@ -45,7 +45,6 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public String generateUserHomePath(String userLoginName) {
-		return this.getUserLoginName() + "-" + UUID.randomUUID().toString();
-	}
-			
+		return "/tmp/"+this.getUserLoginName() + "-" + UUID.randomUUID().toString();
+	}	
 }

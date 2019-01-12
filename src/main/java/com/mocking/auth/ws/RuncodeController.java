@@ -37,6 +37,9 @@ public class RuncodeController {
 	@Autowired
 	ConfigProperties config;
 	
+	@Autowired
+	ApplicationContext context;
+	
 	@GetMapping(value = "timer")
 	public String getTimer(Model model) {
 		model.addAttribute("form", new TestForm());
@@ -44,7 +47,7 @@ public class RuncodeController {
 	}
 
 	@Autowired
-	ApplicationContext context;
+	RunCodeService runCodeService;
 	
 	@PostMapping(value = { "/runcode" })
 	public ModelAndView runCode(@ModelAttribute("form") TestForm form, Model model) throws Exception {
@@ -60,11 +63,11 @@ public class RuncodeController {
 		*/
 		
 		// Generate source file
-		RunCodeService runCodeProcess= context.getBean(RunCodeService.class);
-		runCodeProcess.config(new SourceCode("Solution", sourceCode, "java"));
+		//RunCodeService runCodeProcess= context.getBean(RunCodeService.class);
+		runCodeService.config(new SourceCode("Solution", sourceCode, "java"));
 		
 		// Run code and produce output
-		CodeResult codeResult = runCodeProcess.executeCode();
+		CodeResult codeResult = runCodeService.executeCode();
 		
 		// Reap output and send to rendering layer
 		Map<String, Object> params = new HashMap<>();
@@ -72,15 +75,5 @@ public class RuncodeController {
 		// Please change key from 'feedback' to 'consoleOutput'
 		params.put("output", codeResult.getFullConsoleOutput());
 		return new ModelAndView("timer", params);
-	}
-	
-	/*
-	 * In hackerrank it is expecting the Java class name is Solution,
-	 * In leetcode as long as it is public clalss classname, the classname will be used.
-	 * I am providing a very wicked impl here to quickly have this feature, change this to a better solution
-	 * in the future. 
-	 * */
-	private String getFileName(String sourceCode) {
-		return "";
 	}
 }
