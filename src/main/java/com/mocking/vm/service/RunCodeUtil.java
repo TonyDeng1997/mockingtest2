@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -45,15 +44,6 @@ public class RunCodeUtil {
 		return file.isFile() && file.canExecute();
 	}
 	
-	/*
-	 * TODO should also get a UserID+ UUID Unpon user creation we will have to
-	 * create a unique path for the user and save it to the database table. Move the
-	 * following two functions to UserUtil.java
-	 */
-	protected String getUserId() {
-		return UUID.randomUUID().toString();
-	}
-
 	public void generateSourceFile(SourceCode sourceCode, String sourceFilePath) {
 		try (FileWriter fileWriter = new FileWriter(sourceFilePath)) {
 			fileWriter.write(sourceCode.getCode());

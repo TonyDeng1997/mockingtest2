@@ -10,14 +10,24 @@ public class User {
     private String username;
     private String password;
     private String passwordConfirm;
+    private String homePath;
     private Set<Role> roles;
 
-    @Id
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;
     }
 
+	@Column(name="home_path")
+	public String getHomePath() {
+		return homePath;
+	}
+
+	public void setHomePath(String homePath) {
+		this.homePath = homePath;
+	}
+	
     public void setId(Long id) {
         this.id = id;
     }
