@@ -1,5 +1,7 @@
 package com.mocking.auth.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.mocking.auth.model.QuestionData;
@@ -19,4 +21,10 @@ public class QuestionServiceImpl implements QuestionService {
 	public QuestionData findQuestionDataByTitle(String title) {
 		return questionRepository.findByTitle(title);
 	}
+
+	@Override
+	public List<QuestionData> findAll() {
+		return questionRepository.findAll();
+	}
+	
 }
