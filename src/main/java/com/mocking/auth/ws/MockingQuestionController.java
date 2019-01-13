@@ -1,30 +1,22 @@
 package com.mocking.auth.ws;
 
 
-import com.mocking.auth.model.MockingConfig;
-import com.mocking.auth.model.MockingQuestion;
-import com.mocking.auth.model.User;
-import com.mocking.auth.service.MockingConfigService;
-import com.mocking.auth.service.MockingQuestionService;
-import com.mocking.auth.service.SecurityService;
-import com.mocking.auth.service.UserService;
-import com.mocking.auth.validator.MockingConfigValidator;
-import com.mocking.auth.validator.MockingQuestionValidator;
-import com.mocking.auth.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mocking.auth.model.MockingQuestion;
+import com.mocking.auth.service.MockingQuestionService;
+import com.mocking.auth.validator.MockingQuestionValidator;
 
 //https://dzone.com/articles/add-custom-functionality-to-a-spring-data-reposito
 //https://dzone.com/articles/using-spring-mvc%E2%80%99s
 //
-@Controller
+@RestController
 public class MockingQuestionController {
 
     @Autowired
@@ -53,26 +45,8 @@ public class MockingQuestionController {
         }
 
         mockingQuestionService.save(mockingQuestionForm);
-
         return "redirect:/welcome";
     }
   
 	
-    /*
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String login(Model model, String error, String logout) {
-        if (error != null)
-            model.addAttribute("error", "Your username and password is invalid.");
-
-        if (logout != null)
-            model.addAttribute("message", "You have been logged out successfully.");
-
-        return "login";
-    }
-
-    @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
-    public String welcome(Model model) {
-        return "welcome";
-    }
-    */
 }

@@ -2,20 +2,21 @@ package com.mocking.auth.ws;
 
 /*@author feifei*/
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mocking.auth.model.Client;
 import com.mocking.auth.service.ClientService;
 import com.mocking.auth.validator.ClientValidator;
-import com.mocking.auth.model.Client;
 
 //https://dzone.com/articles/add-custom-functionality-to-a-spring-data-reposito
 //https://dzone.com/articles/using-spring-mvc%E2%80%99s
 //
-@Controller
+@RestController
 public class ClientController {
 
 	@Autowired
