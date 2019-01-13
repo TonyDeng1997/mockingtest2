@@ -5,15 +5,14 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.nio.file.Path;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
+import com.mocking.auth.service.SecurityService;
 import com.mocking.auth.service.UserServiceImpl;
 import com.mocking.vm.VMFactory;
 import com.mocking.vm.component.CodeResult;
@@ -52,6 +51,8 @@ public class RunCodeService {
 	@Autowired
 	UserServiceImpl userService;
 
+	@Autowired
+	SecurityService securityService;
 	private RunCodeService() {}
 	
 	public void init() {
@@ -67,7 +68,7 @@ public class RunCodeService {
 		init();
 		this.sourceCode = sourceCode;
 		builder = new ProcessBuilder();
-		userHomeDirecory = userService.findHomePathByUsername(userService.getUserLoginName());
+		userHomeDirecory = userService.findHomePathByUsername(securityService.findLoggedInUsername());
 		sourceFilePath = getSourceFilePath(userHomeDirecory, this.sourceCode);
 		// Set working directory
 		builder.directory(new File(userHomeDirecory));

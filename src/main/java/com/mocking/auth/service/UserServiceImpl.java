@@ -1,10 +1,9 @@
 package com.mocking.auth.service;
 
+import java.io.File;
 import java.util.HashSet;
 import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import com.mocking.auth.repository.RoleRepository;
@@ -18,14 +17,20 @@ public class UserServiceImpl implements UserService {
 	private RoleRepository roleRepository;
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
-
+	@Autowired
+	SecurityService securityService;
+	
 	@Override
 	public void save(com.mocking.auth.model.User user) {
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 		user.setRoles(new HashSet<>(roleRepository.findAll()));
+		
+		String loginName = user.getUsername();
+		String homePath = createWorkingDirectory(generateUserHomePath(loginName));
+		user.setHomePath(homePath);
 		userRepository.save(user);
 	}
-
+	
 	@Override
 	public com.mocking.auth.model.User findByUsername(String username) {
 		return userRepository.findByUsername(username);
@@ -38,13 +43,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public String getUserLoginName() {
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		return auth.getName();
-	}
-
-	@Override
 	public String generateUserHomePath(String userLoginName) {
-		return "/tmp/"+this.getUserLoginName() + "-" + UUID.randomUUID().toString();
+		return "/tmp/"+  userLoginName + "-" + UUID.randomUUID().toString();
 	}	
 }
