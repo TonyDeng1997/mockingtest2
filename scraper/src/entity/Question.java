@@ -1,4 +1,4 @@
-package scraper;
+package entity;
 
 public class Question {
 	private Long questionId;

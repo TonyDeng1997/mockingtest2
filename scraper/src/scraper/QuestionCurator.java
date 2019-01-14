@@ -7,15 +7,15 @@ import java.util.Arrays;
 import java.util.List;
 import org.apache.commons.io.FileUtils;
 
+import entity.Question;
+
 /*
  * We copy tables from https://leetcode.com/problems/all and manually formatted some wierd column like "new",
  * and then we write this problem to reformat the file.
  * 
  * */
 public class QuestionCurator {
-	private final static String baseUrl = "https://leetcode.com/problems/"; 
-	
-	
+	private static final String baseUrl = "https://leetcode.com/problems/"; 
 	
 	/*
 	 * @param inputFile 
@@ -31,19 +31,16 @@ public class QuestionCurator {
 		StringBuilder sb = new StringBuilder();
 		
 		// Used to build sql
-		StringBuilder sql_builder = new StringBuilder();
+		StringBuilder sqlBuilder = new StringBuilder();
 		
 		// Only get the even number lines
 		int x=0;
 		String[] finals;
 		Long questionId = 0L;
-		List<Question> questionlist = new ArrayList<Question>();
+		List<Question> questionlist = new ArrayList<>();
 		for (String line : contents) {
 			x++;
 			if(x%2==0) {
-				
-				// TODO remove this when it is done
-				//System.out.println(line);
 				finals=line.split("\\s{2,}");
 				String[] entry = line.split("\\d+\\.\\d+%");
 				Question newquestion=new Question();
@@ -68,12 +65,10 @@ public class QuestionCurator {
 						newquestion.getDifficulty() + "\t" + newquestion.getDescriptionUrl();
 				sb.append(formattedQuestion + "\n");
 				
-				//TODO code generation of sql statements and write to a different V1__Question__Data.sql
-				
 				String sql = "INSERT INTO question_data (title, acceptance_rate, difficulty, description, article) VALUES (" + 
 				"'"+ questionName + "', '" +  acceptance_rate + "', '" + difficulty + "', '" + "" +  "', '" + null +  "');";
 				
-				sql_builder.append(sql + "\n");
+				sqlBuilder.append(sql + "\n");
 			}
 		}
 		
@@ -83,12 +78,12 @@ public class QuestionCurator {
 			FileUtils.writeStringToFile(outputFile, sb.toString(),"UTF8");
 
 			// write to sql
-			File sql_output_file = new File("/Users/TonyDeng/Desktop/mockingtestold/src/main/resources/db/migration/V2__QuestionData.sql");
+			File sqlOutputFile = 
+					new File("/Users/TonyDeng/Desktop/mockingtestold/src/main/resources/db/migration/V2__QuestionData.sql");
 			
-			FileUtils.writeStringToFile(sql_output_file, sql_builder.toString(),"UTF8");
+			FileUtils.writeStringToFile(sqlOutputFile, sqlBuilder.toString(),"UTF8");
 			System.out.println("Done!");
-		}
-		
+		}	
 		return questionlist;
 	}
 	

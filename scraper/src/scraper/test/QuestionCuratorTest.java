@@ -3,8 +3,9 @@ package scraper.test;
 import java.io.IOException;
 import java.util.List;
 import org.junit.Test;
+
+import entity.Question;
 import junit.framework.Assert;
-import scraper.Question;
 import scraper.QuestionCurator;
 
 public class QuestionCuratorTest {
