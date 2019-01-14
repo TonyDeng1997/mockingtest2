@@ -2,8 +2,12 @@
 package com.mocking.auth.ws;
 
 
-import java.util.List;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.codec.binary.Base64;
 /*@author feifei*/
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -43,21 +48,26 @@ public class QuestionController {
         return "redirect:/welcome";
     }
     
-    /*
+    
     //TODO test this and add a jsp file.
     //https://leetcode.com/problems/two-sum/description/
-    @GetMapping(value = "problem/{title}")
-    public ModelAndView getQuestion(Model model, @PathVariable String title) {
-    	QuestionData question = questionService.findQuestionDataByTitle(title);
-        model.addAttribute("questionForm", new QuestionData());
+    @GetMapping(value = "/problems/{title}")
+    public Map<String, Object> getQuestion(Model model, @PathVariable String title) {
+    	String[] titleWords = title.split("-");
+    	StringBuilder sb = new StringBuilder();
+    	for (String str: titleWords) {
+    		sb.append(str);
+    		sb.append(" ");
+    	}
+    	QuestionData question = questionService.findQuestionDataByTitle(sb.toString());
+
         Map<String, Object> params = new HashMap<>();
         question.setDescription(new String(Base64.decodeBase64(question.getDescription())));
-        params.put("question", question.getDescription());
-        params.put("title", question.getTitle());
-        return new ModelAndView("show_question", params); // show_question.jsp
-    }*/
+        params.put("question", question);
+        return params; // show_question.jsp
+    }
     
-    @GetMapping("/problem/all")
+    @GetMapping("/problems/all")
     public ResponseEntity<List<QuestionData>> listAllUsers() {
         List<QuestionData> questions = questionService.findAll();
         if (questions.isEmpty()) {
