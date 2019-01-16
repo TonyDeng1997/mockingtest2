@@ -43,11 +43,11 @@ public class VMFactory {
 		}
 		
 		if (vmType.equalsIgnoreCase(VMFactory.PYTHON)) {
-			return new PythonVM();
+			return pythonVM;
 		}
 		
 		if (vmType.equalsIgnoreCase(VMFactory.JAVASCRIPT)) {
-			return new JavascriptVM();
+			return javascriptVM;
 		}
 		
 		if (vmType.equalsIgnoreCase(VMFactory.KOTLIN)) {

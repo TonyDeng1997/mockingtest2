@@ -64,7 +64,7 @@ public class RuncodeController {
 		
 		// Generate source file
 		//RunCodeService runCodeProcess= context.getBean(RunCodeService.class);
-		runCodeService.config(new SourceCode("Solution", sourceCode, "java"));
+		runCodeService.config(new SourceCode("Solution", sourceCode, "js"));
 		
 		// Run code and produce output
 		CodeResult codeResult = runCodeService.executeCode();

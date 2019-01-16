@@ -27,9 +27,7 @@ width: 50%;
 /*padding: 10px;*/.
 }
 
-body {
-        overflow: hidden;
-    }
+
 
 #editor {
        position: relative !important;

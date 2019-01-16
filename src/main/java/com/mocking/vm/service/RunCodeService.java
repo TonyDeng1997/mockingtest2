@@ -96,13 +96,20 @@ public class RunCodeService {
 			 * TODO Java has been done. Python requires testing and cleaning. Kotlin is not
 			 * done. JS is not done.
 			 */
+			
+			
 			if (sourceCode.getFileExt().equals("java")) {
 				String compileCommand = vmFactory.getVM("java").getCompileCommand(sourceCode);
 				String runCommand = vmFactory.getVM("java").getRunCommand(sourceCode);
 				builder.command(shellPath, "-c", compileCommand + ";" + runCommand);
-			} else if (sourceCode.getFileExt().equalsIgnoreCase("python")) {
-				builder.command(shellPath, "-c", "python " + sourceFilePath.toString());
-			} else if (sourceCode.getFileExt().equalsIgnoreCase("javascript")) {
+			} else if (sourceCode.getFileExt().equals("py")) {
+				String runCommand = vmFactory.getVM("python").getRunCommand(sourceCode);	
+				System.out.println(runCommand);
+				builder.command(shellPath, "-c", runCommand);
+			} else if (sourceCode.getFileExt().equalsIgnoreCase("js")) {
+				String runCommand = vmFactory.getVM("javascript").getRunCommand(sourceCode);	
+				System.out.println(runCommand);
+				builder.command(shellPath, "-c", runCommand);
 
 			} else if (sourceCode.getFileExt().equalsIgnoreCase("kotlin")) {
 
