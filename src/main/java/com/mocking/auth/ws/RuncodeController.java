@@ -57,14 +57,31 @@ public class RuncodeController {
 		 * This requires a redesign of UI.
 		 * */
 		String sourceCode = form.getSource_code();
-
+		
 		/* TODO read language from json/form hidden field and then
 		 * use a factory design pattern to handle this 
 		*/
 		
 		// Generate source file
 		//RunCodeService runCodeProcess= context.getBean(RunCodeService.class);
-		runCodeService.config(new SourceCode("Solution", sourceCode, "js"));
+		String ext;
+		switch(form.getLanguage()) {
+		  case "javascript":
+			ext="js";
+		    break;
+		  case "python":
+			  ext="py";
+		    break;
+		  case "java":
+			  ext="java";
+		    break;
+		  default:
+		    ext="java";
+		}
+		System.out.print("*********************");
+		System.out.println(ext);
+		System.out.print("*********************");
+		runCodeService.config(new SourceCode("Solution", sourceCode, ext));
 		
 		// Run code and produce output
 		CodeResult codeResult = runCodeService.executeCode();
@@ -77,3 +94,4 @@ public class RuncodeController {
 		return new ModelAndView("timer", params);
 	}
 }
+

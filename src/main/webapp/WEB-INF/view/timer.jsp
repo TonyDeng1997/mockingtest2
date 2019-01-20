@@ -83,6 +83,7 @@ width: 50%;
 	<div class="column level-left">
 	<spring:bind path="source_code">
 		<form:textarea id="code" cols='100' rows='20' path="source_code" placeholder="" ></form:textarea>
+		<form:textarea id="language" cols='0' rows='0'  style="visibility:hidden" path="language"  placeholder="" ></form:textarea>
 	</spring:bind>
 	</div>
 

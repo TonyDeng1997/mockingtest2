@@ -1,3 +1,5 @@
+
+
 function startTimer(duration, display) {
 	var timer = duration; // in seconds
 	var minutes;
@@ -23,7 +25,8 @@ function startTimer(duration, display) {
 	      alert("The test is timed out. Your page will be redirected now.");
 	      window.location.href = "http://localhost:8080/login?logout";
 	    }
-	    console.log(parseInt(timer));
+	    //console.log(parseInt(timer));
+
 	  
 	    window.localStorage.setItem("seconds",seconds);
 	    window.localStorage.setItem("minutes",minutes);
@@ -56,4 +59,9 @@ window.onload = function () {
 	  $(document).on("keydown", disableF5);
 }
 
+function changefunction(){
+	    var selector = document.getElementById('lang_selector');
+	    var value = selector[selector.selectedIndex].value;
 
+	    document.getElementById('language').value = value;
+}
