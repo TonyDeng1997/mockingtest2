@@ -59,9 +59,4 @@ window.onload = function () {
 	  $(document).on("keydown", disableF5);
 }
 
-function changefunction(){
-	    var selector = document.getElementById('lang_selector');
-	    var value = selector[selector.selectedIndex].value;
 
-	    document.getElementById('language').value = value;
-}

@@ -29,6 +29,11 @@
     		  '\t System.out.println(\"Hello world\");\n' +
     		  '\t return;\n\t}' +
     		  '\n}';
+      var template_python='def Solution:\n'+'\tprint("Hello from a function")';
+      var template_javascript='function Solution() {\n'+
+	  '\t console.log(\"Hello world\");\n' +
+	  '\t return;' +
+	  '\n}';
       
       if (!domCodeElm.value) {
         editor.getDoc().setValue(template);
@@ -44,6 +49,22 @@
     	  console.info( "This page is not reloaded");
     	  localStorage.clear();
       }
+      function changefunction(){
+  	    var selector = document.getElementById('lang_selector');
+  	    var value = selector[selector.selectedIndex].value;
+		if(value=="python"){
+			editor.getDoc().setValue(template_python);
+		}
+		if(value=="java"){
+			editor.getDoc().setValue(template);
+		}
+		if(value=="javascript"){
+			editor.getDoc().setValue(template_javascript);
+		}
+  	    document.getElementById('language').value = value;
+  	    
+  	    
+  }
 </script>
 
 </body>
