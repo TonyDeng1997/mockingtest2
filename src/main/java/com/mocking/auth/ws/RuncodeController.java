@@ -37,9 +37,6 @@ public class RuncodeController {
 	@Autowired
 	ConfigProperties config;
 	
-	@Autowired
-	ApplicationContext context;
-	
 	@GetMapping(value = "timer")
 	public String getTimer(Model model) {
 		model.addAttribute("form", new TestForm());
@@ -58,12 +55,6 @@ public class RuncodeController {
 		 * */
 		String sourceCode = form.getSource_code();
 		
-		/* TODO read language from json/form hidden field and then
-		 * use a factory design pattern to handle this 
-		*/
-		
-		// Generate source file
-		//RunCodeService runCodeProcess= context.getBean(RunCodeService.class);
 		String ext;
 		switch(form.getLanguage()) {
 		  case "javascript":
@@ -78,9 +69,7 @@ public class RuncodeController {
 		  default:
 		    ext="java";
 		}
-		System.out.print("*********************");
-		System.out.println(ext);
-		System.out.print("*********************");
+		
 		runCodeService.config(new SourceCode("Solution", sourceCode, ext));
 		
 		// Run code and produce output
