@@ -68,12 +68,20 @@ public class QuestionController {
     }
     
     @GetMapping("/problems/all")
-    public ResponseEntity<List<QuestionData>> listAllUsers() {
+    public ResponseEntity<Map<String, Object>> listAllQuestions() {
         List<QuestionData> questions = questionService.findAll();
         if (questions.isEmpty()) {
             return new ResponseEntity(HttpStatus.NO_CONTENT);
             // You many decide to return HttpStatus.NOT_FOUND
         }
-        return new ResponseEntity<>(questions, HttpStatus.OK);
+        HashMap <String, Object> map = new HashMap<>();
+        map.put("items", questions);
+        return new ResponseEntity<>(map, HttpStatus.OK);
+    }
+    
+    //TODO, add the html to this jsp, or see if or file ext can support html.
+    @GetMapping("/problems/show-all")
+    public String showQuestions() {
+        return "showAllQuestion.jsp";
     }
 }
