@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Component } from 'react';
 import axios from 'axios';
 
 class App extends Component {
@@ -15,8 +14,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-
-    /*
     fetch("http://localhost:9000/problems/all")
       .then(res => res.json())
       .then(
@@ -36,27 +33,6 @@ class App extends Component {
           });
         }
       )
-      */
-
-     axios.get('http://localhost:9000/problems/all')
-     .then(function (response) {
-       // handle success
-       console.log(response);
-     }).then(res => res.json())
-     .then(
-       (result) => {
-         this.setState({
-           isLoaded: true,
-           items: result.items
-         });
-       })
-     .catch(function (error) {
-       // handle error
-       console.log(error);
-     })
-     .then(function () {
-       // always executed
-     });
   }
 
   render() {
@@ -69,8 +45,8 @@ class App extends Component {
       return (
         <ul>
           {items.map(item => (
-            <li key={item.id}>
-              {item.title} {item.acceptance_rate}
+            <li key={item.title}>
+              {item.title} {item.difficulty}
             </li>
           ))}
         </ul>

@@ -1,31 +1,25 @@
 var path = require('path');
 
-var node_dir = __dirname + '/node_modules';
-
 module.exports = {
-    entry: './src/main/js/app.js',
+    entry: './src/main/webapp/WEB-INF/view/question_all/src/index.js',
     devtool: 'sourcemaps',
     cache: true,
-    debug: true,
-    resolve: {
-        alias: {
-            'stompjs': node_dir + '/stompjs/lib/stomp.js',
-        }
-    },
+    mode: 'development',
     output: {
         path: __dirname,
-        filename: './src/main/resources/static/built/bundle.js'
+        filename: './src/main/webapp/WEB-INF/view/question_all/src/bundle.js'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: path.join(__dirname, '.'),
                 exclude: /(node_modules)/,
-                loader: 'babel-loader',
-                query: {
-                    cacheDirectory: true,
-                    presets: ['es2015', 'react']
-                }
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ["@babel/preset-env", "@babel/preset-react"]
+                    }
+                }]
             }
         ]
     }

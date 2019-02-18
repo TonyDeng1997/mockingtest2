@@ -101,8 +101,9 @@ width: 50%;
 </div>
 </form:form>
 </div>
-
+<div id="root"></div>
 <script src= "resources/javascript/timer.js" ></script>
+<script src= "resources/javascript/bundle.js" ></script>
 
 <%@ include file="codeMirrorInit.html" %>
 
